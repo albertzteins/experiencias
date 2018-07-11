@@ -1,0 +1,1226 @@
+<style type="text/css">
+	
+
+	/* css dinamica car en contexto */
+
+	.ladinamica {
+		width: 960px;
+		margin: auto;
+		/*padding-top: 64px;*/
+		display: grid;
+		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
+		grid-template-rows: 246px 202px 48px 1fr;
+		grid-gap: 0px 20px; /* row gap   column gap */
+	}
+		.ladinamica h3 {
+			font-size: 2rem;
+			margin-bottom: 1.4rem;
+			font-weight: lighter;
+		}
+
+		.portada {
+			grid-row: 1 / span 2;
+			grid-column: 1 / -1;
+			
+		}
+
+		.portada img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.infosombra {
+			grid-column: info-start / info-end;
+			grid-row: 2/4;
+			/*background-color: rgb(220,220,220);*/
+			box-shadow:2px 2px 6px rgb(200,200,200);
+			z-index: 1;
+		}
+
+		.info {
+			grid-column: info-start / info-end;
+			grid-row: 2/3;
+			background-color: rgb(220,220,220);
+			z-index: 2;
+			margin-bottom: 0px;
+			padding: 18px 18px 18px 21px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.info h2 {
+			font-size: 1.6rem;
+			line-height: 1.6rem;
+			margin-bottom: 1rem;
+		}
+
+		.info .viral {
+			width: calc(50% - 20px);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.socialdata {
+			grid-column: info-start / info-end;
+			grid-row: 3/4;
+			background-color: white;
+			z-index: 2;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			/*align-content: center; */
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		.socialdata div {
+
+			display: flex;
+			flex-direction: row;
+			/*justify-content: space-between;*/
+			align-items: center; 
+			/*align-content: center;*/
+			font-size: 0.8rem;
+
+		}
+
+
+
+	/*.contadorregresivo {
+		grid-column: 1 / -1;
+		grid-row: 3/5;
+		background-color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+		.contadorregresivo .numeros {
+			display: flex;
+			flex-direction: row;
+		
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 6rem;
+		}
+
+
+		.contadorregresivo .numeros .tagnumero{
+			font-size: 0.6rem;
+			text-align: center;
+			margin-top: 3rem;
+		}
+
+		.contadorregresivo .titulo {
+			font-size: 0.8rem;
+			margin-bottom: 3rem;
+		}*/
+
+
+
+	/*.fondogris {
+		grid-column: 1 / -1;
+		grid-row: 5/7;
+		background-color: rgb(240,240,240);
+	}*/
+	.ladinamica .bloqueizquierdo {
+		grid-column: info-start / info-end;
+		/*grid-column: info-start / info-end;*/
+		grid-row: 5/ span 1;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		line-height: 1.4rem;
+
+		/*display: grid;*/
+		/*grid-template-columns: repeat(6, 1fr);*/
+		/*grid-column-gap: 20px;*/
+	}
+
+		
+
+		.bloqueizquierdo p {
+			margin-bottom: 1.6rem;
+		}
+
+		/*.bloqueizquierdo .galeriafotos {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px 20px;
+		}
+
+		.bloqueizquierdo .galeriafotos .wrapperfoto {
+			width: 100%;
+			height: 175px;
+			cursor: pointer;
+		}
+		
+
+		.bloqueizquierdo .galeriafotos .wrapperfoto img {
+			width: 100%;
+			height: 100%; 
+			object-fit: cover;
+		}*/
+
+		.ganadores .galeriafotos {
+			/*grid-column: 1 / -1;*/
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px 20px;
+		}
+
+		.ganadores .galeriafotos .wrapperfoto {
+			width: 100%;
+			height: 144px;
+			cursor: pointer;
+		}
+		
+
+		.ganadores .galeriafotos .wrapperfoto img {
+			width: 100%;
+			height: 100%; 
+			object-fit: cover;
+		}
+		
+
+		.btn {
+			/*background-color: #84ffff;*/
+			padding: 5px 15px 5px 15px;
+			box-shadow:2px 2px 6px rgb(180,180,180);
+			cursor: pointer;
+		}
+
+
+		.linkcyanmayuscula {
+			color: #0097a7;
+			font-size: 0.8rem;
+			font-weight: normal;
+			cursor: pointer;
+			text-transform: capitalize;
+		}
+
+		.wrappercomodin {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			/*margin-top: 3rem;*/
+		}
+		.wrappercomodin div {
+			font-size: 3rem;
+			font-weight: bold;
+			margin-left: 0.5rem;
+		}
+
+		.separador {
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px solid #AAAAAA;
+		}
+
+
+		.disabled {
+			background-color: rgb(220,220,220);
+			color: white;
+		}
+
+
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		z-index: 15;
+	}
+
+
+
+	
+
+	/**************** publicidad ********************/
+
+	.publicidad {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 320px;
+		margin: auto;
+
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+	}
+
+	.publicidad .wrapperp {
+		grid-column: 3 / -3;
+		grid-row: 1 / 2;
+	}
+
+	.publicidad .wrapperp img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+ 
+
+	.lastrow {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 80px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+	}
+
+	.lastrow .scrolltotop {
+		grid-column: -3 / span 1;
+		grid-row: 1 / -1;
+		justify-self: center;
+		align-self: center;
+		color: rgba(200,200,200);
+		font-size: 1.3rem;
+		/*text-align: center;*/
+	}
+
+	/************************************************/
+
+	.ladinamica .ganadores {
+		grid-column: form-start / form-end;
+		grid-row: 5/ span 1;
+		padding-bottom: 4rem;
+	}
+
+	.ladinamica .ganadores .aliasganadores {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr );
+		grid-gap: 20px 20px;
+
+
+	}
+
+	.ladinamica .aliasganadores .imagedinamica {
+
+		width: 80px;
+		height: 80px;
+		cursor: pointer;
+	}
+
+	.ladinamica .aliasganadores .imagedinamica img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2.5px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+
+	.ladinamica .aliasganadores .imagedinamica svg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2.5px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+
+	.ladinamica .ganadores .btnKKK {
+		margin-top: 2rem !important;
+		/*justify-self: center;*/
+		/*text-align: center;*/
+		width: 60%;
+		/*height: 80px;*/
+		/*border-radius: 50%;
+		border: 2.5px #fff solid;
+	    box-shadow:3px 3px 8px black;*/
+	}
+
+
+	.wrapperbotoncentrado {
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.wrappercarruselflotante {
+		color: white;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 80%;
+		height: 80%;
+		margin-left: -40%;
+		margin-top: -40vh;
+		/*background-color: yellow;*/
+		z-index: 20;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left {
+		color: white;
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	    text-align: center;
+
+		-webkit-transition: 0.1s; /* Safari */
+	    transition-duration: 0.1s;
+	    transition-timing-function: ease-in;
+	}
+
+	.wrappercarruselflotante .fa-arrow-right {
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	    text-align: center;
+
+		-webkit-transition: 0.1s; /* Safari */
+	    transition-duration: 0.1s;
+	    transition-timing-function: ease-in;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left:hover {
+		background-color: #AAA;
+	}
+
+	.wrappercarruselflotante .fa-arrow-right:hover {
+		background-color: #AAA;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left:active { 
+	    background-color: #3c464c;
+	    color: #fff
+	}
+
+	.wrappercarruselflotante .fa-arrow-right:active { 
+	    background-color: #3c464c;
+	    color: #fff
+	}
+
+	.wrappercarruselflotante .wrappercarruselfoto {
+		width: 70vw;
+		height: 46.6vw;	
+	}
+
+	.wrappercarruselflotante .wrappercarruselfoto img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (max-width: 960px) { 
+		
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.ladinamica {
+			width: 100%;
+		}
+
+		.portada {
+			width: 100%;
+		} 
+
+		.infosombra {
+			grid-column: 2 / -2;
+			grid-row: 2/4;
+
+		}
+
+		.info {
+			grid-column: 2 / -2;
+			grid-row: 2/3;
+		}
+
+		.socialdata {
+			grid-column: 2 / -2;
+			grid-row: 3/4;
+
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 3rem;
+		}
+
+
+		.detalles {
+			grid-column: 2 / -2;
+			grid-row: 5/6;
+		}
+
+		
+
+		.formulario {
+			grid-column: 2 / -2;
+			grid-row: 6/7;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .lastrow, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+
+		.headerdinamica .linea {
+	 		/*grid-column: 1 / -1;*/
+	 	}
+
+	 	.headerdinamica h1 {
+	 		/*grid-column: 1 / span 5;*/
+	 	}
+
+		/*.headerdinamica {
+			width: 960px;
+			margin: auto;
+			padding-top: 84px;	
+			display: grid;
+			grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+			grid-column-gap: 20px;
+
+	 	}*/
+
+		.categoriadinamica {
+			padding-left: 10px;
+			padding-right: 10px;
+			/*padding-top: 52px;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 52px;
+			width: 960px;
+			margin: auto;*/
+
+			/*display: grid;*/
+			grid-template-columns: 1fr;
+			grid-auto-rows:464px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+			height: 432px;
+			
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+   			white-space: nowrap;
+		}
+
+		.publicidad {
+			width: 100% !important;
+		} 
+
+		.publicidad .wrapperp {
+			grid-column: 2 / -2;
+			grid-row: 1 / 2;
+		}
+
+		.publicidad .wrapperp img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+
+		.ladinamica .bloqueizquierdo {
+			grid-column: 2 / -2;
+			/*grid-column: info-start / info-end;*/
+			grid-row: 5/ span 1;
+			/*margin-top: 3rem;
+			margin-bottom: 3rem;
+			line-height: 1.4rem;*/
+
+			/*display: grid;*/
+			/*grid-template-columns: repeat(6, 1fr);*/
+			/*grid-column-gap: 20px;*/
+		}
+
+		.ladinamica .ganadores {
+			grid-column: 2 / -2;
+			grid-row: 6/ span 1;
+			padding-bottom: 4rem;
+		}
+
+		.wrappercarruselflotante .wrappercarruselfoto {
+			width: 100vw;
+			height: auto;	
+		}
+
+		.fa-arrow-left, .fa-arrow-right {
+			display: none;
+		} 
+
+	}
+
+
+</style>
+<!-- <div class="grid"> -->
+
+	<section class="ladinamica">
+
+		<div class="portada">
+			<img src="images/blanco.jpg">
+		</div>
+
+		<div class="infosombra"></div>
+
+		<div class="info">
+			<div>Recompensas</div>
+			<h2></h2>
+			<div class="vigencia">Vigencia: <span></span></div>
+			<!-- <div class="viral"><span>Me gusta</span> <span>COMPARTIR</span></div> -->
+		</div>
+
+		<div class="socialdata">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div class="totallikes"></div>
+			</div>
+			<div class="social">
+				<div class="fa fa-user-o" style="margin-right:0.5em"></div>
+				<div class="participaciones"></div>
+			</div>
+		</div>
+
+		
+		<div class="bloqueizquierdo">
+			<h2 style="margin-bottom: 1rem">Descripcion</h2>
+			<div class="descripcion">
+				
+			</div>
+			
+
+			<!-- <h2 style="margin-bottom: 1rem">Premio</h2>
+			<div class="premio">
+				
+			</div> -->
+
+			<!-- <div class="galeria"> -->
+
+			<!-- <h2 style="margin-bottom: 1rem">Galeria</h2>
+
+
+			<div class="galeriafotos">
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/exp1.png">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/exp2.png">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/exp3.png">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/exp4.png">
+				</div>
+			</div>
+				
+			<div class="wrapperbotoncentrado">
+				<div class="btn masfotos no-seleccionable">MAS FOTOS</div>
+			</div> -->
+			
+		</div>
+
+
+		<div class="ganadores" style="padding-top:4rem;">
+			<h2 style="margin-bottom: 1rem">Ganadores</h2>
+			<!-- <h2 style="margin-bottom: 1rem">Galeria</h2> -->
+
+
+			<div class="galeriafotos">
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/ganadores1.jpg">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/ganadores2.jpg">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/ganadores3.jpg">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/galeriaexperiencias/ganadores4.jpg">
+				</div>
+			</div>
+				
+			<!-- </div> -->
+			<div class="wrapperbotoncentrado">
+				<div class="btn masfotos no-seleccionable">Más fotos</div>
+			</div>
+			<!-- <div class="totalganadores" style="margin-bottom: 1rem">181</div>
+			<div class="aliasganadores"> -->
+				
+			<!-- </div> -->
+
+			<!-- <div class="wrapperbotoncentrado">
+				<div class="btn">MOSTRAR MAS</div>
+			</div> -->
+		</div>
+
+	</section>
+
+
+	
+
+	<section class="publicidad bloquesection">
+		<div class="wrapperp">
+			<img src="images/publicidad4.jpg">
+		</div>
+	</section>
+
+	<section class="lastrow">
+		<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+	</section>
+
+
+	<!-- <footer class="secciones">
+		<img class="brand" src="images/logo_telcel_blanco.png">
+		
+			<div class="bold18">GANADORES</div>
+		</nav>
+		<header></header>
+		<div class="socialwrapper blanco">
+			<div class="bold18" >SÍGUENOS</div>
+			<div class="social">
+				<div class="fa fa-google-plus grismuyoscuroBack" aria-hidden="true" ></div>
+				<div class="fa fa-twitter grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-facebook grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-instagram grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-youtube-play grismuyoscuroBack" aria-hidden="true"></div>
+			</div>
+			<div class="regular12">
+				¿Cómo funciona?<br>
+				Mapa del sitio<br>
+				Términos y Condiciones<br>
+				Políticas de privacidad<br>
+			</div>
+		</div>
+		<div class="legal regular12 grisclaro">Copyright 2018. Todos los derechos reservados</div>
+		<div class="newsletter blanco">
+			<div class="bold18" >NEWSLETTER</div>
+			<div class="regular12">Suscríbete a nuestro Newsletter</div>
+			<input type="input" name="NOMBRE" placeholder="NOMBRE">
+			<input type="input" name="EMAIL" placeholder="CORREO ELECTRÓNICO">
+			<div class="btn grismuyoscuro">SUSCRIBIRSE</div>
+		</div>
+		
+	</footer> -->
+
+<!-- </div> -->
+
+<!-- dinamica interccion 1 -->
+<div class="fondoventanasflotante"></div>
+
+<div class="wrappercarruselflotante">
+	<div class="fa fa-arrow-left izq manita" aria-hidden="true"></div>
+	<div class="wrappercarruselfoto">
+		<!-- <img src="images/galeriaexperiencias/exp1.png" width="70%" height="auto"> -->
+		<img src="images/galeriaexperiencias/ganadores1.jpg" >
+	</div>
+	
+	<div class="fa fa-arrow-right der manita" aria-hidden="true"></div>	
+</div>
+
+
+
+<div class="ventanaterminoscondiciones">
+	<div class="fa fa-times close" aria-hidden="true" ></div>
+	<div class="cuerpotexto">
+		<p class="titulo">Terminos y Condiciones</p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in 
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+	</div>
+	<div class="separador"></div>
+	<div class="checkbox">
+		<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem;"></div>
+		<div class="linkcyanmayuscula no-seleccionable ">Acepto los terminos y condiciones</div>
+	</div>
+	<div class="botones">
+		<div class="linkcyanmayuscula no-seleccionable cancelar">CANCELAR</div>
+		<div class="linkcyanmayuscula no-seleccionable aceptar">ACEPTAR</div>
+	</div>
+</div>
+
+<!-- fin dinamica interaccion 1 -->
+
+
+<script type="text/javascript">
+	var triviaslide = 1;
+	var acierto = false;
+	var ultimoslide = 5;
+
+	var cuentaregresiva;
+	var dia = '02'
+	var hora = '04'
+	var minuto = '22'
+	var segundo = 10;
+
+	$('.dia').text(dia);
+	$('.hora').text(hora);
+	$('.minuto').text(minuto);
+	$('.segundo').text(segundo);
+
+	clearInterval( cuentaregresiva);
+	cuentaregresiva = setInterval( function() {
+		segundo -= 1;
+		if ( segundo < 1 ) {
+			segundo = 60;
+			minuto -= 1;
+			if ( minuto < 1 ) {
+				minuto = 60;
+				hora -= 1;
+				if ( hora < 1 ) {
+					hora = 24;
+					dia -= 1;
+					if ( dia == 0) {
+						// se acabo
+					}
+				}
+			}
+		}
+		segf = ('0' + segundo).slice (-2);
+		minf = ('0' + minuto).slice (-2);
+		horf = ('0' + hora).slice (-2);
+		diaf = ('0' + dia).slice (-2);
+
+		
+		segf = ('0' + segundo).slice (-2);
+		$('.dia').text(diaf);
+		$('.hora').text(horf);
+		$('.minuto').text(minf);
+		$('.segundo').text( segf ) ;
+
+	}, 1000);
+
+	var aceptado = false;
+
+	$(document).ready( function() {
+
+		$(".fondoventanasflotante").hide();
+		$(".wrappercarruselflotante").hide();
+		
+		$(".comenzar").removeClass("disabled");
+		// contenido de las trivias de la dinamica
+		$(".trivia").hide();
+		$('[data-slide="regresar"]').hide();
+		$('[data-slide="finalizar"]').hide();
+		$('[data-slide="seguirjugando"]').hide();
+		$('[data-slide="1"]').hide();
+		$('[data-slide="2"]').hide();
+		$('[data-slide="3"]').hide();
+		$('[data-slide="4"]').hide();
+		$('[data-slide="5"]').hide();
+		$('[data-slide="6"]').hide();
+		
+		$(".wrapperventanaterminoscondiciones").hide();
+		$(".ventanaterminoscondiciones").hide();
+
+		// $(".comenzar").not(".disabled").click( function() {
+		// 	$(".fondoventanaflotante").show();
+		// 	$(".ventanaflotante").show();
+		// });
+
+		$( "body" ).undelegate(  ".comenzar:not(.disabled)", "click").delegate( ".comenzar:not(.disabled)", "click", function() {
+			
+			triviaslide = 1;
+			$('[data-slide="continuar"]').show();
+			$('[data-slide="finalizar"]').hide();
+			$('[data-slide="regresar"]').hide();
+			$('[data-slide="seguirjugando"]').hide();
+			$('[data-slide="1"]').hide();
+			$('[data-slide="2"]').hide();
+			$('[data-slide="3"]').hide();
+			$('[data-slide="4"]').hide();
+			$('[data-slide="5"]').hide();
+
+			$(".aceptoterminoscondiciones").addClass("disabled");
+		  	$(".fondoventanasflotante").show();
+			$(".trivia").show();
+			$('[data-slide="1"]').show();
+		});
+
+		// , .wrapperventanaterminoscondiciones
+		$(".fondoventanasflotante, .wrappercarruselflotante").click( function() {
+			// $(this).hide();
+			$(".fondoventanasflotante").hide();
+			$(".trivia").hide();
+			$(".ventanaterminoscondiciones").hide();
+			$(".wrappercarruselflotante").hide();
+		})
+
+		$(".ventanaterminoscondiciones .close, .ventanaterminoscondiciones .aceptar, .ventanaterminoscondiciones  .cancelar").click( function() {
+			$(".fondoventanasflotante").hide();
+			// $(".ventanaflotante").hide();
+			$(".ventanaterminoscondiciones").hide();
+		})
+
+		$(".dinamicacard2").click( function() {
+			$(".containergrid").fadeTo(400,0.0, function() {
+				$('html, body').scrollTop(0);
+				$(".containergrid").load("secciones/dinamica.html", function() {
+					$(".containergrid").fadeTo(400,1.0);
+				});
+			})
+		})
+
+		$(".opciones").click( function() {
+			$(".opciones").find( ".fa" ).removeClass("fa-dot-circle-o");
+			$(".opciones").find( ".fa" ).addClass("fa-circle-o");
+			$(this).find( ".fa" ).removeClass("fa-circle-o");
+			$(this).find( ".fa" ).addClass("fa-dot-circle-o");
+		})
+
+		$( "body" ).undelegate(  ".aceptoterminoscondiciones:not(.disabled)", "click").delegate( ".aceptoterminoscondiciones:not(.disabled)", "click", function() {
+			// console.log(3);
+			$(".aceptoterminoscondiciones").toggleClass("fa-check-square");
+			aceptado =  $(".aceptoterminoscondiciones").hasClass("fa-check-square");
+			$(".comenzar").toggleClass("disabled");
+		});
+
+
+
+		$(".terminoscondiciones").click( function() {
+			// $(".fondoventanasflotante").show();
+			$(".fondoventanasflotante").show();
+			// $(".ventanaflotante").show();
+			$(".ventanaterminoscondiciones").show();
+			
+			// $(".wrapperventanaterminoscondiciones").show();
+			
+			//$(".ventanaflotante").show();
+			
+			// $(".aceptoterminoscondiciones").toggleClass("fa-check-square");
+			// alert(  $(".aceptoterminoscondiciones").hassClass("fa-check-square") );
+			// $(".comenzar").toggleClass("disabled");
+		})
+
+		// $( "body" ).undelegate(  ".trivia .continuarp", "click").delegate( ".trivia .continuarp", "click", function() {
+
+		$('[data-slide="continuar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+			triviaslide += 1;
+			switch(triviaslide) {
+			    case 1:
+			        $('[data-slide="regresar"]').hide();
+			        $('[data-slide="finalizar"]').hide();
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        break;
+			    case 2:
+			    	$('[data-slide="regresar"]').fadeIn(600);
+			    	// $('[data-slide="continuar"]').fadeIn(600);
+			    	// $('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case (ultimoslide-1):
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case ultimoslide:
+			    	$('[data-slide="regresar"]').hide();
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="seguirjugando"]').fadeIn(600);
+
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        if ( acierto == true ) {
+			        	$('[data-acierto="false"]').hide();
+						$('[data-acierto="true"]').fadeIn(600);
+					} else {
+						$('[data-acierto="true"]').hide();
+						$('[data-acierto="false"]').fadeIn(600);
+					}	
+			        break;
+			    default:
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			}
+		})
+
+		$('[data-slide="regresar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+			triviaslide -= 1;
+			switch(triviaslide) {
+			    case 1:
+			        $('[data-slide="regresar"]').hide();
+			        $('[data-slide="finalizar"]').hide();
+			        $('[data-slide="continuar"]').fadeIn(600);
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        break;
+			    case 2:
+			    	// $('[data-slide="regresar"]').fadeIn(600);
+			    	// $('[data-slide="continuar"]').fadeIn(600);
+			    	// $('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case (ultimoslide-2):
+			    	$('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="continuar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case (ultimoslide-1):
+			    	$('[data-slide="finalizar"]').fadeIn(600);
+			    	$('[data-slide="regresar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case ultimoslide:
+			    	$('[data-slide="regresar"]').hide();
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').hide();
+
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        if ( acierto == true ) {
+			        	$('[data-acierto="false"]').hide();
+						$('[data-acierto="true"]').fadeIn(600);
+					} else {
+						$('[data-acierto="true"]').hide();
+						$('[data-acierto="false"]').fadeIn(600);
+					}
+					$('[data-slide="seguirjugando"]').fadeIn(600);
+			        break;
+			    default:
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			}
+		})
+
+		$('[data-slide="finalizar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+
+			triviaslide += 1;
+
+			$('[data-slide="regresar"]').hide();
+	    	$('[data-slide="continuar"]').hide();
+	    	$('[data-slide="finalizar"]').hide();
+
+	    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+	        if ( acierto == true ) {
+	        	$('[data-acierto="false"]').hide();
+				$('[data-acierto="true"]').fadeIn(600);
+			} else {
+				$('[data-acierto="true"]').hide();
+				$('[data-acierto="false"]').fadeIn(600);
+			}
+			$('[data-slide="seguirjugando"]').fadeIn(600);
+			
+		})
+
+		$('[data-slide="seguirjugando"]').click( function() {
+			cargaContenido( "inicio.html" );
+		});
+
+		
+
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+
+
+		$.get('images/iconouser.svg', function(data){
+			
+			$(".aliasganadores .imagedinamica:not(.foto)").append(data.documentElement);
+			
+			
+			$(".aliasganadores .imagedinamica").each(function(index){
+				var tinte = Math.random()*360;
+				$(this).find("rect").css("fill", "hsl("+tinte+",68%,80%)");
+				$(this).find("path").css("fill", "hsl("+tinte+",68%,80%)");
+				$(this).find("circle").css("fill", "hsl("+tinte+",68%,80%)");
+			})
+			
+		});
+
+		// var galeriaFotos = ["exp1.png", "exp2.png", "exp3.png", "exp4.png", "exp5.png", "exp6.png", "exp7.jpg", "exp8.jpg"];
+		var galeriaFotos = ["ganadores1.jpg", "ganadores2.jpg", "ganadores3.jpg", "ganadores4.jpg", "ganadores5.jpg", "ganadores6.jpg", "ganadores7.jpg", "ganadores8.jpg"];
+		var indexGaleriaFotos = 0;
+		var indexGrupoFotos = 0;
+
+		// amplia foto de la galeria
+		$(".galeriafotos .wrapperfoto").click( function() {
+			indexGaleriaFoto = $(this).index()+(indexGrupoFotos*4);
+			// alert( indexGrupoFotos*4 )
+			$(".fondoventanasflotante").show();
+			$(".wrappercarruselflotante").show();
+			// $(".wrappercarruselflotante img" ).attr( "src", $(this).find("img").attr("src") ); //wrapperfoto img
+			$(".wrappercarruselflotante img" ).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto] );
+			// indexGaleriaFoto
+		})
+
+		
+		// retrocede foto aumentada
+		$(".wrappercarruselflotante .fa-arrow-left").click( function(event) {
+			event.stopPropagation();
+			indexGaleriaFoto -= 1;
+			if ( indexGaleriaFoto < 0 ) { 
+				indexGaleriaFoto = galeriaFotos.length-1 
+			}
+
+			$(".wrappercarruselflotante img" ).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto] );
+			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+
+			if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 3 ) {
+				
+				indexGrupoFotos--;
+				if ( indexGrupoFotos < 0) { indexGrupoFotos = 1 };
+				for(i=0; i<4; i++) {
+					$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[i+(indexGrupoFotos*4)] );
+				}
+			}
+	
+			
+		}) 
+
+		// avanza foto aumentada
+		$(".wrappercarruselflotante .fa-arrow-right").click( function(event) {
+			event.stopPropagation();
+			indexGaleriaFoto = (indexGaleriaFoto+1)%galeriaFotos.length;
+			
+			$(".wrappercarruselflotante img" ).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto] );
+			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+			if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 0) {
+				indexGrupoFotos = (indexGrupoFotos+1) % ( galeriaFotos.length / $(".galeriafotos .wrapperfoto").length );
+				for(i=0; i<$(".galeriafotos .wrapperfoto").length; i++) {
+					$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto+i] );
+				}
+			}
+		}) 
+		 
+		$('.masfotos').click( function() {
+			// alert( $(".galeriafotos .wrapperfoto").length );
+			indexGrupoFotos = (indexGrupoFotos+1)%2;
+			// alert(indexGrupoFotos);
+			for(var i=0; i<4; i++) {
+				$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[i+(indexGrupoFotos*4)] );
+			}
+		})
+
+
+		$(".publicidad").click( function() {
+			window.open( "https://www.claroshop.com", "blank")
+		})
+
+
+		$(".wrappercarruselflotante").swipe( {
+	        //Single swipe handler for left swipes
+	        swipeRight:function(event, direction, distance, duration, fingerCount) {
+	          	event.stopPropagation();
+				indexGaleriaFoto -= 1;
+				if ( indexGaleriaFoto < 0 ) { 
+					indexGaleriaFoto = galeriaFotos.length-1 
+				}
+
+				$(".wrappercarruselflotante img" ).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto] );
+				$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+
+				if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 3 ) {
+					
+					indexGrupoFotos--;
+					if ( indexGrupoFotos < 0) { indexGrupoFotos = 1 };
+					for(i=0; i<4; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[i+(indexGrupoFotos*4)] );
+					}
+				}
+	        },
+	        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+	          	event.stopPropagation();
+				indexGaleriaFoto = (indexGaleriaFoto+1)%galeriaFotos.length;
+				
+				$(".wrappercarruselflotante img" ).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto] );
+				$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+				if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 0) {
+					indexGrupoFotos = (indexGrupoFotos+1) % ( galeriaFotos.length / $(".galeriafotos .wrapperfoto").length );
+					for(i=0; i<$(".galeriafotos .wrapperfoto").length; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", "images/galeriaexperiencias/"+galeriaFotos[indexGaleriaFoto+i] );
+					}
+				}
+	          	 
+	        },
+	        //Default is 75px, set to 0 for demo so any distance triggers swipe
+	        threshold:75
+	    });
+
+
+	    var dinamicaJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
+        	dinamicadataJson = data;
+        	console.log(data);
+        	$(".ladinamica .info h2").text(data.promocion.titulo);
+        	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
+        	$(".totallikes").text(data.promocion.likes);
+        	$(".participaciones").text(data.promocion.shares);
+        	// $(".participaciones").text(data.promocion.participaciones);
+        	$(".portada img").attr("src",data.promocion.imagen_lg);
+        	// $(".totalganadores").text(data.promocion.ganadores_total);
+        	$(".descripcion").html(data.promocion.inicio_juego_txt+data.promocion.bases);
+        	// $(".premio").html(data.promocion.premio);
+
+
+        	// $(".aliasganadores").empty();
+    //     	var aliasUserHTML = "";
+    //     	for(var i=0; i<data.promocion.ganadores_list.length; i++ ) {
+    //     		if ( data.promocion.ganadores_list[i].img == "" ) {
+				// 	aliasUserHTML += '<div class="imagedinamica" >';
+				// 	aliasUserHTML += '</div>';
+				// } else {
+				// 	aliasUserHTML += '<div class="imagedinamica foto" >';
+				// 	aliasUserHTML += '	<img src="'+data.promocion.ganadores_list[i].img+'">';
+				// 	aliasUserHTML += '</div>';
+				// }
+    //     	}
+    //     	$(".aliasganadores").append(aliasUserHTML);
+
+        	$.get('images/iconouser.svg', function(datasvg){	
+				$(".imagedinamica:not(.foto)").append(datasvg.documentElement);			
+				// $(".imagedinamica").each(function(index){
+				// 	var tinte = Math.random()*360;
+				// 	$(this).find("rect").css("fill", "hsl("+tinte+",68%,80%)");
+				// 	$(this).find("path").css("fill", "hsl("+tinte+",68%,80%)");
+				// 	$(this).find("circle").css("fill", "hsl("+tinte+",68%,80%)");
+				// })	
+			});
+        	
+        });
+
+	});
+
+	
+
+
+
+</script>

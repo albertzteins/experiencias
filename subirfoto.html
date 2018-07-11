@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aaa</title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<form name='formulario' id='formulario' method='post' action='https://admin.experienciastelcel.com/restful/fotoperfil/' target='_self' enctype="multipart/form-data"> 
+	  <label for="nombre">Archivo:</label>
+	 <input name="archivo1" type="file" id="archivo1"><br/>
+	 <input type="hidden" name="upk" value="2">
+	 <h5>En el caso de enviar fotos, recuerde detallar en el campo mensajes para que sección es y dejar datos de contacto. El tamaño de la imagen debe ser menor a 2Mb.</h5>
+	 <input type="submit" name="enviar" value="enviar">
+	</form>
+
+	<script type="text/javascript">
+		$(document).ready(function($) {
+
+		//    //// METODO PARA INSERTAR LOS DATOS //// 
+		//     $("#form").submit(function() {
+		//         event.preventDefault();
+
+		//         var cadena = $(this).serializeArray();
+
+		//         $.ajax({
+		//             url: 'https://admin.experienciastelcel.com/restful/fotoperfil/',
+		//             type: 'POST',
+		//             data: cadena
+		//         })      
+		//         .done(function(respuesta) {
+
+		//             var resultado = $.parseJSON(respuesta);
+		//             console.log(resultado);
+		//         .fail(function() {
+		//             console.log("error");
+		//         });
+		// 	});
+		});
+
+
+		    function sendit(e){
+			    e.preventDefault();
+			    //var data = $(this).serializeArray();
+			    var url = $(this).attr('action');
+			    var type = $(this).attr('method');
+			    forma = $(this).get(0);
+			    //forma = $('#empresaspt1').get(0);
+			    
+			    var data = new FormData(forma);
+			    //var data =$(this).serializeArray()
+			    console.log(data);
+			    $.ajax({url:url,
+			            type:type,
+			            data:data,
+			            cache: false,
+			            processData: false,
+			            contentType:false,
+			            dataType: 'json',
+			            success:function(response){
+
+			            }
+
+			    });
+
+			}
+
+			$('#formulario').submit(sendit);
+	</script>
+</body>
+</html>

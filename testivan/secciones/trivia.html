@@ -1,0 +1,779 @@
+
+<style type="text/css">
+		
+
+	/******************* trivia ************************/
+
+	.trivia {	
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 459px;
+		height: 595px;
+
+		margin-left: calc(459px/-2);
+		margin-top: calc(595px/-2);
+
+		/*margin-top: -384.5px;*/
+		
+		background-color: white;
+		z-index: 18;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		-ms-grid-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;
+
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;
+
+		color: white;
+		
+	}
+
+	
+
+
+	.trivia .tiempopregunta {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		color: black;
+		font-size: 1.4rem;
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		align-self: center;
+		justify-self: star;
+		padding-left: 1rem;
+		background-color: white;
+	}
+
+	.trivia .tiempopregunta .cronometro {
+		color: black;
+		margin-left: 0.8rem;
+	}
+
+	.trivia .close {
+		-ms-grid-column: 8;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: -2 / -1;
+		grid-row:  1 / span 1;
+		align-self: center;
+		justify-self: center;
+		color: #222222;
+		/*background-color: white;*/
+		text-align: center;
+		font-size: 1rem;
+		/*padding-top: 1.2rem;*/
+		cursor: pointer;
+	}
+
+	.trivia .portadav {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row:  2 / span 1;
+		/*overflow: hidden;*/
+	}
+
+	.trivia .portadav img {
+		/*width: 100%;
+		height: 100%;
+		object-fit: cover;*/
+	}
+
+	.trivia .fondoamarilloslide1 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 5;
+
+		grid-column: 1 / -1;
+		grid-row:  3 / span 5;
+		background-color: #00338d; /* color hexagesimal azul teelcel */
+	}
+
+	.trivia .textoportada {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 2 / -2;
+		grid-row:  3 / span 2;
+
+		padding-top: 2.0rem;
+		padding-bottom: 2.0rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: white;
+
+		z-index: 18;
+		/*background-color: #ffd100;*/
+	}
+
+	.trivia .textoportada .instruccion1 {
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+	}
+
+	.trivia .textoportada .instruccion2 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+	}
+
+
+	.trivia .numeropregunta {
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.6rem;
+	}
+
+
+	.trivia .pregunta {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  3 / span 1;
+		background-color: #00338d;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		padding-left: 1.3rem; 
+		padding-top: 1.3rem; 
+		padding-bottom: 1.3rem; 
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.trivia .opcion1 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  4 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #1a50a4;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.trivia .opcion2 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  5 / span 1;
+		padding-left: 1.3rem;
+		background-color: #346dba;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.trivia .opcion3 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  6 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #4e8ad1;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.trivia .continuarp {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 4;
+
+		-ms-grid-row: 7;
+		-ms-grid-row-span: 1;
+
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+		/*background-color: #f5f5f5;*/
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	/*.trivia .continuarp .btn {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+	}*/
+
+	.trivia .titulofinalportada {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 7;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / -2;
+		grid-row:  2 / span 1 ;
+		align-self: center;
+		justify-self: center;
+		font-size: 2.0rem;
+		color: white;
+	}
+
+	.trivia .felicidades {
+
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.trivia .felicidades .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.trivia .felicidades .comodin img {
+		height: 3rem;
+	}
+	.trivia .felicidades .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.trivia .felicidades .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+	
+
+	.trivia .losentimos {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.trivia .losentimos .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.trivia .losentimos .comodin img {
+		height: 3rem;
+	}
+	.trivia .losentimos .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.trivia .losentimos .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+
+	/**************************************************/
+
+
+	@media only screen and (max-width: 960px) { 
+		
+
+		.trivia {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+
+			margin-left: 0px;
+			margin-top: 0px;
+
+			
+			/*grid-template-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;*/
+		
+		}
+		
+		
+
+
+	}
+
+</style>
+
+<div class="trivia">
+
+	<!-- <div class="pagina"> -->
+	<div class="tiempopregunta">
+		<span class="fa fa-clock-o" aria-hidden="true"></span> 
+		<span class="cronometro no-seleccionable">
+			<span class="hora_">00</span>
+			:
+			<span class="minuto_">00</span>
+			:
+			<span class="segundo_">00</span>
+		</span>
+	</div>
+
+	<i class="fa fa-times close no-seleccionable" aria-hidden="true"></i>
+
+	<div class="portadav portadaprimera" data-slide="1" >
+		<!-- <img src="images/blanco.jpg"> -->
+	</div>
+
+
+	<div class="fondoamarilloslide1"></div>
+
+	<div class="textoportada" data-slide="1">
+		<p class="instruccion1 blanco"></p>
+
+		<p class="instruccion2"><span class="azulclarotexttelcel">¡Mucha suerte!</span></p>
+	</div>
+
+	
+
+	<div class="titulofinalportada bold" data-slide="7">
+		<div data-acierto="true" >¡Felicidades!</div>
+		<div data-acierto="false" >Gracias por participar</div>
+	</div>
+	<div class="felicidades" data-slide="5" data-acierto="true">
+		<div>Obtuviste <span class> </span> de X respuestas correctas en un tiempo de:
+			<span class="hora bold">00</span>:<span class="minuto bold">00</span>:<span class="segundo bold">00</span>.</div>
+		
+	</div>
+
+	<div class="losentimos" data-slide="5" data-acierto="false" >
+		<div></div>
+		
+	</div>
+
+
+
+
+	<div class="continuarp">
+		<div class="btn negro" data-slide="regresar">Regresar</div>
+		<div id="continuar" class="btn negro" data-slide="continuar">Continuar</div>
+		<div class="btn negro" data-slide="finalizar" >Finalizar</div>
+		<div class="btn negro" data-slide="seguirjugando">Seguir jugando</div>
+	</div>
+	<!-- </div> -->
+
+
+</div>
+
+<script type="text/javascript">
+	var dinamicadataJson = {};
+	var dinamicadataJsonRespuesta = {};
+	var totalpreguntas;
+
+	var triviaslide = 1;
+	var acierto = false;
+	var ultimoslide = 5;
+
+	
+	$(document).ready( function() {
+
+		// $('.dia_').text(dia_);
+		// $('.hora_').text(hora_);
+		// $('.minuto_').text(minuto_);
+		// $('.segundo_').text(segundo_);
+
+		segf_ = ('0' + segundo_).slice (-2);
+		minf_ = ('0' + minuto_).slice (-2);
+		horf_ = ('0' + hora_).slice (-2);
+		diaf_ = ('0' + dia_).slice (-2);
+
+		//alert(2);
+		// segf_ = ('0' + segundo_).slice (-2);
+		$('.dia_').text(diaf_);
+		$('.hora_').text(horf_);
+		$('.minuto_').text(minf_);
+		$('.segundo_').text( segf_ ) ;
+
+
+		var dinamicaJsonTrivia = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
+		 	// alert(data.promocion.pk);
+
+			dinamicadataJsonRespuesta = [ {'name':'promo','value': id_dinamica}, {'name':'uspk','value':upk} ];
+
+			
+
+			ultimoslide = data.promocion.preguntas.length+2;
+	        totalpreguntas = data.promocion.preguntas.length;
+	        /* Location of the image */
+  			
+
+  			$('.trivia .portadaprimera').css({
+  				"background-image": "url("+data.promocion.imagen+")",
+  				"background-position": "center center",
+  				"background-repeat:": "no-repeat",
+  				"background-size": "cover",
+  				"background-color": "white"
+  			})
+
+  			// alert( data.promocion.imagen );
+			// $('.portadaprimera img').attr("src", data.promocion.imagen);
+	        $(".textoportada .instruccion1").html(data.promocion.inicio_juego_txt);
+	        var preguntaimagenHTML = '';
+	        var preguntaHTML = '';
+
+	        // alert( data.promocion.preguntas.length )
+	        //
+	        for(var i=0; i<data.promocion.preguntas.length; i++) {
+
+	        	var imagenfull = ' style = "'
+	        	imagenfull += 'background-image: url('+data.promocion.preguntas[i].img+');'
+	  			imagenfull += 'background-position: center center;'
+	  			imagenfull += 'background-repeat: no-repeat;'
+	 			imagenfull += 'background-size: cover;'
+	  			imagenfull += 'background-color: white;"'
+
+	        	preguntaHTML += '<div class="portadav" data-slide="'+(i+2)+'" '+imagenfull+' >'
+				// preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img+'">'
+				preguntaHTML += '</div>'
+				// alert( preguntaHTML );
+				
+				servicioBeneficio = false;
+
+
+				if ( servicioBeneficio && i==0 ) {
+					preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+					preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+					preguntaHTML += '	<p>Beneficio <img src="images/claro-musica.png" width="100" >: esta respuesta te la mereces</p>'
+					preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+					preguntaHTML += '</div>'
+				} else {
+					preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+					preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+					preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+					preguntaHTML += '</div>'
+				}
+				
+				 
+				// alert( data.promocion.preguntas[i].options.length )
+				
+				for(var o=0; o<data.promocion.preguntas[i].options.length; o++) {
+					// if ( servicioBeneficio ) {
+						// if ( o == 0  && servicioBeneficio && i==0) {
+						// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+						// 	preguntaHTML += '	<i class="fa fa-dot-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+						// 	preguntaHTML += '</div>'
+						// } else {
+						// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+						// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+						// 	preguntaHTML += '</div>'
+						// }
+						
+					// } else {
+						preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable manita" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+						preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+						preguntaHTML += '</div>'
+					// }
+					
+					console.log( data.promocion.preguntas[i].options[o].texto )
+				}
+
+				
+				
+				
+	        }
+
+	        // alert( data );
+
+	        $( ".trivia .titulofinalportada" ).data( "slide", ultimoslide );
+			$( ".trivia .felicidades" ).data( "slide", ultimoslide );
+			$( ".trivia .losentimos" ).data( "slide", ultimoslide );
+			$( ".trivia .portadafinal").data( "slide", ultimoslide );
+			$( ".trivia .portadafinal img").attr("src", data.promocion.imagen);
+
+			// alert( data );
+
+	        preguntaHTML += '<div class="portadav portadafinal" data-slide="'+ ultimoslide+'" >'
+			// preguntaHTML += '	<img src="'+data.promocion.imagen+'">'
+			preguntaHTML += '</div>'
+
+	        // $(".trivia").append(preguntaimagenHTML);
+	        // console.log( preguntaHTML ); 	
+	        $(".trivia").append(preguntaHTML);
+
+	        $('.trivia .portadafinal').css({
+  				"background-image": "url("+data.promocion.imagen+")",
+  				"background-position": "center center",
+  				"background-repeat:": "no-repeat",
+  				"background-size": "cover",
+  				"background-color": "white"
+  			})
+
+	        triviaslide = 1;
+			$('[data-slide="continuar"]').show();
+			$('[data-slide="finalizar"]').hide();
+			$('[data-slide="regresar"]').hide();
+			$('[data-slide="seguirjugando"]').hide();
+			$('[data-slide="1"]').hide();
+			$('[data-slide="2"]').hide();
+			$('[data-slide="3"]').hide();
+			$('[data-slide="4"]').hide();
+			$('[data-slide="5"]').hide();
+			$('[data-slide="6"]').hide();
+			$('[data-slide="7"]').hide();
+			$('[data-slide="8"]').hide();
+			$('[data-slide="9"]').hide();
+			$('[data-slide="10"]').hide();
+			$(".trivia").show();
+			$('[data-slide="1"]').show();
+
+
+	        // $('[data-slide="continuar"]').click( function() {
+	       	// $('[data-slide="continuar"]').click( function() {
+	       	// $( "body" ).undelegate(  "#continuar", "click").delegate( "#continuar", "click", function() {
+	       	$('[data-slide="continuar"]').click( function() {
+	        	// alert("continuar");
+				$('[data-slide="'+(triviaslide)+'"]').hide();
+				triviaslide += 1;
+				switch(triviaslide) {
+				    case 1:
+				    	//alert(triviaslide)
+				        $('[data-slide="regresar"]').hide();
+				        $('[data-slide="finalizar"]').hide();
+				        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				        break;
+				    case 2:
+				    	comenzarCuentaProgresiva();
+				    	$('[data-slide="regresar"]').fadeIn(600);
+				    	// $('[data-slide="continuar"]').fadeIn(600);
+				    	// $('[data-slide="finalizar"]').hide();
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				    	$.get('https://admin.experienciastelcel.com/restful/participando/'+upk+'/'+id_dinamica+'/',function(response){
+						    console.log(response);
+						});
+				    	break;
+				    case (ultimoslide-1):
+				    	$('[data-slide="continuar"]').hide();
+				    	$('[data-slide="finalizar"]').fadeIn(600);
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				    	var resultadoJson =  [
+						    {'name':'promo','value':id_dinamica},
+						    {'name':'uspk','value':upk},
+						    {'name':'pregunta','value':13}, 
+						    {'name':'resp_13','value':'bilbbo'},
+						    {'name':'pregunta','value':24},
+						    {'name':'resp_24','value':'sauron'}
+					    ]
+				    	break;
+				    case ultimoslide:
+				    	$('[data-slide="regresar"]').hide();
+				    	$('[data-slide="continuar"]').hide();
+				    	$('[data-slide="finalizar"]').hide();
+				    	$('[data-slide="seguirjugando"]').fadeIn(600);
+
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				        if ( acierto == true ) {
+				        	$('[data-acierto="false"]').hide();
+							$('[data-acierto="true"]').fadeIn(600);
+						} else {
+							$('[data-acierto="true"]').hide();
+							$('[data-acierto="false"]').fadeIn(600);
+						}	
+				        break;
+				    default:
+				        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				}
+				//triviaslide += 1;
+			})
+
+			$('[data-slide="regresar"]').click( function() {
+				$('[data-slide="'+triviaslide+'"]').hide();
+				triviaslide -= 1;
+				switch(triviaslide) {
+				    case 1:
+				    	//comenzarCuentaProgresiva();
+				        $('[data-slide="regresar"]').hide();
+				        $('[data-slide="finalizar"]').hide();
+				        $('[data-slide="continuar"]').fadeIn(600);
+				        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				        break;
+				    case 2:
+				    	// $('[data-slide="regresar"]').fadeIn(600);
+				    	// $('[data-slide="continuar"]').fadeIn(600);
+				    	// $('[data-slide="finalizar"]').hide();
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				    	break;
+				    case (ultimoslide-2):
+				    	$('[data-slide="finalizar"]').hide();
+				    	$('[data-slide="continuar"]').fadeIn(600);
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				    	break;
+				    case (ultimoslide-1):
+				    	$('[data-slide="finalizar"]').fadeIn(600);
+				    	$('[data-slide="regresar"]').fadeIn(600);
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				    	break;
+				    case ultimoslide:
+				    	$('[data-slide="regresar"]').hide();
+				    	$('[data-slide="continuar"]').hide();
+				    	$('[data-slide="finalizar"]').hide();
+
+				    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				        if ( acierto == true ) {
+				        	$('[data-acierto="false"]').hide();
+							$('[data-acierto="true"]').fadeIn(600);
+						} else {
+							$('[data-acierto="true"]').hide();
+							$('[data-acierto="false"]').fadeIn(600);
+						}
+						$('[data-slide="seguirjugando"]').fadeIn(600);
+				        break;
+				    default:
+				        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+				}
+			})
+
+			$('[data-slide="finalizar"]').click( function() {
+				clearInterval( cuentaprogresiva );
+				
+				$('[data-slide="'+triviaslide+'"]').hide();
+
+				triviaslide += 1;
+
+				$('[data-slide="regresar"]').hide();
+		    	$('[data-slide="continuar"]').hide();
+		    	$('[data-slide="finalizar"]').hide();
+
+		    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+		        if ( acierto == true ) {
+		        	$('[data-acierto="false"]').hide();
+					$('[data-acierto="true"]').fadeIn(600);
+				} else {
+					$('[data-acierto="true"]').hide();
+					$('[data-acierto="false"]').fadeIn(600);
+				}
+				$('[data-slide="seguirjugando"]').fadeIn(600);
+
+				console.log( dinamicadataJsonRespuesta );
+
+				$.ajax({'url':'https://admin.experienciastelcel.com/restful/finaltrivia/',
+			          'type':'GET',
+			          'dataType':'json',
+			          'data':dinamicadataJsonRespuesta,
+			          'success':function(response){
+			            	// console.log(response.tiempoUTC);
+			            	var tiempoJuego = convertMS(response.tiempoUTC);
+			            	console.log(tiempoJuego.d)
+			            	console.log(tiempoJuego.h)
+			            	console.log(tiempoJuego.m)
+			            	console.log(tiempoJuego.s)
+
+			            	console.log(response.correctas);
+			            	console.log(totalpreguntas)
+
+			            	var respuesta = '<p style="font-size:1rem;">Obtuviste '+response.correctas+' de '+totalpreguntas+' respuestas correctas<br>en un tiempo de:</p>'
+							respuesta += '<p style="font-size:2rem;">'+tiempoJuego.h+":"+tiempoJuego.m+":"+tiempoJuego.s+'</p>'
+							respuesta += '<p style="font-size:1rem;">Los resultados se darán a conocer una semana despues de cerrado el evento</p>'
+							respuesta += '<p style="font-size:2rem;">¡Mucha suerte!</p>'
+
+							$(".losentimos").html(respuesta);
+
+			          }
+			     });
+				
+			})
+
+			$('[data-slide="seguirjugando"]').click( function() {
+				cargaContenido( "inicio.html" );
+			});
+
+			$(".trivia .close").click( function() {
+				$(".fondoventanasflotante").hide();
+				$( ".trivia" ).remove();
+			})
+
+		});
+
+		// $(".trivia").hide();
+		// $('[data-slide="regresar"]').hide();
+		// $('[data-slide="finalizar"]').hide();
+		// $('[data-slide="seguirjugando"]').hide();
+		// $('[data-slide="1"]').hide();
+		// $('[data-slide="2"]').hide();
+		// $('[data-slide="3"]').hide();
+		// $('[data-slide="4"]').hide();
+		// $('[data-slide="5"]').hide();
+		// $('[data-slide="6"]').hide();
+		// $('[data-slide="7"]').hide();
+		// $('[data-slide="8"]').hide();
+		// $('[data-slide="9"]').hide();
+		// $('[data-slide="10"]').hide();
+
+		$( "body" ).undelegate(  ".opciones", "click").delegate( ".opciones", "click", function() {
+			$(".opciones").find( ".fa" ).removeClass("fa-dot-circle-o");
+			$(".opciones").find( ".fa" ).addClass("fa-circle-o");
+			$(this).find( ".fa" ).removeClass("fa-circle-o");
+			$(this).find( ".fa" ).addClass("fa-dot-circle-o");
+			//alert(triviaslide );
+			// alert( $(this).data("pk") )
+			// alert($(this).data("rpk") );
+			dinamicadataJsonRespuesta.push( {'name':'pregunta','value': $(this).data("pk") })
+			dinamicadataJsonRespuesta.push( {'name':'resp_'+$(this).data("pk"),'value': $(this).data("rpk") })
+
+		})
+		
+
+	})
+	
+</script>

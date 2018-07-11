@@ -1,0 +1,136 @@
+
+<style type="text/css">
+    
+
+  /******************* trivia ************************/
+
+  .trivia { 
+    position:absolute;
+    top: 10%;
+    height:auto;
+    margin: auto;
+    /*margin-top: -384.5px;*/
+    
+    background-color: white;
+    z-index: 18;
+
+    border-radius: 0.4em;
+    overflow: hidden;
+    box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+    left: 50%;
+    width: 345px;
+      margin-left: calc(345px/-2);
+    
+  }
+
+  
+
+  .distancia{
+    padding:20px;
+    text-align: right;
+  }
+
+
+
+  /**************************************************/
+
+
+  @media only screen and (max-width: 960px) { 
+    
+
+    .trivia {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+
+      margin-left: 0px;
+      margin-top: 0px;
+
+      
+      /*grid-template-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;*/
+    
+    }
+    
+    
+
+
+  }
+
+  .links{
+    cursor: pointer;
+  }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="/puzz/css/styles.css"/>
+
+<div class="trivia" >
+
+  <div style="padding:20px;font-size: 1.4rem;">
+    <!-- <div class="pagina"> -->
+    <div  contador-juego style="float: left;">
+      <span class="fa fa-clock-o" aria-hidden="true"></span> &nbsp;&nbsp;
+      <span class="cronometro no-seleccionable">
+        <span id="days" class="hora_">00</span>
+        :
+        <span id="hours" class="hora_">00</span>
+        :
+        <span id="minutes" class="minuto_">00</span>
+        :
+        <span id="seconds" class="segundo_">00</span>
+      </span>
+    </div>
+    <div style="float: right;">
+    <i class="fa fa-times close no-seleccionable links" aria-hidden="true"></i>
+    </div>
+    <div style="clear: both;height: 0px;"></div>
+  </div>
+
+
+    <div style="padding:20px;">
+      <div id="finalizarbox"></div>
+      <div ng-app="puzzleApp" id="puzzbox" >
+        <div ng-show="hiddens">
+        <div style="text-align: center;"><img src="{{src}}" style="width:90px;" /></div>
+        <div ng-include="type"></div>
+        <script type="text/ng-template" id="sliding-puzzle">
+          <fieldset id="sliding-simple" style="border: 0px solid;margin:10px 0px; ">
+            <sliding-puzzle size="3x3" src="{{src}}" style="width:320px;margin: auto;"></sliding-puzzle>            
+          </fieldset>
+        </script>
+        </div>
+        <div ng-show="finalizado">
+          Gracias por participar
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  
+</div>
+
+
+
+  <script type="text/javascript">
+    
+      $(".close").click( function() {
+        $(".fondoventanasflotante").hide();
+        $('.trivia').remove();
+      })    
+
+  </script>
+    <script type="text/javascript" src="/puzz/js/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/puzz/js/puzzle/slidingPuzzle.js"></script>
+  <script type="text/javascript" src="/puzz/js/app.js"></script>
+
+  
+
+
+
+

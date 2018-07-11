@@ -1,0 +1,614 @@
+<style type="text/css">
+	
+
+	.headercategoria {
+
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		/*height: 448px;*/
+		margin: auto;
+
+		display: -ms-grid;
+	    -ms-grid-columns: -ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+		-ms-grid-rows: 113px;
+
+		display: grid;
+		grid-template-columns: 10px repeat(5, 1fr) [datasocial-inicio] repeat(7, 1fr) [datasocial-final] 10px ;
+		grid-template-rows: 113px ;
+
+		/*grid-template-rows: repeat(14, 1fr);*/
+		/*grid-auto-rows:464px;*/
+		grid-column-gap: 20px;
+		/*grid-row-gap: 20px;*/
+
+		color: white;
+
+		border-bottom: 1px solid rgb(180,180,180);
+
+	}
+
+
+	
+
+
+	
+
+ 	.headercategoria .linea {
+ 		-ms-grid-column: 2;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+ 		grid-column: 2 / -2;
+ 		grid-row: 1 / 2;
+ 		/*height: 1rem;*/
+ 		border-bottom: 1px solid rgb(180,180,180);
+ 	}
+
+ 	.headercategoria h1 {
+ 		-ms-grid-column: 2;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+ 		grid-column: 2 / span 3;
+ 		grid-row: 1 / 2;
+ 		align-self: end;
+ 		padding-bottom: 1.2rem;
+ 	}
+
+/* 	.headercategoria .wrapper {
+ 		grid-column: datasocial-inicio/datasocial-final;
+ 		grid-row: 1 / 2;
+
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: end;
+ 		justify-content: space-between;
+
+ 		padding-bottom: 0.6rem;
+
+ 		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+ 	}*/
+
+
+
+ 	.wrappercategoria {
+ 		width: 920px; /*58.75rem;*/ /*960 980*/
+		/*height: 448px;*/
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+		/*align-content: flex-end;*/
+		/*justify-content: center;*/
+		/*justify-content: space-between;*/
+		/*align-content: center;*/
+
+		/*flex-wrap: nowrap | wrap | wrap-reverse;*/
+		/**/
+		/*display: -ms-grid;
+	    -ms-grid-columns: -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+		-ms-grid-rows: 113px;
+
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr)  ;
+
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;*/
+		/**/
+
+		color: white;
+		padding-top: 40px;
+ 	}
+
+
+ 	.dinamicacard {
+		/*width: 100%;*/
+		width: 286px;
+		height: 423px;
+
+		margin: 10px;
+		/*align-self: flex-start;*/
+		/*align-self: auto;*/
+		/*margin-right: 10px;
+		margin-bottom: 20px;*/
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 8px 36px 177px 154px 48px;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 177px 154px [footer] 48px;
+
+
+
+		/*font-size: 1rem;*/
+		background-color: white;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+		/*box-shadow:2px 2px 6px rgba(0,0,0,0.5);*/
+
+		cursor: pointer;
+
+		/*margin-left: 20px;*/
+
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+	}
+	
+
+	/*.dinamicacard:first-child {
+		margin-left: 0px;
+	}*/
+
+	.dinamicacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		background-color: white;
+	}
+
+	.dinamicacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 2;
+
+	}
+
+	.dinamicacard .imagedinamica img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.dinamicacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+		/*text-align: center;*/
+		background-color: #f5f5f5;
+		color: rgb(80,80,80);
+		/*line-height: 36px;*/
+
+		display: flex;
+		flex-direction: column;
+		
+		/*align-content: center;*/
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.dinamicacard .diaevento div {
+		text-align: center;
+	}
+
+	.dinamicacard .diaevento .diacard {
+		margin-top: 0.1rem;
+		font-size: 1.2rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.dinamicacard .diaevento .mescard {
+		font-size: 0.7rem;
+		font-weight: normal;
+	}
+
+	.dinamicacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		/*text-align: center;*/
+		background-color: #f5f5f5;
+
+		border-radius: 0rem 0rem 0.5rem 0rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.dinamicacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.dinamicacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dinamicacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.dinamicacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	
+
+	.wrappermostrarmas {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 120px;
+	}
+	.wrappermostrarmas .btn {
+		width: 180px;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		box-shadow:2px 2px 6px rgb(200,200,200);
+	}
+
+
+	
+
+	@media only screen and (max-width: 960px) { 
+		.headercategoria {
+			width: 100%; 
+			grid-template-columns: 10px [datasocial-inicio] repeat(5, 1fr)  repeat(7, 1fr) [datasocial-final] 10px ;
+			grid-template-rows: 113px 1fr ;
+		}
+		.headercategoria .linea {
+	 		grid-column: 2 / -2;
+	 		grid-row: 2 / 3;
+	 	}
+
+	 	.headercategoria .wrapper {
+	 		/*grid-column: datasocial-inicio/datasocial-final;*/
+	 		grid-row: 2 / 3;
+	 		font-size: 0.4rem;
+	 	}
+
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.wrappercategoria {
+			width: calc(100% - 40px);
+			/*width: 80%;*/
+			/*grid-template-columns: repeat(1, 1fr)  ;*/
+			justify-content: center;
+		}
+
+		
+		
+
+		/*.publicidad {
+			width: calc(100% - 20px);
+		}
+
+		.publicidad .wrapperp {
+			grid-column: 1 / -1;
+		}
+
+		.lastrow {
+			width: 100%;
+		}*/
+	}
+
+</style>
+
+
+<header class="headercategoria">
+	<h1 class="titulocategoria typotituloseccion grisoscuro"></h1>
+	<!-- <div class="linea"></div> -->
+	<!-- <nav class="wrapper grisoscuro">
+		<div>
+			<span>TODOS</span>
+			<span class="numerosDinamicos blanco">12334</span>
+		</div>
+		<div>
+			<span>RECOPENSAS</span>
+			<span class="numerosDinamicos blanco">1222</span>
+		</div>	
+		<div>
+			<span>CONCURSOS</span>
+			<span class="numerosDinamicos blanco">122</span>	
+		</div>
+	</nav> -->
+</header>
+
+<!-- <section class="categoriadinamica bloquesection"> -->
+	
+	
+
+
+<div class="wrappercategoria">
+	
+</div>
+
+	<div class="wrappermostrarmas">
+			<!-- <div class="btn azulmuyclaroBack no-seleccionable">MOSTRAR MÁS</div> -->
+	</div>
+	
+<!-- </section> -->
+
+<section class="publicidad bloquesection">
+	<div class="wrapperp">
+		<img src="images/publicidad2.jpg">
+	</div>
+</section>
+
+<section class="lastrow">
+	<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+</section>
+
+<script type="text/javascript">
+	
+	$(document).ready( function() {
+		//alert( categoria);
+		
+		$(".titulocategoria").text(categoriaTitulo);
+		
+		// https://admin.experienciastelcel.com/restful/promos=musica
+		var dinamicasJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promosby/?search="+categoria , function( data ) {
+
+			var dinamicasHTML = '';
+			for(i=0; i<data.dinamicas.length; i++) {
+				if ( data.dinamicas[i].status == "proximamente" ) {
+					dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
+				} else {
+					dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
+				}
+				
+				dinamicasHTML += '	<div class="bartop"></div>'
+				
+				// foto a pasar a Back
+				dinamicasHTML += '	<div class="imagedinamica">'
+				dinamicasHTML += '		<img src="'+data.dinamicas[i].imagen+'">'
+				dinamicasHTML += '	</div>'
+				//
+
+				if ( data.dinamicas[i].status == "proximamente" ) {
+					dinamicasHTML += '	<div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+				} else {
+					dinamicasHTML += '	<div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
+					dinamicasHTML += '	<div class="diaevento grismedio" >';
+					dinamicasHTML += '		<div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
+					dinamicasHTML += '		<div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
+					dinamicasHTML += '	</div>'
+				}
+
+				
+
+
+
+				// if ( i==5 ) {
+				// 	dinamicasHTML += '	<div class="segmento"><img src="images/icono_claromusica.png" ></div>';
+				// }
+				dinamicasHTML += '	<div class="infodinamica">'
+				dinamicasHTML += '		<div class="typotitulocard grismuyoscuro">'
+				dinamicasHTML += '			'+data.dinamicas[i].titulo_completo
+				dinamicasHTML += '		</div>'
+
+				if ( data.dinamicas[i].status != "proximamente" ) {
+					dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+				}
+				
+				// dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+
+
+				dinamicasHTML += '	</div>'
+				dinamicasHTML += '	<footer class="grismedio">'
+				dinamicasHTML += '		<div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+				dinamicasHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+				dinamicasHTML += '			<div class="totallikes">'+data.dinamicas[i].likes+'</div>'
+				dinamicasHTML += '		</div>'
+				dinamicasHTML += '		<div class="social">'
+				dinamicasHTML += '			<div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+				dinamicasHTML += '			<div>'+data.dinamicas[i].participaciones+'</div>'
+				dinamicasHTML += '		</div>'
+				dinamicasHTML += '	</footer>'
+				dinamicasHTML += '</div>'
+
+			}
+			$(".wrappercategoria").append( dinamicasHTML );
+		});
+		
+
+
+		// var promocionesJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promosbycat/?search="+categoria, function( 
+		// var promocionesJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promos/", function( data ) {
+		// 	// console.log(data)
+		// 	if ( data.dinamicas.length < 6 ) {
+		// 		$(".wrappermostrarmas div").hide();
+		// 	} else {
+		// 		$(".wrappermostrarmas div").show();
+		// 	}
+		// 	// $(".titulocategoria").text(categoria)
+		// 	$(".titulocategoria").text(categoriaTitulo);
+		// 	var dinamica = '';
+		// 	for(i=0; i<data.dinamicas.length; i++ ) {		
+		// 			console.log(data.dinamicas[i].categorias);
+		// 			dinamica += '<div class="dinamicacard puntero ultimos" data-id="'+data.dinamicas[i].pk+'">';
+		// 				dinamica += '<div class="bartop"></div>';
+		// 				// var numazar = Math.round( Math.random()*5 );
+		// 				// alert(numazar);
+		// 				dinamica += '<div class="imagedinamica"><img src="'+data.dinamicas[i].imagen+'" ></div>';
+		// 				dinamica += '<div class="tagdinamica regular12 grismedio">Recompensa</div>';
+		// 				dinamica += '<div class="infodinamica">';
+		// 				dinamica += '	<div class="regular16 grismuyoscuro">'+data.dinamicas[i].titulo_completo+'</div>';
+		// 				dinamica += '	<div class="vigencia typovigencia grisoscuro">VIGENCIA: '+data.dinamicas[i].vigencia+'</div>';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<footer class="grismedio">';
+		// 				dinamica += '	<div>';
+		// 				dinamica += '		<div class="fa fa-heart-o" style="margin-right:0.5em"></div>';
+		// 				dinamica += '		<div>'+data.dinamicas[i].likes+'</div>';
+		// 				dinamica += '	</div>';
+		// 				dinamica += '	<div class="social">';
+		// 				dinamica += '		<div class="fa fa-user-o" style="margin-right:0.5em"></div>';
+		// 				dinamica += '		<div>'+data.dinamicas[i].participaciones+'</div>';
+		// 				dinamica += '	</div>';
+		// 				dinamica += '</footer>';
+		// 			dinamica += '</div>';
+		// 	}
+
+		// 	$(".wrappercategoria").append( dinamica );
+		// 	$(".ultimos").hide().fadeTo(1000, 1.0).removeClass('ultimos');
+		// });
+		// https://admin.experienciastelcel.com/restful/promosbycat/?search=musica
+		// "https://admin.experienciastelcel.com/restful/promosbycat/?search="+categoria
+
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+
+		$( "body" ).undelegate(  ".wrappermostrarmas .btn", "click").delegate( ".wrappermostrarmas .btn", "click", function() {
+		
+			var dinamica = '';
+			for(i=0; i<6; i++ ) {			
+					dinamica += '<div class="dinamicacard2 puntero ultimos">';
+						dinamica += '<div class="bartop"></div>';
+						// var numazar = Math.round( Math.random()*5 );
+						// alert(numazar);
+						dinamica += '<div class="imagedinamica"><img src="images/dinamica'+(i+1)+'.jpg" ></div>';
+						dinamica += '<div class="tagdinamica regular12 grismedio">Recompensa</div>';
+						dinamica += '<div class="infodinamica">';
+						dinamica += '	<div class="regular16 grismuyoscuro">';
+						dinamica += '		Todo el helado que<br>quieras por un año.';
+						dinamica += '	</div>';
+						dinamica += '	<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: FEB. 08 | 2018</div>';
+						dinamica += '</div>';
+						dinamica += '<footer class="grismedio">';
+						dinamica += '	<div>';
+						dinamica += '		<div class="fa fa-heart-o" style="margin-right:0.5em"></div>';
+						dinamica += '		<div>12345</div>';
+						dinamica += '	</div>';
+						dinamica += '	<div class="social">';
+						dinamica += '		<div class="fa fa-share-alt" style="margin-right:0.5em"></div>';
+						dinamica += '		<div>12345</div>';
+						dinamica += '	</div>';
+						dinamica += '</footer>';
+					dinamica += '</div>';
+			}
+
+			$(".wrappercategoria").append( dinamica );
+
+			$(".ultimos").hide().fadeTo(1000, 1.0).removeClass('ultimos');
+			// $(".ultimos").show();
+			//$(".ultimos").fadeTo(300, 1.0);
+		})
+
+
+		// $(".dinamicacard2").click( function() {
+		// 	$(".containergrid").fadeTo(400,0.0, function() {
+		// 		$('html, body').scrollTop(0);
+		// 		$(".containergrid").load("secciones/dinamica.html", function() {
+		// 			$(".containergrid").fadeTo(400,1.0);
+		// 		});
+		// 	})
+		// })
+
+
+		// $( "body" ).undelegate(  ".wrappercategoria .dinamicacard2", "click").delegate( ".wrappercategoria .dinamicacard2", "click", function() {
+		// 	id_dinamica = $(this).data("id");
+		// 	alert("aaa"+id_dinamica)
+		// 	cargaContenido( "dinamica.html" )
+		// });
+
+
+		
+		$(".publicidad").click( function() {
+			window.open( "https://www.telcel.com/promociones/planes/doble-megas-en-planes-telcel", "blank")
+		})
+
+	})
+		
+</script>

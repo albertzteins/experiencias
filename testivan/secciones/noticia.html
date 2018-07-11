@@ -1,0 +1,234 @@
+<style type="text/css">
+	
+
+	.typotitulonoticia {
+		font-size: 1.6rem;
+		font-weight: bold;
+		line-height: 1.6rem;
+	}
+
+	.typoautorfechanoticia {
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 1.8rem;
+	}
+
+	.typosocialnoticia {
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+		color: #0097a7;
+	}
+
+	/******************** noticia *************************/
+
+	.noticias {
+
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		/*height: 516px;*/
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 36px 234px 178px 48px [cuerpotexto] 1fr [fincuerpotexto];
+		color: white;
+		background-color: white;
+
+		grid-column-gap: 20px;
+	}
+
+	.noticias .imagenfondo {
+	    /*z-index: -1;*/
+		grid-column: 1 / -1;
+		grid-row: 1 / 4;
+	}
+
+	.noticias .imagenfondo img {
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+	/*.titulo {
+		background-color: white;
+		align-self: start;
+		text-align: center;
+	}*/
+
+	.noticias .titulo {
+		grid-column: 3 / span 2;
+		grid-row: 1 / 2;
+		background-color: white;
+		/*align-self: center;*/
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.noticias .infocard {
+		z-index: 2;
+		grid-column: 3 / span 5;
+		grid-row: 3 / 5;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+
+		background-color: #f5f5f5;
+
+		box-shadow:2px 2px 6px rgba(0,0,0,0.4);
+
+		font-size: 1.4rem;
+
+	}
+
+	.noticias .infocard footer { 
+		height: 48px;
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 1.0rem;
+		padding-right: 1.0rem;
+		font-size: 0.8rem;
+	}
+
+	.noticias .infocard footer div { 
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		/*font-size: 1.2rem;*/
+	}
+
+	.noticias .infocard .info {
+		/*height: 100%;*/
+		height: 178px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0.8rem 1rem 1rem 1rem;
+		font-size: 2rem;
+		line-height: 2rem;
+		font-weight: bold;
+	} 
+
+	.noticias .socialnoticia {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 10rem;
+	}
+
+	.noticias .cuerpotexto {
+		margin-top: 3rem;
+		grid-column: 3 / span 6;
+		grid-row: cuerpotexto / fincuerpotexto;
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+	}
+
+	.noticias .cuerpotexto p {
+		margin-bottom: 1.1rem;
+	}
+
+
+	.lastrow {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 80px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		/*color: white;*/
+		background-color: white;
+	}
+
+
+
+	.lastrow .scrolltotop {
+		grid-column: -3 / span 1;
+		grid-row: 1 / -1;
+		justify-self: center;
+		align-self: center;
+		color: rgba(200,200,200);
+		font-size: 1.3rem;
+		/*text-align: center;*/
+	}
+
+
+</style>
+
+<section class="noticias bloquesection">
+	<div class="imagenfondo">
+		<img src="images/noticia1.png">
+	</div>
+
+	<!-- <div class="titulo grisoscuro info14">Noticias</div> -->
+
+	<div class="infocard">
+		<div class="info">
+			<div class="grisoscuro">
+				<p class="typoautorfechanoticia">Noticia</p>
+				<p class="typotitulonoticia">La tecnología en la Copa Confederaciones</p>
+				<p class="typoautorfechanoticia">por <span class="autor">chucho pérez</span>: <span class="fecha">feb. 08 | 2018</span></p>
+			</div>
+			<div class="socialnoticia typosocialnoticia">
+				<div>ME GUSTA</div>
+				<div>COMPARTIR</div>
+			</div>
+		</div>
+		
+		<footer class="grismedio typofootercard">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="cuerpotexto grisoscuro">
+		<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do 
+		eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut 
+		enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+		dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+		proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do 
+		eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut 
+		enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+		dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+		proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur  adipiscing elit, sed do 
+		eiusmod tempor incididunt  ut labore et dolore magna aliqua. Ut 
+		enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+		ut aliquip ex ea commodo consequat.</p>
+		<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+		dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+		proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+	</div>
+</section>
+
+<section class="lastrow">
+	<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+</section>
+
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+	})
+
+	
+	
+</script>

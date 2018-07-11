@@ -1,0 +1,828 @@
+<style type="text/css">
+	
+
+	/* css dinamica car en contexto */
+
+	.ladinamica {
+		width: 960px;
+		margin: auto;
+		/*padding-top: 64px;*/
+		display: grid;
+		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
+		grid-template-rows: 246px 202px 48px 1fr;
+		grid-gap: 0px 20px; /* row gap   column gap */
+	}
+		.ladinamica h3 {
+			font-size: 2rem;
+			margin-bottom: 1.4rem;
+			font-weight: lighter;
+		}
+
+		.portada {
+			grid-row: 1 / span 2;
+			grid-column: 1 / -1;
+			
+		}
+
+		.portada img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.infosombra {
+			grid-column: info-start / info-end;
+			grid-row: 2/4;
+			/*background-color: rgb(220,220,220);*/
+			box-shadow:2px 2px 6px rgb(200,200,200);
+			z-index: 1;
+		}
+
+		.info {
+			grid-column: info-start / info-end;
+			grid-row: 2/3;
+			background-color: rgb(220,220,220);
+			z-index: 2;
+			margin-bottom: 0px;
+			padding: 18px 18px 18px 21px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.info h2 {
+			font-size: 1.6rem;
+			line-height: 1.6rem;
+			margin-bottom: 1rem;
+		}
+
+		.info .viral {
+			width: calc(50% - 20px);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.socialdata {
+			grid-column: info-start / info-end;
+			grid-row: 3/4;
+			background-color: white;
+			z-index: 2;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			/*align-content: center; */
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		.socialdata div {
+
+			display: flex;
+			flex-direction: row;
+			/*justify-content: space-between;*/
+			align-items: center; 
+			/*align-content: center;*/
+			font-size: 0.8rem;
+
+		}
+
+
+
+	/*.contadorregresivo {
+		grid-column: 1 / -1;
+		grid-row: 3/5;
+		background-color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+		.contadorregresivo .numeros {
+			display: flex;
+			flex-direction: row;
+		
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 6rem;
+		}
+
+
+		.contadorregresivo .numeros .tagnumero{
+			font-size: 0.6rem;
+			text-align: center;
+			margin-top: 3rem;
+		}
+
+		.contadorregresivo .titulo {
+			font-size: 0.8rem;
+			margin-bottom: 3rem;
+		}*/
+
+
+
+	/*.fondogris {
+		grid-column: 1 / -1;
+		grid-row: 5/7;
+		background-color: rgb(240,240,240);
+	}*/
+	.ladinamica .bloqueizquierdo {
+		grid-column: info-start / info-end;
+		/*grid-column: info-start / info-end;*/
+		grid-row: 5/ span 1;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		line-height: 1.4rem;
+
+		/*display: grid;*/
+		/*grid-template-columns: repeat(6, 1fr);*/
+		/*grid-column-gap: 20px;*/
+	}
+
+		
+
+		.bloqueizquierdo p {
+			margin-bottom: 1.6rem;
+		}
+
+		/*.bloqueizquierdo .galeriafotos {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px 20px;
+		}
+
+		.bloqueizquierdo .galeriafotos .wrapperfoto {
+			width: 100%;
+			height: 175px;
+			cursor: pointer;
+		}
+		
+
+		.bloqueizquierdo .galeriafotos .wrapperfoto img {
+			width: 100%;
+			height: 100%; 
+			object-fit: cover;
+		}*/
+
+		.ganadores .galeriafotos {
+			/*grid-column: 1 / -1;*/
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px 20px;
+		}
+
+		.ganadores .galeriafotos .wrapperfoto {
+			width: 100%;
+			height: 144px;
+			cursor: pointer;
+		}
+		
+
+		.ganadores .galeriafotos .wrapperfoto img {
+			width: 100%;
+			height: 100%; 
+			object-fit: cover;
+		}
+		
+
+		.btn {
+			/*background-color: #84ffff;*/
+			padding: 5px 15px 5px 15px;
+			box-shadow:2px 2px 6px rgb(180,180,180);
+			cursor: pointer;
+		}
+
+
+		.linkcyanmayuscula {
+			color: #0097a7;
+			font-size: 0.8rem;
+			font-weight: normal;
+			cursor: pointer;
+			text-transform: capitalize;
+		}
+
+		.wrappercomodin {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			/*margin-top: 3rem;*/
+		}
+		.wrappercomodin div {
+			font-size: 3rem;
+			font-weight: bold;
+			margin-left: 0.5rem;
+		}
+
+		.separador {
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px solid #AAAAAA;
+		}
+
+
+		.disabled {
+			background-color: rgb(220,220,220);
+			color: white;
+		}
+
+
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		z-index: 15;
+	}
+
+
+	/************************************************/
+
+	.ladinamica .ganadores {
+		grid-column: form-start / form-end;
+		grid-row: 5/ span 1;
+		padding-bottom: 4rem;
+	}
+
+	.ladinamica .ganadores .aliasganadores {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr );
+		grid-gap: 20px 20px;
+
+
+	}
+
+	.ladinamica .aliasganadores .imagedinamica {
+
+		width: 80px;
+		height: 80px;
+		cursor: pointer;
+	}
+
+	.ladinamica .aliasganadores .imagedinamica img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2.5px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+
+	.ladinamica .aliasganadores .imagedinamica svg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2.5px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+
+	.ladinamica .ganadores .btnKKK {
+		margin-top: 2rem !important;
+		width: 60%;
+	}
+
+
+	.wrapperbotoncentrado {
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.wrappercarruselflotante {
+		color: white;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 80%;
+		height: 80%;
+		margin-left: -40%;
+		margin-top: -40vh;
+		/*background-color: yellow;*/
+		z-index: 20;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left {
+		color: white;
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	    text-align: center;
+
+		-webkit-transition: 0.1s; /* Safari */
+	    transition-duration: 0.1s;
+	    transition-timing-function: ease-in;
+	}
+
+	.wrappercarruselflotante .fa-arrow-right {
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+	    text-align: center;
+
+		-webkit-transition: 0.1s; /* Safari */
+	    transition-duration: 0.1s;
+	    transition-timing-function: ease-in;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left:hover {
+		background-color: #AAA;
+	}
+
+	.wrappercarruselflotante .fa-arrow-right:hover {
+		background-color: #AAA;
+	}
+
+	.wrappercarruselflotante .fa-arrow-left:active { 
+	    background-color: #3c464c;
+	    color: #fff
+	}
+
+	.wrappercarruselflotante .fa-arrow-right:active { 
+	    background-color: #3c464c;
+	    color: #fff
+	}
+
+	.wrappercarruselflotante .wrappercarruselfoto {
+		width: 70vw;
+		height: 46.6vw;	
+	}
+
+	.wrappercarruselflotante .wrappercarruselfoto img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (max-width: 960px) { 
+		
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.ladinamica {
+			width: 100%;
+		}
+
+		.portada {
+			width: 100%;
+		} 
+
+		.infosombra {
+			grid-column: 2 / -2;
+			grid-row: 2/4;
+
+		}
+
+		.info {
+			grid-column: 2 / -2;
+			grid-row: 2/3;
+		}
+
+		.socialdata {
+			grid-column: 2 / -2;
+			grid-row: 3/4;
+
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 3rem;
+		}
+
+
+		.detalles {
+			grid-column: 2 / -2;
+			grid-row: 5/6;
+		}
+
+		
+
+		.formulario {
+			grid-column: 2 / -2;
+			grid-row: 6/7;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+
+		.headerdinamica .linea {
+	 		/*grid-column: 1 / -1;*/
+	 	}
+
+	 	.headerdinamica h1 {
+	 		/*grid-column: 1 / span 5;*/
+	 	}
+
+		/*.headerdinamica {
+			width: 960px;
+			margin: auto;
+			padding-top: 84px;	
+			display: grid;
+			grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+			grid-column-gap: 20px;
+
+	 	}*/
+
+		.categoriadinamica {
+			padding-left: 10px;
+			padding-right: 10px;
+			/*padding-top: 52px;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 52px;
+			width: 960px;
+			margin: auto;*/
+
+			/*display: grid;*/
+			grid-template-columns: 1fr;
+			grid-auto-rows:464px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+			height: 432px;
+			
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+   			white-space: nowrap;
+		}
+
+
+		.ladinamica .bloqueizquierdo {
+			grid-column: 2 / -2;
+			/*grid-column: info-start / info-end;*/
+			grid-row: 5/ span 1;
+			/*margin-top: 3rem;
+			margin-bottom: 3rem;
+			line-height: 1.4rem;*/
+
+			/*display: grid;*/
+			/*grid-template-columns: repeat(6, 1fr);*/
+			/*grid-column-gap: 20px;*/
+		}
+
+		.ladinamica .ganadores {
+			grid-column: 2 / -2;
+			grid-row: 6/ span 1;
+			padding-bottom: 4rem;
+		}
+
+		.wrappercarruselflotante .wrappercarruselfoto {
+			width: 100vw;
+			height: auto;	
+		}
+
+		.fa-arrow-left, .fa-arrow-right {
+			display: none;
+		} 
+
+	}
+
+
+</style>
+<!-- <div class="grid"> -->
+
+	<section class="ladinamica">
+
+		<div class="portada">
+			<img src="images/blanco.jpg">
+		</div>
+
+		<div class="infosombra"></div>
+
+		<div class="info">
+			<div>Recompensas</div>
+			<h2></h2>
+			<div class="vigencia">Cerró: <span></span></div>
+			<!-- <div class="viral"><span>Me gusta</span> <span>COMPARTIR</span></div> -->
+		</div>
+
+		<div class="socialdata">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div class="totallikes"></div>
+			</div>
+			<div class="social">
+				<div class="fa fa-user-o" style="margin-right:0.5em"></div>
+				<div class="participaciones"></div>
+			</div>
+		</div>
+
+		
+		<div class="bloqueizquierdo">
+			<h2 style="margin-bottom: 1rem">Descripción</h2>
+			<div class="descripcion">
+				
+			</div>
+			
+
+			
+		</div>
+
+
+		<div class="ganadores" style="padding-top:4rem;">
+			<h2 style="margin-bottom: 1rem">Ganadores</h2>
+			<!-- <h2 style="margin-bottom: 1rem">Galeria</h2> -->
+
+
+			<div class="galeriafotos">
+				<!-- <div class="wrapperfoto">
+					<img src="images/ganadoresblanco.png">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/ganadoresblanco.png">
+				</div>
+				<div class="wrapperfoto">
+					<img src="images/ganadoresblanco.png">
+				</div> -->
+				<!-- <div class="wrapperfoto">
+					<img src="images/ganadoresblanco.png">
+				</div> -->
+			</div>
+				
+			<!-- </div> -->
+			<div class="wrapperbotoncentrado">
+				<div class="btn masfotos no-seleccionable">Más fotos</div>
+			</div>
+			<!-- <div class="totalganadores" style="margin-bottom: 1rem">181</div>
+			<div class="aliasganadores"> -->
+				
+			<!-- </div> -->
+
+			<!-- <div class="wrapperbotoncentrado">
+				<div class="btn">MOSTRAR MAS</div>
+			</div> -->
+		</div>
+
+	</section>
+
+
+	
+
+	<section class="publicidad " data-url="https://www.telcel.com/personas/telefonia/amigo/todavia-no-tienes-amigo#!tarifas">
+		<div class="wrapperp">
+			<img src="images/publicidad/mama-es-mas-que-mama-2018-bne.jpg" class="imgdesktop">
+			<img src="images/publicidad/mama-es-mas-que-mama-2018-bnm.jpg" class="imgmobile">
+		</div>
+	</section>
+
+
+
+
+	
+
+<!-- </div> -->
+
+<!-- dinamica interccion 1 -->
+<div class="fondoventanasflotante"></div>
+
+<div class="wrappercarruselflotante">
+	<div class="fa fa-arrow-left izq manita" aria-hidden="true"></div>
+	<div class="wrappercarruselfoto">
+		<!-- <img src="images/galeriaexperiencias/exp1.png" width="70%" height="auto"> -->
+		<img src="images/galeriaexperiencias/ganadores1.jpg" >
+	</div>
+	
+	<div class="fa fa-arrow-right der manita" aria-hidden="true"></div>	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	// var galeriaFotos = ["exp1.png", "exp2.png", "exp3.png", "exp4.png", "exp5.png", "exp6.png", "exp7.jpg", "exp8.jpg"];
+	var galeriaFotos = [];
+	 // = ["ganadores1.jpg", "ganadores2.jpg", "ganadores3.jpg", "ganadores4.jpg", "ganadores5.jpg", "ganadores6.jpg", "ganadores7.jpg", "ganadores8.jpg"];
+	var indexGaleriaFotos = 0;
+	var indexGrupoFotos = 0;
+	var totalGrupoFotosMod4 = 0;
+	var mod4 = 4;
+
+
+	$(document).ready( function() {
+		parent.postMessage('scrollthem,0', '*');
+
+		$(".fondoventanasflotante").hide();
+		$(".wrappercarruselflotante").hide();
+		
+		
+		$(".fondoventanasflotante, .wrappercarruselflotante").click( function() {
+			// $(this).hide();
+			$(".fondoventanasflotante").hide();
+			$(".wrappercarruselflotante").hide();
+		})
+
+		
+
+		
+
+		// amplia foto de la galeria
+		$( "body" ).undelegate(  ".galeriafotos .wrapperfoto", "click").delegate( ".galeriafotos .wrapperfoto", "click", function() {
+			indexGaleriaFoto = $(this).index()+(indexGrupoFotos*mod4);
+			// alert( indexGrupoFotos*4 )
+			// alert(  $(this).index() );
+			$(".fondoventanasflotante").show();
+			$(".wrappercarruselflotante").show();
+			// $(".wrappercarruselflotante img" ).attr( "src", $(this).find("img").attr("src") ); //wrapperfoto img
+			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+			// indexGaleriaFoto
+		})
+
+		
+		// retrocede foto aumentada
+		$(".wrappercarruselflotante .fa-arrow-left").click( function(event) {
+			event.stopPropagation();
+			indexGaleriaFoto -= 1;
+			if ( indexGaleriaFoto < 0 ) { 
+				indexGaleriaFoto = galeriaFotos.length-1 
+			}
+
+			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+
+			// alert( indexGaleriaFoto == (galeriaFotos.length-1) );
+			if( indexGaleriaFoto % mod4 == (mod4-1)  ) {
+				indexGrupoFotos--;
+				if ( indexGrupoFotos < 0) { indexGrupoFotos = (mod4-1) };
+			}
+			if ( indexGaleriaFoto == galeriaFotos.length-1 ) {
+				indexGrupoFotos = totalGrupoFotosMod4-1;
+			}
+
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for(var i=0; i<mod4; i++) {
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
+				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+	        	htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
+				htmlGallery += '</div>'	
+			}
+			$('.galeriafotos').append(htmlGallery);
+	
+			
+		}) 
+
+		// avanza foto aumentada
+		$(".wrappercarruselflotante .fa-arrow-right").click( function(event) {
+			event.stopPropagation();
+			indexGaleriaFoto = (indexGaleriaFoto+1)%galeriaFotos.length;
+			var indexGaleriaFotoMod4 = indexGaleriaFoto%mod4;
+			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+			// alert( indexGaleriaFoto % mod4 );
+
+			if( indexGaleriaFoto % mod4 == 0  ) {
+				indexGrupoFotos = (indexGrupoFotos+1)%totalGrupoFotosMod4;
+			}
+
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for(var i=0; i<mod4; i++) {
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
+				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+	        	htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
+				htmlGallery += '</div>'	
+			}
+			$('.galeriafotos').append(htmlGallery);
+
+
+
+		}) 
+		 
+		$('.masfotos').click( function() {;
+			indexGrupoFotos = (indexGrupoFotos+1)%totalGrupoFotosMod4;
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for(var i=0; i<mod4; i++) {
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
+				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+	        	htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
+				htmlGallery += '</div>'	
+			}
+			$('.galeriafotos').append(htmlGallery);
+
+		})
+
+
+		$(".wrappercarruselflotante").swipe( {
+	        //Single swipe handler for left swipes
+	        swipeRight:function(event, direction, distance, duration, fingerCount) {
+	          	event.stopPropagation();
+				indexGaleriaFoto -= 1;
+				if ( indexGaleriaFoto < 0 ) { 
+					indexGaleriaFoto = galeriaFotos.length-1 
+				}
+
+				$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+				$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+
+				if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 3 ) {
+					
+					indexGrupoFotos--;
+					if ( indexGrupoFotos < 0) { indexGrupoFotos = 1 };
+					for(i=0; i<4; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*4)] );
+					}
+				}
+	        },
+	        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+	          	event.stopPropagation();
+				indexGaleriaFoto = (indexGaleriaFoto+1)%galeriaFotos.length;
+				
+				$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+				$(".wrappercarruselflotante img" ).hide().fadeIn(600);
+
+				if( indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 0) {
+					indexGrupoFotos = (indexGrupoFotos+1) % ( galeriaFotos.length / $(".galeriafotos .wrapperfoto").length );
+					for(i=0; i<$(".galeriafotos .wrapperfoto").length; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[indexGaleriaFoto+i] );
+					}
+				}
+	          	 
+	        },
+	        //Default is 75px, set to 0 for demo so any distance triggers swipe
+	        threshold:75
+	    });
+
+		
+	    var dinamicaJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
+        	dinamicadataJson = data;
+        	console.log(data);
+        	$(".ladinamica .info h2").text(data.promocion.texto_ganadores);
+        	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
+        	$(".totallikes").text(data.promocion.likes);
+        	$(".participaciones").text(data.promocion.shares);
+        	// $(".participaciones").text(data.promocion.participaciones);
+        	$(".portada img").attr("src",data.promocion.imagen_ganadores);
+        	// $(".totalganadores").text(data.promocion.ganadores_total);
+        	$(".descripcion").html(data.promocion.inicio_juego_txt+data.promocion.descripcion_ganadores);
+        	// $(".premio").html(data.promocion.premio);
+        	// galeriaFotos = data.promocion.galeria;
+            // console.log( data.promocion.galeria );
+        	// console.log( galeriaFotos );
+        	
+        	if ( data.promocion.galeria.length > 0 ) {
+        		totalGrupoFotosMod4 =  Math.ceil(data.promocion.galeria.length / mod4);
+        		// alert( totalGrupoFotosMod4 );
+        		$('.galeriafotos').empty();
+	        	var htmlGallery = "";
+	        	for (var i=0; i<data.promocion.galeria.length; i++ ) { 		
+	        		galeriaFotos.push( data.promocion.galeria[i].imagen );
+	        		if ( i < Math.min(data.promocion.galeria.length, 4) ) {
+	        			htmlGallery += '<div class="wrapperfoto">'
+						htmlGallery +=	'<img src="'+ galeriaFotos[i]+'">'
+						htmlGallery += '</div>'
+	        			// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i] );
+	        		}
+	        		
+	        	}
+	        	$('.galeriafotos').append(htmlGallery);
+	        	if ( data.promocion.galeria.length <= 4 ) {
+	        		$('.wrapperbotoncentrado').remove();
+	        	}
+        	} else {
+        		$('.ganadores').empty();
+        	}
+        	
+
+        	
+        });
+
+	});
+
+
+
+
+</script>

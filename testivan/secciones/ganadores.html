@@ -1,0 +1,489 @@
+<style type="text/css">
+	
+
+	.headercategoria {
+
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		/*height: 448px;*/
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 113px ;
+		/*grid-template-rows: repeat(14, 1fr);*/
+		/*grid-auto-rows:464px;*/
+		grid-column-gap: 20px;
+		/*grid-row-gap: 20px;*/
+
+		color: white;
+
+		border-bottom: 1px solid rgb(180,180,180);
+
+	}
+
+
+	
+
+
+	
+
+ 	.headercategoria .linea {
+ 		grid-column: 2 / -2;
+ 		grid-row: 1 / 2;
+ 		/*height: 1rem;*/
+ 		border-bottom: 1px solid rgb(180,180,180);
+ 	}
+
+ 	.headercategoria h1 {
+ 		grid-column: 2 / span 3;
+ 		grid-row: 1 / 2;
+ 		align-self: end;
+ 		padding-bottom: 1.2rem;
+ 	}
+
+ 	/*.headercategoria .wrapper {
+ 		grid-column: datasocial-inicio/datasocial-final;
+ 		grid-row: 1 / 2;
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: end;
+ 		justify-content: space-between;
+
+ 		padding-bottom: 0.6rem;
+
+ 		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+ 	}*/
+
+
+
+ 	.wrappercategoria {
+ 		width: 920px; /*58.75rem;*/ /*960 980*/
+		/*height: 448px;*/
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+
+		/*display: grid;
+		grid-template-columns: repeat(3, 1fr)  */;
+
+
+		/*grid-template-rows: 113px ;*/
+		/*grid-template-rows: repeat(14, 1fr);*/
+		/*grid-auto-rows:464px;*/
+		/*grid-column-gap: 20px;
+		grid-row-gap: 20px;*/
+
+		color: white;
+		padding-top: 40px;
+ 	}
+
+
+
+
+	/* css dinamica car en contexto */
+
+ 	.ganadorescard {
+ 		width: 286px;
+		height: 423px;
+
+		margin: 10px;
+
+
+		/*width: 220px*/;  /*3 columnas*/
+		background-color: white;
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		-ms-grid-rows: 8px 183px 29px 29px 120px 52px;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 183px 29px 29px 120px 52px;	
+		/*grid-column-gap: 20px;*/
+		/*margin-right: 20px;*/
+		/*border-radius: 20px*/
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+		/*box-shadow:2px 2px 6px black;*/
+		cursor: pointer;
+	}
+
+	.ganadorescard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.ganadorescard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / 4;
+
+	}
+
+	.ganadorescard .imagedinamica img {
+		/*width: 100%;*/
+		/*height: 100%;*/
+		/*object-fit: cover;*/
+
+	}
+
+
+	
+
+	.ganadorescard .imageuser1 {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 2 / span 3;
+		grid-row: 3 / 5;
+		width: 58px;
+		height: 58px;
+		justify-self: start;
+		/*background-image: url("../images/dinamica1.jpg");*/
+		background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    z-index: 1;
+	    border-radius: 50%;
+	    border: 3px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+	.ganadorescard .imageuser2 {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 4 / span 3;
+		grid-row: 3 / 5;
+		width: 58px;
+		height: 58px;
+		justify-self: start;
+		/*background-image: url("../images/dinamica1.jpg");*/
+		background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    z-index: 1;
+	    border-radius: 50%;
+	    border: 3px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+	.ganadorescard .imageuser3 {
+		-ms-grid-column: 6;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 6 / span 3;
+		grid-row: 3 / 5;
+		width: 58px;
+		height: 58px;	
+		justify-self: start;
+		/*background-image: url("../images/dinamica1.jpg");*/
+		background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    z-index: 1;
+	    border-radius: 50%;
+	    border: 3px #fff solid;
+	    box-shadow:3px 3px 8px black;
+	}
+
+	.ganadorescard .imageuser img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	.ganadorescard .imageuser svg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+
+
+	.ganadorescard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 5 / 6;
+		background-color: #fff;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		/*font-size: 1.6rem;
+		line-height: 1.6rem;
+		font-weight: normal;*/
+	}
+
+	.ganadorescard .detalles {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 6 / 7;
+		background-color: white;
+		color: rgb(100,100,100);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+	/*****************************************************/ 
+
+
+	.wrappermostrarmas {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 120px;
+	}
+	.wrappermostrarmas .btn {
+		width: 180px;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		box-shadow:2px 2px 6px rgb(200,200,200);
+	}
+
+
+	
+	
+
+	@media only screen and (max-width: 960px) { 
+		.headercategoria {
+			width: 100%; 
+			/*grid-template-columns: 10px [datasocial-inicio] repeat(5, 1fr)  repeat(7, 1fr) [datasocial-final] 10px ;*/
+			/*grid-template-rows: 113px 1fr ;*/
+		}
+		.headercategoria .linea {
+	 		grid-column: 2 / -2;
+	 		grid-row: 2 / 3;
+	 	}
+
+	 	.headercategoria .wrapper {
+	 		/*grid-column: datasocial-inicio/datasocial-final;*/
+
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+
+	 		grid-row: 2 / 3;
+	 		font-size: 0.4rem;
+	 	}
+
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.wrappercategoria {
+			width: calc(100% - 40px);
+			/*width: 80%;*/
+			/*grid-template-columns: repeat(1, 1fr)  ;*/
+			justify-content: center;
+		}
+
+		.publicidad {
+			width: calc(100% - 0px);
+		}
+
+		.publicidad .wrapperp {
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 28;
+
+			grid-column: 1 / -1;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .lastrow, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+	}
+
+</style>
+
+
+<header class="headercategoria">
+	<h1 class="typotituloseccion grisoscuro">Ganadores</h1>
+	<!-- <div class="linea"></div> -->
+</header>
+
+<!-- <section class="categoriadinamica bloquesection"> -->
+	
+	
+
+
+<div class="wrappercategoria">
+	
+
+</div>
+
+<div class="wrappermostrarmas">
+		<!-- <div class="btn azulmuyclaroBack no-seleccionable">MOSTRAR MÁS</div> -->
+</div>
+	
+<!-- </section> -->
+
+<section class="publicidad bloquesection">
+	<div class="wrapperp">
+		<img src="images/publicidad3.jpg">
+	</div>
+</section>
+
+<section class="lastrow">
+	<div class="fa fa-arrow-up scrolltotop no-seleccionable" aria-hidden="true"></div>
+</section>
+
+<script type="text/javascript">
+	
+	$(document).ready( function() {
+
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+
+		// $(".wrappermostrarmas .btn").click( function() {
+
+		// 	var dinamica = '';
+		// 	for(i=0; i<6; i++ ) {			
+		// 			dinamica += '<div class="ganadorescard ultimos">';
+		// 				dinamica += '<div class="bartop"></div>';
+		// 				// var numazar = Math.round( Math.random()*5 );
+		// 				// alert(numazar);
+		// 				dinamica += '<div class="imagedinamica" >';
+		// 				dinamica += '  <img src="images/ganadores1.jpg">';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<div class="imageuser imageuser1" >';
+		// 				dinamica += '	<img src="images/user1.jpg">';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<div class="imageuser imageuser2" >';
+		// 				dinamica += '	<img src="images/user2.jpg">';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<div class="imageuser imageuser3" >';
+		// 				dinamica += '	<img src="images/user3.jpg">';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<div class="infodinamica">';
+		// 				dinamica += '	<div class="vigencia regular12 grisoscuro">Gana boletos para el AMT Telcel.</div>';
+		// 				dinamica += '</div>';
+		// 				dinamica += '<div class="detalles">Detalles</div>';
+		// 			dinamica += '</div>';
+		// 	}
+
+
+		
+		
+			
+		
+		
+		
+		
+	
+
+		// 	$(".wrappercategoria").append( dinamica );
+
+		// 	$(".ultimos").hide().fadeTo(1000, 1.0).removeClass('ultimos');
+		// 	// $(".ultimos").show();
+		// 	//$(".ultimos").fadeTo(300, 1.0);
+		// })
+
+
+		$(".ganadorescard").click( function() {
+			cargaContenido("dinamicaganadores.html")
+		})
+
+		$(".publicidad").click( function() {
+			window.open( "https://www.telcel.com/personas/servicios/otros/google-play-store#", "blank")
+		})
+
+		// https://admin.experienciastelcel.com/restful/finalizados/
+
+		/****************** ganadores *******************************************/
+
+		// https://admin.experienciastelcel.com/restful/finalizados/
+		var ganadoresJson = $.getJSON( "https://admin.experienciastelcel.com/restful/finalizados/", function( data ) {
+			var cardHTML = '';
+			for(i=0; i<data.dinamicas.length; i++) {
+				cardHTML += '<div class="ganadorescard shadowcard" data-id="'+data.dinamicas[i].pk+'" >'
+				cardHTML += '	<div class="bartop"></div>'
+
+
+				cardHTML += '	<div class="imagedinamica" >'
+				cardHTML += '		<img src="'+data.dinamicas[i].imagen+'">'
+				cardHTML += '	</div>'
+
+				
+				var limiteganadores = Math.min( data.dinamicas[i].ganadores_list.length, 3);
+				for( var player=0; player < limiteganadores; player++) {
+					// console.log( data.dinamicas[i].ganadores_list[player].img == "" );
+					if ( data.dinamicas[i].ganadores_list[player].img== "" ) {
+						cardHTML += '	<div class="imageuser imageuser'+(player+1)+'" >'
+					} else {
+						cardHTML += '	<div class="imageuser imageuser'+(player+1)+' foto" >'
+						cardHTML += '		<img src="'+data.dinamicas[i].ganadores_list[player].img+'">'
+					}
+					
+					cardHTML += '	</div>'
+				}
+				cardHTML += '	<div class="infodinamica">'
+				cardHTML += '		<div class="typotitulocard grismuyoscuro">'+data.dinamicas[i].titulo_completo+'</div>'
+				cardHTML += '	</div>'
+				cardHTML += '	<div class="detalles typodetallesvigencia">Detalles</div>'
+				cardHTML += '</div>'
+			}
+			$(".wrappercategoria").append( cardHTML );
+
+			$.get('images/iconouser.svg', function(data){	
+				$(".imageuser:not(.foto)").append(data.documentElement);			
+				$(".imageuser").each(function(index){
+					var tinte = Math.random()*360;
+					$(this).find("rect").css("fill", "hsl("+tinte+",68%,80%)");
+					$(this).find("path").css("fill", "hsl("+tinte+",68%,80%)");
+					$(this).find("circle").css("fill", "hsl("+tinte+",68%,80%)");
+				})	
+			});
+				
+		});
+		/**********************************************************************/
+
+	})
+		
+</script>

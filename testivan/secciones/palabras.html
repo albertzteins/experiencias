@@ -1,0 +1,458 @@
+<style type="text/css">
+	
+	/******************* palabras *********************/
+
+	.palabras {	
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 459px;
+		height: 595px;
+
+		margin-left: calc(459px/-2);
+		margin-top: calc(595px/-2);
+
+		/*margin-top: -384.5px;*/
+		
+		background-color: white;
+		z-index: 18;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		/*grid-template-rows: 294px 53px 118px [opciones-start] repeat(3, 64px) [opciones-end] 114px;*/
+		grid-template-rows: 45px 206px 125px [opciones-start] repeat(3, 45px) [opciones-end] 84px;
+		justify-content: stretch;
+
+		color: white;
+		
+	}
+
+	.palabras .fondoamarilloslide1 {
+		grid-column: 1 / -1;
+		grid-row:  3 / span 5;
+		background-color: #00338d; /* color hexagesimal azul teelcel */
+	}
+
+	.palabras .tiempopregunta {
+		color: black;
+		font-size: 1.4rem;
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		align-self: center;
+		justify-self: star;
+		padding-left: 1rem;
+		background-color: white;
+	}
+
+	.palabras .tiempopregunta .cronometro {
+		color: black;
+		margin-left: 0.8rem;
+	}
+
+	.palabras .close {
+		grid-column: -2 / -1;
+		grid-row:  1 / span 1;
+		align-self: center;
+		justify-self: center;
+		color: #222222;
+		/*background-color: white;*/
+		text-align: center;
+		font-size: 1rem;
+		/*padding-top: 1.2rem;*/
+	}
+
+	.palabras .portadav {
+		grid-column: 1 / -1;
+		grid-row:  2 / span 1;
+	}
+
+	.palabras .portadav img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.palabras .textoportada {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 2;
+
+		padding-top: 2.0rem;
+		padding-bottom: 2.0rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: white;
+
+		z-index: 18;
+		/*background-color: #ffd100;*/
+	}
+
+	.palabras .textoportada .instruccion1 {
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+	}
+
+	.palabras .textoportada .instruccion2 {
+		margin-top: 1.8rem;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+	}
+
+	.palabras .imagenizq {
+		grid-column: 1 / span 4;
+		grid-row:  2 / span 1;
+		padding: 20px 10px 20px 20px;
+	}
+
+	.palabras .imagender {
+		grid-column: 5 / span 4;
+		grid-row:  2 / span 1;
+		padding: 20px 20px 20px 10px;
+	}
+
+	.palabras .imagenizq img, .palabras .imagender img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.palabras .numeropregunta {
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.6rem;
+	}
+
+
+	.palabras .pregunta {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  3 / span 1;
+		background-color: #00338d;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		padding-left: 1.3rem; 
+		padding-top: 1.3rem; 
+		padding-bottom: 1.3rem; 
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.palabras .palabra {
+		/*margin-top: 2rem;*/
+		width:90%;
+		font-size: 2rem;
+		color: #00338d;
+	}
+
+	.palabras .pregunta * {
+		margin-top: 1.5rem;
+	}
+
+	.palabras .opcion1 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  4 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #1a50a4;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.palabras .opcion2 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  5 / span 1;
+		padding-left: 1.3rem;
+		background-color: #346dba;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.palabras .opcion3 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  6 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #4e8ad1;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.palabras .continuarp {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+		/*background-color: #f5f5f5;*/
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	/*.trivia .continuarp .btn {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+	}*/
+
+	.palabras .titulofinalportada {
+		grid-column: 2 / -2;
+		grid-row:  2 / span 1 ;
+		align-self: center;
+		justify-self: center;
+		font-size: 2.0rem;
+		color: white;
+	}
+
+	.palabras .felicidades {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.palabras .felicidades .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.palabras .felicidades .comodin img {
+		height: 3rem;
+	}
+	.palabras .felicidades .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.palabras .felicidades .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+	
+
+	.palabras .losentimos {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.palabras .losentimos .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.palabras .losentimos .comodin img {
+		height: 3rem;
+	}
+	.palabras .losentimos .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.palabras .losentimos .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+
+	/**************************************************/
+
+	@media only screen and (max-width: 960px) {
+
+	}
+	
+</style>
+
+<div class="palabras">
+	<div class="tiempopregunta">
+		<span class="fa fa-clock-o" aria-hidden="true"></span> 
+		<span class="cronometro no-seleccionable">
+			<span class="hora_">00</span>
+			:
+			<span class="minuto_">00</span>
+			:
+			<span class="segundo_">00</span>
+		</span>
+	</div>
+
+	<i class="fa fa-times close no-seleccionable" aria-hidden="true"></i>
+
+	<div class="portadav portadaprimera" data-slide="1" >
+		<img src="images/tecate1.jpg">
+	</div>
+
+	
+
+	<!-- <div class="imagender" data-slide="2" >
+		<img src="images/tecate2.jpg">
+	</div> 
+	<div class="imagenizq" data-slide="2" >
+		<img src="images/tecate2.jpg">
+	</div>  -->
+
+	<div class="fondoamarilloslide1"></div>
+
+	<div class="textoportada" data-slide="1">
+		<p class="instruccion1 blanco"></p>
+
+		<p class="instruccion2"><span class="azulclarotexttelcel">¡Mucha suerte!</span></p>
+	</div>
+
+	
+
+	<div class="titulofinalportada bold" data-slide="5">
+		<div data-acierto="true" >¡Felicidades!</div>
+		<div data-acierto="false" >Gracias por participar</div>
+	</div>
+	<div class="felicidades" data-slide="5" data-acierto="true">
+		<div>Obtuviste <span class> </span> de X respuestas correctas en un tiempo de:
+			<span class="hora bold">00</span>:<span class="minuto bold">00</span>:<span class="segundo bold">00</span>.</div>
+		
+	</div>
+
+	<div class="losentimos" data-slide="5" data-acierto="false" >
+		<div></div>
+		
+	</div>
+
+
+
+
+	<div class="continuarp">
+		<div class="btn negro" data-slide="regresar">REGRESAR</div>
+		<div class="btn negro" data-slide="continuar">CONTINUAR</div>
+		<div class="btn negro" data-slide="finalizar" >FINALIZAR</div>
+		<div class="btn negro" data-slide="seguirjugando">SEGUIR JUGANDO</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+	$(document).ready( function() {
+		ultimoslide = data.promocion.preguntas.length+2;
+        totalpreguntas = data.promocion.preguntas.length;
+        //alert( ultimoslide );
+		$('.portadaprimera img').attr("src", data.promocion.imagen);
+		// $('.portadafinal').data("slide",ultimoslide);
+		// $('.portadafinal img').attr("src", data.promocion.imagen);
+		// alert( "data-slide"+$('.portadafinal').data("slide") ).
+        $(".textoportada .instruccion1").html(data.promocion.inicio_juego_txt);
+        var preguntaimagenHTML = '';
+         var preguntaHTML = '';
+         //alert( "length"+data.promocion.preguntas.length );
+        for(var i=0; i<data.promocion.preguntas.length; i++) {
+        	// alert(i);
+   //      	preguntaHTML += '<div class="portadav" data-slide="'+(i+2)+'" >'
+			// preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img+'">'
+			// preguntaHTML += '</div>'
+
+			preguntaHTML += '<div class="imagenizq" data-slide="'+(i+2)+'" >'
+			preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img[0]+'">'
+			preguntaHTML += '</div>'
+
+			preguntaHTML += '<div class="imagender" data-slide="'+(i+2)+'" >'
+			preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img[1]+'">'
+			preguntaHTML += '</div>'
+
+
+
+			if ( servicioBeneficio && i==0 ) {
+				// preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+				// preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+				// preguntaHTML += '	<p>Beneficio <img src="images/claro-musica.png" width="100" >: esta respuesta te la mereces</p>'
+				// preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+				// preguntaHTML += '</div>'
+			} else {
+				preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+				preguntaHTML += '	<div class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</div>'
+				preguntaHTML += '	<div class="description">'+data.promocion.preguntas[i].description+'</div>'
+				preguntaHTML += '	<input class="palabra" type="text" value="">';
+				preguntaHTML += '</div>'
+				
+			}
+			
+			 
+				console.log( data.promocion.segmentos)
+			// for(var o=0; o<data.promocion.preguntas[i].options.length; o++) {
+				// if ( servicioBeneficio ) {
+					// if ( o == 0  && servicioBeneficio && i==0) {
+					// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+					// 	preguntaHTML += '	<i class="fa fa-dot-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+					// 	preguntaHTML += '</div>'
+					// } else {
+					// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+					// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+					// 	preguntaHTML += '</div>'
+					// }
+					
+				// } else {
+				// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+				// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+				// 	preguntaHTML += '</div>'
+				// }
+				
+				// console.log( data.promocion.preguntas[i].options[o].texto )
+			// }
+
+			$( ".palabras .titulofinalportada" ).data( "slide", ultimoslide );
+			$( ".palabras .felicidades" ).data( "slide", ultimoslide );
+			$( ".palabras .losentimos" ).data( "slide", ultimoslide );
+			// $( ".palabras .portadafinal").data( "slide", ultimoslide );
+			// $( ".palabras .portadafinal img").attr("src", data.promocion.imagen);
+			
+			
+        }
+        preguntaHTML += '<div class="portadav portadafinal" data-slide="'+ ultimoslide+'" >'
+		preguntaHTML += '	<img src="'+data.promocion.imagen+'">'
+		preguntaHTML += '</div>'
+        // $(".trivia").append(preguntaimagenHTML);
+        $(".palabras").append(preguntaHTML);
+	})
+</script>

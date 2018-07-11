@@ -1,0 +1,133 @@
+
+		/******************* SOPA ************************/
+
+
+	.trivia{
+		position:absolute;
+	    z-index: 211;
+	    height: auto;
+	    width: 599px;
+	    background: #fff;
+	    top:50%;
+	    left:50%;
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+		margin-left: calc(599px/-2);
+		margin-top: calc(595px/-2);
+	}
+
+
+
+
+	.tiempopregunta{
+
+			color: black;
+			font-size: 1.4rem;
+			padding-left: 1rem;
+			background-color: white;
+
+	}
+
+
+
+	.texto-alto{
+		    font-size: 2rem;
+	    margin-top: 1.5rem;
+	}
+
+
+
+
+		.tablero-col{
+			display: inline-block;
+			width:10%;
+			border:1px solid #cacaca;
+			text-align: center;
+			font-weight: bolder;
+			padding: 10px;
+			cursor: pointer;
+			color:#000000;
+		}
+
+
+		.upercaser{
+			/* Diego */
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:blue !important;
+		}
+
+
+
+		.preselect{
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:blue !important;
+		}
+
+
+
+		.errselect{
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:red !important;
+		}
+
+
+
+
+
+/*  ************************* PUZZLE ***************************  */
+
+
+	
+
+	.distancia{
+		padding:20px;
+		text-align: right;
+	}
+
+
+
+
+
+	.links{
+		cursor: pointer;
+	}
+
+	.blue-box{
+		background: #00338d;padding:40px;color:#fff;
+	}
+
+
+	.texto-alto{
+		    font-size: 2rem;
+	    margin-top: 1.5rem;
+	}
+
+
+
+
+		/**************************************************/
+
+
+	@media only screen and (max-width: 960px) { 
+		
+
+		.trivia {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 310px;
+			height: 100%;
+			margin-left: 0px;
+			margin-top: 0px;					
+		}
+		
+	
+
+	}

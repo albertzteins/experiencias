@@ -1,0 +1,518 @@
+<style type="text/css">
+	/******************** noticia *************************/
+
+	.noticias {
+
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 516px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 36px 234px 178px 48px;
+		color: white;
+		background-color: white;
+
+		grid-column-gap: 20px;
+	}
+
+	.noticias .imagenfondo {
+	    /*z-index: -1;*/
+		grid-column: 1 / -1;
+		grid-row: 1 / 4;
+	}
+
+	.noticias .imagenfondo img {
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+	/*.titulo {
+		background-color: white;
+		align-self: start;
+		text-align: center;
+	}*/
+
+	.noticias .titulo {
+		grid-column: 3 / span 2;
+		grid-row: 1 / 2;
+		background-color: white;
+		/*align-self: center;*/
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.noticias .infocard {
+		z-index: 2;
+		grid-column: 3 / span 5;
+		grid-row: 3 / 5;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+
+		background-color: white;
+
+		box-shadow:2px 2px 6px rgba(0,0,0,0.4);
+
+		font-size: 1.4rem;
+
+	}
+
+	.noticias .infocard footer { 
+		height: 48px;
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 1.0rem;
+		padding-right: 1.0rem;
+		font-size: 0.8rem;
+	}
+
+	.noticias .infocard footer div { 
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		/*font-size: 1.2rem;*/
+	}
+
+	.noticias .infocard .info {
+		/*height: 100%;*/
+		height: 178px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0.8rem 1rem 1rem 1rem;
+		font-size: 2rem;
+		line-height: 2rem;
+		font-weight: bold;
+	} 
+
+
+
+
+	.wrappercategoria {
+ 		width: 900px; /*58.75rem;*/ /*960 980*/
+		/*height: 448px;*/
+		margin: auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr)  ;
+		/*grid-template-rows: 113px ;*/
+		/*grid-template-rows: repeat(14, 1fr);*/
+		/*grid-auto-rows:464px;*/
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+
+		color: white;
+		padding-top: 40px;
+ 	}
+
+
+
+
+	/* css dinamica car en contexto */
+
+ 	.wrappercategoria .dinamicacard2 {
+		height: 464px; /*quitar despues*/
+
+		background-color: white;
+		/*background-color: red;*/
+
+		grid-column: 1fr;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 236px 136px 48px;	
+		/*grid-column-gap: 20px;*/
+		/*margin-right: 20px;*/
+		/*border-radius: 20px*/
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow:2px 2px 6px rgb(200,200,200);
+	}
+
+	.wrappercategoria .dinamicacard2 .bartop {
+		grid-column: 1 / 13;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.wrappercategoria .dinamicacard2 .imagedinamica {
+		grid-column: 1 / 13;
+		grid-row: 2 / 4;
+		/*background-image: url("../images/dinamica1.jpg");*/
+		background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.wrappercategoria .dinamicacard2 .imagedinamica img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.wrappercategoria .dinamicacard2 .tagdinamica {
+		grid-column: 2 / 6;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.wrappercategoria .dinamicacard2 .infodinamica {
+		grid-column: 1 / 13;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		font-size: 1.3rem;
+	}
+
+	.wrappercategoria .dinamicacard2 footer {
+		grid-column: 1 / 13;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.wrappercategoria .dinamicacard2 footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+
+
+	.wrappermostrarmas {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 120px;
+	}
+	.wrappermostrarmas .btn {
+		width: 180px;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		box-shadow:2px 2px 6px rgb(200,200,200);
+	}
+
+
+
+
+	.publicidad {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 320px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+	}
+
+	.publicidad .wrapperp {
+		grid-column: 3 / -3;
+		grid-row: 1 / 2;
+	}
+
+	.publicidad .wrapperp img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+ 
+
+	.lastrow {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 80px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+	}
+
+
+
+	.lastrow .scrolltotop {
+		grid-column: -3 / span 1;
+		grid-row: 1 / -1;
+		justify-self: center;
+		align-self: center;
+		color: rgba(200,200,200);
+		font-size: 1.3rem;
+		/*text-align: center;*/
+	}
+
+
+</style>
+
+
+<section class="noticias bloquesection">
+	<div class="imagenfondo">
+		<img src="images/bg.jpg">
+	</div>
+
+	<div class="titulo grisoscuro info14">Noticias</div>
+
+	<div class="infocard">
+		<div class="violetabrillanteBack info">
+			<div>
+				<p class="blanco">Conciertos este 2018</p>
+				<p class="violetabrillanteclaro">que no te puedes perder</p>
+			</div>
+			<p class="azuloscuro typovigencia">VIGENCIA: FEB. 08 | 2018</p>
+		</div>
+		
+		<footer class="grismedio typofootercard">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+</section>
+
+
+<div class="wrappercategoria">
+	
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica4.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				Partido Tigres v.s.<br>Pumas
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica1.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				Gánate unos<br>Nike Mercurial
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica2.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				El Campeonato <br>del Pacífico te espera.
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica5.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				Todo el helado que<br>quieras por un año.
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica5.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				Todo el helado que<br>quieras por un año.
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="dinamicacard2 puntero">
+		<div class="bartop"></div>
+		<div class="imagedinamica" >
+			<img src="images/dinamica5.jpg">
+		</div>
+		<div class="tagdinamica regular12 grismedio">Noticia</div>
+		<div class="infodinamica">
+			<div class="regular16 grismuyoscuro">
+				Todo el helado que<br>quieras por un año.
+			</div>
+			<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>
+		</div>
+		<footer class="grismedio">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+				<div>12345</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+</div>
+
+<div class="wrappermostrarmas">
+		<div class="btn azulmuyclaroBack no-seleccionable">MOSTRAR MÁS</div>
+</div>
+
+
+
+<section class="publicidad bloquesection">
+	<div class="wrapperp">
+		<img src="images/fondopublicidad.png">
+	</div>
+</section>
+
+<section class="lastrow">
+	<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+</section>
+
+
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		
+		$(".wrappermostrarmas .btn").click( function() {
+
+			var dinamica = '';
+			for(i=0; i<6; i++ ) {			
+					dinamica += '<div class="dinamicacard2 puntero ultimos">';
+						dinamica += '<div class="bartop"></div>';
+						// var numazar = Math.round( Math.random()*5 );
+						// alert(numazar);
+						dinamica += '<div class="imagedinamica"><img src="images/dinamica'+(i+1)+'.jpg" ></div>';
+						dinamica += '<div class="tagdinamica regular12 grismedio">Noticia</div>';
+						dinamica += '<div class="infodinamica">';
+						dinamica += '	<div class="regular16 grismuyoscuro">';
+						dinamica += '		Todo el helado que<br>quieras por un año.';
+						dinamica += '	</div>';
+						dinamica += '	<div class="vigencia typovigencia grisoscuro">VIGENCIA: FEB. 08 | 2018</div>';
+						dinamica += '</div>';
+						dinamica += '<footer class="grismedio">';
+						dinamica += '	<div>';
+						dinamica += '		<div class="fa fa-heart-o" style="margin-right:0.5em"></div>';
+						dinamica += '		<div>12345</div>';
+						dinamica += '	</div>';
+						dinamica += '	<div class="social">';
+						dinamica += '		<div class="fa fa-share-alt" style="margin-right:0.5em"></div>';
+						dinamica += '		<div>12345</div>';
+						dinamica += '	</div>';
+						dinamica += '</footer>';
+					dinamica += '</div>';
+			}
+
+			$(".wrappercategoria").append( dinamica );
+
+			$(".ultimos").hide().fadeTo(1000, 1.0).removeClass('ultimos');
+			// $(".ultimos").show();
+			//$(".ultimos").fadeTo(300, 1.0);
+		})
+
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+
+		$(".dinamicacard2").click( function() {
+			cargaContenido( "noticia.html" )
+		})
+
+	})
+</script>

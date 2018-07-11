@@ -1,0 +1,258 @@
+<style type="text/css">
+	
+
+	.typotitulonoticia {
+		font-size: 1.6rem;
+		font-weight: bold;
+		line-height: 1.6rem;
+	}
+
+	.typoautorfechanoticia {
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 1.8rem;
+	}
+
+	.typosocialnoticia {
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+		color: #0097a7;
+	}
+
+	/******************** noticia *************************/
+
+	.comofunciona {
+
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		/*height: 516px;*/
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 36px 234px 178px 48px 84px [cuerpotexto] 1fr [fincuerpotexto];
+		color: white;
+		background-color: white;
+
+		grid-column-gap: 20px;
+	}
+
+	.comofunciona .imagenfondo {
+	    /*z-index: -1;*/
+		grid-column: 1 / -1;
+		grid-row: 1 / 4;
+	}
+
+	.comofunciona .imagenfondo img {
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+	/*.titulo {
+		background-color: white;
+		align-self: start;
+		text-align: center;
+	}*/
+
+	.comofunciona .titulo {
+		grid-column: 3 / span 2;
+		grid-row: 1 / 2;
+		background-color: white;
+		/*align-self: center;*/
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.comofunciona .infocard {
+		z-index: 2;
+		grid-column: 3 / span 5;
+		grid-row: 3 / 5;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+
+		background-color: #f5f5f5;
+
+		box-shadow:2px 2px 6px rgba(0,0,0,0.4);
+
+		font-size: 1.4rem;
+
+	}
+
+	.comofunciona .infocard footer { 
+		height: 48px;
+		background-color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 1.0rem;
+		padding-right: 1.0rem;
+		font-size: 0.8rem;
+	}
+
+	.comofunciona .infocard footer div { 
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		/*font-size: 1.2rem;*/
+	}
+
+	.comofunciona .infocard .info {
+		/*height: 100%;*/
+		height: 178px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0.8rem 1rem 1rem 1rem;
+		font-size: 2rem;
+		line-height: 2rem;
+		font-weight: bold;
+	} 
+
+	.comofunciona .socialnoticia {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 10rem;
+	}
+
+	.comofunciona .titulocomofunciona {
+		margin-top: 3rem;
+		grid-column: 3 / span 5;
+		grid-row: 5  / span 1;
+		color: black;
+		font-weight: 300;
+		font-size: 2rem;
+	}
+
+	.comofunciona .col1 {
+		grid-column: 3 / span 5;
+	}
+
+	.comofunciona .col2 {
+		grid-column: 8 / span 5;
+	}
+
+	.comofunciona .cuerpotexto {
+		margin-top: 0.5rem;
+		/*grid-column: 3 / span 6;*/
+		grid-row: cuerpotexto / fincuerpotexto;
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+	}
+
+	.comofunciona .cuerpotexto p {
+		margin-bottom: 1.1rem;
+	}
+
+
+	.lastrow {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 80px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		/*color: white;*/
+		background-color: white;
+	}
+
+
+
+	.lastrow .scrolltotop {
+		grid-column: -3 / span 1;
+		grid-row: 1 / -1;
+		justify-self: center;
+		align-self: center;
+		color: rgb(200,200,200);
+		font-size: 1.3rem;
+		/*text-align: center;*/
+	}
+
+	@media only screen and (max-width: 960px) { 
+		.perfil, .publicidad, .dinamicas, .lastrow, .comofunciona  {
+			width: 100%;
+		}
+
+		.comofunciona  {
+				grid-template-columns: 5px repeat(12, 1fr) 5px ;
+		}
+
+		/*.comofunciona .cuerpotexto {
+			margin-top: 3rem;
+			grid-column: 2 / -2;
+			grid-row: cuerpotexto / fincuerpotexto;
+			font-size: 0.8rem;
+			line-height: 1.2rem;
+		}*/
+
+		.comofunciona .titulocomofunciona {
+			grid-column: 2 / -2;
+		}
+
+		.comofunciona .col1 {
+			grid-column: 2 / -2;
+		}
+
+		.comofunciona .col2 {
+			grid-column: 2 / -2;
+			grid-row: fincuerpotexto / span 1;
+		}
+	}
+
+</style>
+
+<section class="comofunciona bloquesection">
+	<div class="imagenfondo">
+		<img src="images/como-funciona.jpg">
+	</div>
+
+	<!-- <div class="titulo grisoscuro info14">comofunciona</div> -->
+
+	<h2 class="titulocomofunciona" style="margin-bottom: 1rem">¿Cómo funciona?</h2>
+
+
+	<div class="cuerpotexto col1 grisoscuro">
+		
+		<p>Experiencias Telcel es el lugar donde puedes ganar experiencias inolvidables. Es muy fácil, participa y gana entradas a conciertos, meet &amp; greet, pases VIP a competencias deportivas y muchas experiencias más.</p>
+
+		<p>1. Configura tu perfil con los servicios Telcel que tienes contratados.<br>
+		Esto es lo más importante, los distintos servicios que tienes contratados te darán ventaja en algunas experiencias, esto te permitirá tener mayores respuestas correctas y menor tiempo de participación.</p>
+
+		<p>2. Participa en la dinámica.<br>
+		Existen varios tipos de dinámicas para ganar, asegúrate de leer bien las instrucciones antes de comenzar para que no pierdas valiosos segundos, los ganadores son elegidos por mayor cantidad de respuestas correctas en el menor tiempo disponible, ¡piensa rápido!</p>
+
+		
+
+		
+	</div>
+
+	<div class="cuerpotexto col2 grisoscuro">
+		<p>3. Espera los resultados.<br>
+		Una vez que pase el tiempo de participación, se analizaran los resultados de todos los participantes y se le notificará a los ganadores. Este proceso puede tomar hasta un día después de que termine el concurso, se paciente y ponte listo para recibir tu premio.</p>
+
+		<p>Para cualquier duda o aclaración escríbenos a <span style="color: #00338d">experienciastelcel@telcel.com.</span></p>
+	</div>
+
+</section>
+
+<section class="lastrow">
+	<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+</section>
+
+
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+	})
+
+	
+	
+</script>

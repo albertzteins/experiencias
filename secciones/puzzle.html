@@ -1,0 +1,94 @@
+
+<link rel="stylesheet" type="text/css" href="/css/dinamicas_angular.css"/>
+
+<link rel="stylesheet" type="text/css" href="/puzz/css/styles.css"/>
+
+<div class="trivia" id="puzzle-canvas" ng-app="puzzleApp">
+
+
+	<div style="padding:20px;font-size: 1.4rem;">
+		<!-- <div class="pagina"> -->
+		<div  contador-juego style="float: left;">
+			<span class="fa fa-clock-o" aria-hidden="true"></span> &nbsp;&nbsp;
+			<span class="cronometro no-seleccionable">
+				<span id="days" class="hora_">00</span>
+				:
+				<span id="hours" class="hora_">00</span>
+				:
+				<span id="minutes" class="minuto_">00</span>
+				:
+				<span id="seconds" class="segundo_">00</span>
+			</span>
+		</div>
+		<div style="float: right;">
+		<i class="fa fa-times close no-seleccionable links" aria-hidden="true"></i>
+		</div>
+		<div style="clear: both;height: 0px;"></div>
+	</div>
+
+
+
+	<section ng-show="startgame==0">
+			<div class="blue-box" >
+				<div id="txt-html"></div>
+				<div class="continuarp" style="margin: 20px 0px;">
+					<div class="btn negro iniciar-pz" >Iniciar Juego</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="jugando-puzzle" ng-show="startgame==1">
+		
+		<div style="padding:20px;">
+			<div id="finalizarbox"></div>
+			<div ng-app="puzzleApp" id="puzzbox" >
+				<div ng-show="hiddens">
+				<div style="text-align: center;"><img src="{{src}}" style="width:90px;" /></div>
+				<div ng-include="type"></div>
+				
+				<script type="text/ng-template" id="sliding-puzzle">
+					<fieldset id="sliding-simple" style="border: 0px solid;margin:10px 0px; ">
+						<sliding-puzzle size="3x3" src="{{src}}" style="width:320px;margin: auto;"></sliding-puzzle>						
+					</fieldset>
+				</script>
+
+				</div>
+				<div ng-show="finalizado">
+					Gracias por participar
+				</div>
+			</div>
+
+
+
+		</div>
+
+	</section>
+	<section id="final-puzzle" ng-show="startgame==2">
+		<div class="blue-box" >
+			<div>Gracias por participar <br> Tú tiempo fué:</div>
+			<div class="texto-alto tiempofinal" ></div>
+			<div class="texto-alto">¡Mucha Suerte!</div>
+		</div>
+	</section>
+</div>
+
+
+
+	<script type="text/javascript">
+		
+			$(".close").click( function() {
+				$(".fondoventanasflotante").hide();
+				$('.trivia').remove();
+			})		
+
+	</script>
+    <script type="text/javascript" src="/puzz/js/lib/angular/angular.js"></script>
+
+    <script type="text/javascript" src="/puzz/js/puzzle/slidingPuzzle.js"></script>
+	<script type="text/javascript" src="/puzz/js/app.js"></script>
+
+	
+
+
+
+

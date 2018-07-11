@@ -1,0 +1,102 @@
+<link rel="stylesheet" type="text/css" href="/css/dinamicas_angular.css"/>
+<section id="main-sopa">
+
+	<div class="trivia" ng-app="puzzleApp" ng-controller="swiperCtr">
+
+		<div ng-hide="status=='finalizo'">
+
+			<!-- <div class="pagina"> -->
+			
+			<div style="padding:20px;;">
+			
+			 <div style="float:left;">
+			    <div class="tiempopregunta" contador-juego>
+				<span class="fa fa-clock-o" aria-hidden="true" style="padding:0px 20px;"></span> 
+				<span class="cronometro no-seleccionable">
+
+					<span id="days" class="hora_">00</span>
+					:
+					<span id="hours" class="hora_">00</span>
+					:
+					<span id="minutes" class="minuto_">00</span>
+					:
+					<span id="seconds" class="segundo_">00</span>
+				</span>
+			    </div>
+			</div>
+			<div style="float:right;">
+			<i class="fa fa-times closes no-seleccionable" aria-hidden="true"></i>
+			</div>
+			<div style="clear:both;height:0px;overflow:hidden;"> &nbsp; </div>
+			
+
+			</div>
+
+
+			<div class="textoportada" data-slide="1">
+
+
+				<div class="blue-box" ng-show="startgame==0">
+					<div ng-bind-html="dinamica.inicio_juego_txt">{{dinamica.inicio_juego_txt}}</div>
+
+					<div class="continuarp" style="margin: 20px 0px;">
+						<div class="btn negro" ng-click="iniciar();">Iniciar Juego</div>
+					</div>
+
+				</div>
+				
+				<div class="blue-box" ng-show="startgame==2">
+					<div>Gracias por participar <br> Encontraste {{npalabras}} de {{totales}} palabras, tú tiempo fué:</div>
+					<div class="texto-alto" >{{tiempofinal}}</div>
+					<div class="texto-alto">¡Mucha Suerte!</div>
+				</div>
+
+				<section id="game-box" ng-show="startgame==1">
+
+					<div style="padding:20px;">
+	
+					<div ng-repeat="p in dinamica.preguntas">
+					<h1>{{p.pregunta}}</h1>
+					<div style="position: relative;height:300px;border:2px solid gray;width:100%;overflow: hidden;">
+
+							<div style="background:#fff;position:absolute;left:0px;top: 0px;height:300px;width:10%;z-index: 11;">
+								LEFT
+							</div>
+							<div style="background:#fff;position:absolute;right:0px;top: 0px;height:300px;width:10%;z-index: 11;">
+								RIGHT
+							</div>
+
+
+								<img src="{{path_site}}{{i.img}}"   width="100%"  swiper-on class="swipeable" style="position:absolute;margin: 20px 0px;z-index: 10;" ng-repeat="i in p.imgs">
+							
+					</div>
+				</div>
+
+				</div>
+				
+
+				
+				<div class="continuarp" style="margin: 20px 0px;text-align: center;">
+					<div class="btn negro" finalizar-juego style="display: inline-block;">Finalizar</div>
+				</div>
+				
+			</section>
+			</div>
+		</div>
+
+		<div ng-show="status=='finalizo'">
+			<div class="textoportada" data-slide="1" style="color:#000;">Gracias por participar</div>
+		</div>
+
+
+
+	</div>
+		<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/js/chumbucket.js"></script>
+		<script type="text/javascript" src="/js/hammer.min.js"></script>
+		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script type="text/javascript" src="/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="/js/swiper_ctr.js"></script>
+
+</section>

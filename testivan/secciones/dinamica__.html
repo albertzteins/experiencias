@@ -1,0 +1,2296 @@
+<style type="text/css">
+	
+	.grid {
+		/*min-width: 1024px;*/
+		width: 960px;
+		/*width: 914px; */  /* size mac 1280 */
+
+		/*display: flex;
+		flex-direction: column;*/
+
+		display: grid;
+		grid-template-columns: 1fr;
+		/*grid-template-columns: 40px repeat(12, 1fr) 40px;
+		grid-template-rows: 770px 723px 675px 692px 580px 525px;*/
+		/*grid-template-rows: repeat(6, auto);*/
+		/*grid-column-gap: 20px;
+		grid-row-gap: 2px;*/
+		margin: auto;
+
+	}
+
+
+
+	.categoriadinamica {
+		padding-top: 52px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 52px;
+		width: 960px;
+		margin: auto;
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows:464px;
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+
+	}
+
+
+	/* css header subcategoria*/
+	.headerdinamica {
+		width: 960px;
+		margin: auto;
+		padding-top: 84px;	
+		display: grid;
+		grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+		grid-column-gap: 20px;
+
+ 	}
+
+ 	.headerdinamica .linea {
+ 		grid-column: 2 / -2;
+ 		grid-row: 2 / 3;
+ 		height: 1rem;
+ 		border-bottom: 1px solid rgb(80,80,80);
+ 	}
+
+ 	.headerdinamica h1 {
+ 		grid-column: 2 / span 5;
+ 		grid-row: 1 / 2;
+ 	}
+ 	.headerdinamica .wrapper {
+ 		grid-column: datasocial-inicio/datasocial-final;
+ 		grid-row: 1 / 2;
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: end;
+ 		justify-content: space-between;
+ 	}
+
+ 	.headerdinamica .wrapper .div {
+ 		
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 	}
+
+ 	/* fin css header subcategoria*/
+
+ 	/* css dinamica car en contexto */
+
+ 	.categoriadinamica .dinamicacard2 {
+		height: 464px; /*quitar despues*/
+
+		background-color: white;
+		/*background-color: red;*/
+
+		grid-column: 1fr;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 236px 136px 48px;	
+		/*grid-column-gap: 20px;*/
+		/*margin-right: 20px;*/
+		/*border-radius: 20px*/
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow:2px 2px 6px rgb(200,200,200);
+	}
+
+	.categoriadinamica .dinamicacard2 .bartop {
+		grid-column: 1 / 13;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.categoriadinamica .dinamicacard2 .imagedinamica {
+		grid-column: 1 / 13;
+		grid-row: 2 / 4;
+		/*background-image: url("../images/dinamica1.jpg");*/
+		background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	.categoriadinamica .dinamicacard2 .imagedinamica img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.categoriadinamica .dinamicacard2 .tagdinamica {
+		grid-column: 2 / 6;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.categoriadinamica .dinamicacard2 .infodinamica {
+		grid-column: 1 / 13;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.categoriadinamica .dinamicacard2 footer {
+		grid-column: 1 / 13;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.categoriadinamica .dinamicacard2 footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.invisible {
+		opacity: 0;
+	}
+
+
+
+	/* css dinamica car en contexto */
+
+	.ladinamica {
+		width: 960px;
+		margin: auto;
+		/*padding-top: 64px;*/
+		display: grid;
+		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
+		grid-template-rows: 246px 202px 48px 308px auto auto;
+		grid-gap: 0px 20px; /* row gap   column gap */
+	}
+
+	.portada {
+		grid-row: 1 / span 2;
+		grid-column: 1 / -1;
+		
+	}
+
+	.portada img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.infosombra {
+		grid-column: info-start / info-end;
+		grid-row: 2/4;
+		/*background-color: rgb(220,220,220);*/
+		box-shadow:2px 2px 6px rgb(200,200,200);
+		z-index: 1;
+	}
+
+	.info {
+		grid-column: info-start / info-end;
+		grid-row: 2/3;
+		background-color: rgb(220,220,220);
+		z-index: 2;
+		margin-bottom: 0px;
+		padding: 18px 18px 18px 21px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.info h2 {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	.info .viral {
+		width: calc(50% - 20px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.socialdata {
+		grid-column: info-start / info-end;
+		grid-row: 3/4;
+		background-color: white;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		/*align-content: center; */
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.socialdata div {
+
+		display: flex;
+		flex-direction: row;
+		/*justify-content: space-between;*/
+		align-items: center; 
+		/*align-content: center;*/
+		font-size: 0.8rem;
+
+	}
+
+	.contadorregresivo {
+		grid-column: 1 / -1;
+		grid-row: 3/5;
+		background-color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contadorregresivo .numeros {
+		display: flex;
+		flex-direction: row;
+	
+	}
+
+	.contadorregresivo .numeros > div{
+		font-size: 6rem;
+		/*display: flex;
+		flex-direction: column;
+		justify-content: center;*/
+	}
+
+	.contadorregresivo .numeros .numero {
+		/*display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 3rem;*/
+	}
+
+	.contadorregresivo .numeros .tagnumero{
+		font-size: 0.6rem;
+		text-align: center;
+		margin-top: 3rem;
+	}
+
+	.contadorregresivo .titulo {
+		font-size: 0.8rem;
+		margin-bottom: 3rem;
+	}
+
+	.fondogris {
+		grid-column: 1 / -1;
+		grid-row: 5/7;
+		background-color: rgb(240,240,240);
+	}
+	.detalles {
+		grid-column: info-start / info-end;
+		grid-row: 5/6;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		line-height: 1.4rem;
+	}
+
+	.ladinamica h3 {
+		font-size: 2rem;
+		margin-bottom: 1.4rem;
+		font-weight: lighter;
+	}
+
+	.detalles p {
+		margin-bottom: 1.6rem;
+	}
+
+	.comenzar {
+		grid-column: info-start / span 2;
+		grid-row: 6/7;
+		text-align: center;
+
+		/*margin-top: 3rem;*/
+		margin-bottom: 3rem;
+		/*line-height: 1.4rem;*/
+		cursor: pointer;
+
+	}
+
+	.formulario {
+		grid-column: form-start / form-end;
+		grid-row: 5/6;
+
+		margin-top: 3rem;
+		/*margin-bottom: 3rem;*/
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.formulario input {
+		width: 100%;
+		height: 3rem;
+		/*margin-bottom: 3rem;*/
+	}
+
+	.formulario .btn {
+		width: calc( 50% - 20px ) !important;
+		margin-top: 4rem;
+		text-align: center;
+	}
+
+	.btn {
+		background-color: #fa6400;
+		padding: 5px 15px 5px 15px;
+		box-shadow:2px 2px 6px rgb(180,180,180);
+		color: white;
+	}
+
+
+	.linkcyanmayuscula {
+		color: #0097a7;
+		font-size: 0.8rem;
+		font-weight: normal;
+		cursor: pointer;
+		text-transform: capitalize;
+	}
+
+	.wrappercomodin {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		/*margin-top: 3rem;*/
+	}
+	.wrappercomodin div {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-left: 0.5rem;
+	}
+
+	.separador {
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #AAAAAA;
+	}
+
+
+	.disabled {
+		background-color: rgb(220,220,220);
+		color: white;
+	}
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		z-index: 15;
+	}
+
+
+
+	/******************* trivia ************************/
+
+	.trivia {	
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 459px;
+		height: 595px;
+
+		margin-left: calc(459px/-2);
+		margin-top: calc(595px/-2);
+
+		/*margin-top: -384.5px;*/
+		
+		background-color: white;
+		z-index: 18;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		/*grid-template-rows: 294px 53px 118px [opciones-start] repeat(3, 64px) [opciones-end] 114px;*/
+		grid-template-rows: 45px 206px 125px [opciones-start] repeat(3, 45px) [opciones-end] 84px;
+		justify-content: stretch;
+
+		color: white;
+		
+	}
+
+	
+
+
+	.trivia .tiempopregunta {
+		color: black;
+		font-size: 1.4rem;
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		align-self: center;
+		justify-self: star;
+		padding-left: 1rem;
+		background-color: white;
+	}
+
+	.trivia .tiempopregunta .cronometro {
+		color: black;
+		margin-left: 0.8rem;
+	}
+
+	.trivia .close {
+		grid-column: -2 / -1;
+		grid-row:  1 / span 1;
+		align-self: center;
+		justify-self: center;
+		color: #222222;
+		/*background-color: white;*/
+		text-align: center;
+		font-size: 1rem;
+		/*padding-top: 1.2rem;*/
+	}
+
+	.trivia .portadav {
+		grid-column: 1 / -1;
+		grid-row:  2 / span 1;
+	}
+
+	.trivia .portadav img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.trivia .fondoamarilloslide1 {
+		grid-column: 1 / -1;
+		grid-row:  3 / span 5;
+		background-color: #00338d; /* color hexagesimal azul teelcel */
+	}
+
+	.trivia .textoportada {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 2;
+
+		padding-top: 2.0rem;
+		padding-bottom: 2.0rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: white;
+
+		z-index: 18;
+		/*background-color: #ffd100;*/
+	}
+
+	.trivia .textoportada .instruccion1 {
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+	}
+
+	.trivia .textoportada .instruccion2 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+	}
+
+
+	.trivia .numeropregunta {
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.6rem;
+	}
+
+
+	.trivia .pregunta {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  3 / span 1;
+		background-color: #00338d;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		padding-left: 1.3rem; 
+		padding-top: 1.3rem; 
+		padding-bottom: 1.3rem; 
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.trivia .opcion1 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  4 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #1a50a4;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.trivia .opcion2 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  5 / span 1;
+		padding-left: 1.3rem;
+		background-color: #346dba;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.trivia .opcion3 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  6 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #4e8ad1;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.trivia .continuarp {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+		/*background-color: #f5f5f5;*/
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	/*.trivia .continuarp .btn {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+	}*/
+
+	.trivia .titulofinalportada {
+		grid-column: 2 / -2;
+		grid-row:  2 / span 1 ;
+		align-self: center;
+		justify-self: center;
+		font-size: 2.0rem;
+		color: white;
+	}
+
+	.trivia .felicidades {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.trivia .felicidades .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.trivia .felicidades .comodin img {
+		height: 3rem;
+	}
+	.trivia .felicidades .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.trivia .felicidades .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+	
+
+	.trivia .losentimos {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.trivia .losentimos .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.trivia .losentimos .comodin img {
+		height: 3rem;
+	}
+	.trivia .losentimos .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.trivia .losentimos .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+
+	/**************************************************/
+
+	/******************* palabras *********************/
+
+	.palabras {	
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 459px;
+		height: 595px;
+
+		margin-left: calc(459px/-2);
+		margin-top: calc(595px/-2);
+
+		/*margin-top: -384.5px;*/
+		
+		background-color: white;
+		z-index: 18;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		/*grid-template-rows: 294px 53px 118px [opciones-start] repeat(3, 64px) [opciones-end] 114px;*/
+		grid-template-rows: 45px 206px 125px [opciones-start] repeat(3, 45px) [opciones-end] 84px;
+		justify-content: stretch;
+
+		color: white;
+		
+	}
+
+	.palabras .fondoamarilloslide1 {
+		grid-column: 1 / -1;
+		grid-row:  3 / span 5;
+		background-color: #00338d; /* color hexagesimal azul teelcel */
+	}
+
+	.palabras .tiempopregunta {
+		color: black;
+		font-size: 1.4rem;
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		align-self: center;
+		justify-self: star;
+		padding-left: 1rem;
+		background-color: white;
+	}
+
+	.palabras .tiempopregunta .cronometro {
+		color: black;
+		margin-left: 0.8rem;
+	}
+
+	.palabras .close {
+		grid-column: -2 / -1;
+		grid-row:  1 / span 1;
+		align-self: center;
+		justify-self: center;
+		color: #222222;
+		/*background-color: white;*/
+		text-align: center;
+		font-size: 1rem;
+		/*padding-top: 1.2rem;*/
+	}
+
+	.palabras .portadav {
+		grid-column: 1 / -1;
+		grid-row:  2 / span 1;
+	}
+
+	.palabras .portadav img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.palabras .textoportada {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 2;
+
+		padding-top: 2.0rem;
+		padding-bottom: 2.0rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: white;
+
+		z-index: 18;
+		/*background-color: #ffd100;*/
+	}
+
+	.palabras .textoportada .instruccion1 {
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+	}
+
+	.palabras .textoportada .instruccion2 {
+		margin-top: 1.8rem;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+	}
+
+	.palabras .imagenizq {
+		grid-column: 1 / span 4;
+		grid-row:  2 / span 1;
+		padding: 20px 10px 20px 20px;
+	}
+
+	.palabras .imagender {
+		grid-column: 5 / span 4;
+		grid-row:  2 / span 1;
+		padding: 20px 20px 20px 10px;
+	}
+
+	.palabras .imagenizq img, .palabras .imagender img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.palabras .numeropregunta {
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.6rem;
+	}
+
+
+	.palabras .pregunta {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  3 / span 1;
+		background-color: #00338d;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+		padding-left: 1.3rem; 
+		padding-top: 1.3rem; 
+		padding-bottom: 1.3rem; 
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.palabras .palabra {
+		/*margin-top: 2rem;*/
+		width:90%;
+		font-size: 2rem;
+		color: #00338d;
+	}
+
+	.palabras .pregunta * {
+		margin-top: 1.5rem;
+	}
+
+	.palabras .opcion1 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  4 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #1a50a4;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.palabras .opcion2 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  5 / span 1;
+		padding-left: 1.3rem;
+		background-color: #346dba;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.palabras .opcion3 {
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  6 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #4e8ad1;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.palabras .continuarp {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+		/*background-color: #f5f5f5;*/
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	/*.trivia .continuarp .btn {
+		grid-column: 3 / -3;
+		grid-row:  7 / span 1 ;
+	}*/
+
+	.palabras .titulofinalportada {
+		grid-column: 2 / -2;
+		grid-row:  2 / span 1 ;
+		align-self: center;
+		justify-self: center;
+		font-size: 2.0rem;
+		color: white;
+	}
+
+	.palabras .felicidades {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.palabras .felicidades .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.palabras .felicidades .comodin img {
+		height: 3rem;
+	}
+	.palabras .felicidades .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.palabras .felicidades .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+	
+
+	.palabras .losentimos {
+		grid-column: 2 / -2;
+		grid-row:  3 / span 4 ;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		align-items: center;
+		/*padding-bottom: 1rem;*/
+		justify-content: space-between;
+		text-align: center;
+		color: white;
+	}
+
+	.palabras .losentimos .comodin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+
+	.palabras .losentimos .comodin img {
+		height: 3rem;
+	}
+	.palabras .losentimos .comodin div {
+		font-size: 2rem;
+		margin-top: 0.4rem;
+		margin-left: 0.4rem;
+	}
+
+	.palabras .losentimos .social {
+		/*width: 50%;*/
+		/*display: flex;*/
+		/*flex-direction: row;*/
+		/*background-color: none;*/
+		/*align-content: center;*/
+		justify-content: space-between;
+		font-size: 1.3rem;
+		letter-spacing: 0.3rem;
+		margin-top: 0.3rem;
+		/*align-items: center;*/
+		/*text-align: center;*/
+	}
+
+	/**************************************************/
+
+	/*********** ventana terminos y condiciones *******/
+
+	.ventanaterminoscondiciones {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		width: 462px;
+		height: 594px;
+		/*margin-left: -231px;*/
+		/*margin-top: -297px;*/
+		margin-left: calc(462px/-2);
+		margin-top: calc(594px/-2);
+		background-color: white;
+		z-index: 17;
+		border: 4px solid #fff;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		/*grid-template-rows: 38px 370px 20px 108px  58px;*/
+		grid-template-rows: 0.06fr 0.62fr 0.03fr 0.181fr 0.09fr;
+		grid-column-gap: 20px;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+		overflow-y: scroll;
+		/*padding: 20px 20px 20px 20px;*/
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 0.6rem;
+		line-height: 1rem;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto .titulo {
+		font-size: 1rem;
+		/*margin-bottom: 2rem;*/
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto p {
+		margin-bottom: 1.2rem;
+	}
+
+	.ventanaterminoscondiciones .separador {
+		height: 100%;
+		grid-column: 1 / -1;
+		grid-row: 3 / 4;
+		/*padding-left: 20px;*/
+		/*padding-right: 20px;*/
+		border-bottom: 1px solid #444;
+	}
+
+	.ventanaterminoscondiciones .checkbox {
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.ventanaterminoscondiciones .botones {
+		grid-column: 1 / span 3;
+		grid-row: 5 / 6;
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}	
+
+	.ventanaterminoscondiciones .close {
+		grid-column: -2 / -1;
+		grid-row: 1 / 2;
+		/*align-self: center;*/
+		justify-self: end;
+		font-size: 1rem;
+		padding-right: 2px;
+
+	}
+
+	/**********************************************/
+
+
+	/**************** publicidad ********************/
+
+	.publicidad {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 320px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+		cursor: pointer;
+	}
+
+	.publicidad .wrapperp {
+		grid-column: 3 / -3;
+		grid-row: 1 / 2;
+	}
+
+	.publicidad .wrapperp img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+ 
+
+	.lastrow {
+		width: 960px; /*58.75rem;*/ /*960 980*/
+		height: 80px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 1fr;
+		color: white;
+		background-color: white;
+	}
+
+	.lastrow .scrolltotop {
+		grid-column: -3 / span 1;
+		grid-row: 1 / -1;
+		justify-self: center;
+		align-self: center;
+		color: rgba(200,200,200);
+		font-size: 1.3rem;
+		/*text-align: center;*/
+	}
+
+	/************************************************/
+
+	@media only screen and (max-width: 960px) { 
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.ladinamica {
+			width: 100%;
+		}
+
+		.portada {
+			width: 100%;
+		} 
+
+		.infosombra {
+			grid-column: 2 / -2;
+			grid-row: 2/4;
+
+		}
+
+		.info {
+			grid-column: 2 / -2;
+			grid-row: 2/3;
+		}
+
+		.socialdata {
+			grid-column: 2 / -2;
+			grid-row: 3/4;
+
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 3rem;
+		}
+
+
+		.detalles {
+			grid-column: 2 / -2;
+			grid-row: 5/6;
+		}
+
+		
+
+		.formulario {
+			grid-column: 2 / -2;
+			grid-row: 6/7;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .lastrow, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+
+		.headerdinamica .linea {
+	 		/*grid-column: 1 / -1;*/
+	 	}
+
+	 	.headerdinamica h1 {
+	 		/*grid-column: 1 / span 5;*/
+	 	}
+
+		/*.headerdinamica {
+			width: 960px;
+			margin: auto;
+			padding-top: 84px;	
+			display: grid;
+			grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+			grid-column-gap: 20px;
+
+	 	}*/
+
+		.categoriadinamica {
+			padding-left: 10px;
+			padding-right: 10px;
+			/*padding-top: 52px;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 52px;
+			width: 960px;
+			margin: auto;*/
+
+			/*display: grid;*/
+			grid-template-columns: 1fr;
+			grid-auto-rows:464px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+			height: 432px;
+			
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+   			white-space: nowrap;
+		}
+
+		.publicidad {
+			width: 100% !important;
+		} 
+
+		.publicidad .wrapperp {
+			grid-column: 2 / -2;
+			grid-row: 1 / 2;
+		}
+
+		.trivia {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+
+			margin-left: 0px;
+			margin-top: 0px;
+
+			grid-template-rows: 45px 0.62fr 0.37fr [opciones-start] repeat(3, 45px) [opciones-end] 0.2fr;
+		
+		}
+
+		.ventanaterminoscondiciones {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			/*margin-left: -231px;*/
+			/*margin-top: -297px;*/
+			margin-left: 0px;
+			margin-top: 0px;
+			background-color: white;
+			
+			/*grid-template-rows: 38px 370px 20px 108px  58px;*/
+			grid-template-rows: 0.06fr 0.62fr 0.03fr 0.181fr 0.09fr;
+
+		}
+
+
+	}
+
+
+</style>
+<!-- <div class="grid"> -->
+
+	<section class="ladinamica">
+
+		<div class="portada">
+			<img src="images/portadablanca.jpg">
+		</div>
+
+		<div class="infosombra"></div>
+
+		<div class="info">
+			<div>Recompensas</div>
+			<h2>Pases dobles<br>para El Rey León</h2>
+			<div class="vigencia">Vigencia: <span>FEB. 08 | 2018</span></div>
+			<div class="viral"><span>Me gusta</span> <span>Compartir</span></div>
+		</div>
+
+		<div class="socialdata">
+			<div>
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div class="valorlikes">12345</div>
+			</div>
+			<div class="social">
+				<div class="fa fa-user-o" style="margin-right:0.5em"></div>
+				<div class="valorshares">12345</div>
+			</div>
+		</div>
+
+		<div class="contadorregresivo">
+			<div class="titulo">Tiempo de la promoción</div>
+			<div class="numeros">
+				<div class="numero">
+					<div class="dia">00</div>
+					<div class="tagnumero">Dias</div>
+				</div>
+				<div class="numero">
+					<div>:</div>
+				</div>
+				<div class="numero">
+					<div class="hora">00</div>
+					<div class="tagnumero">Horas</div>
+				</div>
+				<div>:</div>
+				<div class="numero">
+					<div class="minuto">00</div>
+					<div class="tagnumero">Minutos</div>
+				</div>
+				<div>:</div>
+				<div class="numero">
+					<div class="segundo">00</div>
+					<div class="tagnumero">Segudos</div>
+				</div>
+			</div>
+			
+			
+		</div>
+
+		<div class="fondogris"></div>
+
+		<div class="detalles">
+			<h3>Bases</h3>
+
+			<div class="bases">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros a ligula pretium convallis. Morbi et elit id lacus eleifend rutrum. Nullam eu tincidunt nulla. Proin convallis mi vel tortor feugiat ultricies. Aenean finibus, dolor vel eleifend rhoncus, erat purus varius mauris, eu tincidunt ex neque eu sapien. Morbi ultrices est vel finibus tempus. Nulla tincidunt vitae sapien accumsan consequat.</div>
+
+			<!-- <h3>Premio</h3>
+
+			<div class="premios">Morbi interdum pellentesque lobortis. Nullam vitae pulvinar risus. Nulla eget libero sed nulla venenatis ornare sed non augue. Sed sed elit erat. Mauris facilisis iaculis libero eu aliquam. Morbi ultrices purus sed ex porta, id imperdiet arcu congue. Morbi commodo nibh eu tellus tempus semper. Nullam vel magna sagittis magna suscipit elementum.</div>
+
+			<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem;"></div>
+			<h4 class="terminoscondiciones linkcyanmayuscula no-seleccionable"> VER TÉRMINOS Y CONDICIONES</h4> -->
+		</div>
+		<!-- <div class="btn comenzar no-seleccionable disabled">COMENZAR</div> -->
+
+
+		<div class="formulario">
+
+			<h3>Premio</h3>
+
+			<div class="premios">Morbi interdum pellentesque lobortis. Nullam vitae pulvinar risus. Nulla eget libero sed nulla venenatis ornare sed non augue. Sed sed elit erat. Mauris facilisis iaculis libero eu aliquam. Morbi ultrices purus sed ex porta, id imperdiet arcu congue. Morbi commodo nibh eu tellus tempus semper. Nullam vel magna sagittis magna suscipit elementum.</div>
+
+			<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem; margin-top: 2rem;"></div>
+			<h4 class="terminoscondiciones linkcyanmayuscula no-seleccionable"> Ver términos y condiciones</h4>
+
+			<div class="btn comenzar no-seleccionable disabled">Participar</div>
+
+			<!-- <h3>¿Tienes un comodín?</h3>
+			<p style="margin-top: 3rem;">SSP Regular 16/26 pt de regalo y obtén  más posibilidades de ganar la recompensa.</p>
+			<div class="wrappercomodin" style="margin-top: 1rem;">
+				<img src="images/comodin2.png">
+				<div>x2</div>
+			</div>
+			<div class="linkcyanmayuscula" style="margin-top: 1rem;">UTILIZAR MONEDAS</div>
+
+			<div class="separador" style="margin-top: 1rem;"></div>
+
+			<input type="input" name="codigo" placeholder="CODIGO" style="margin-top: 3rem;" >
+			<div class="linkcyanmayuscula" style="margin-top: 1rem;">INSERTAR CODIGO</div> -->
+			
+		</div>
+
+	</section>
+
+
+	<header class="headerdinamica">
+		<div class="linea"></div>
+		<h1 class="titulo36bold grismuyoscuro">Otras recomendaciones</h1>
+		
+	</header>
+
+	<section class="categoriadinamica">
+		
+		<div class="dinamicacard2 puntero">
+			<div class="bartop"></div>
+			<div class="imagedinamica" >
+				<img src="images/dinamica4.jpg">
+			</div>
+			<div class="tagdinamica regular12 grismedio">Recompensa</div>
+			<div class="infodinamica">
+				<div class="regular16 grismuyoscuro">
+					Partido Tigres v.s.<br>Pumas
+				</div>
+				<div class="vigencia regular12 grisoscuro">Vigencia: FEB. 08 | 2018</div>
+			</div>
+			<footer class="grismedio">
+				<div>
+					<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+				<div class="social">
+					<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+			</footer>
+		</div>
+
+		<div class="dinamicacard2 puntero">
+			<div class="bartop"></div>
+			<div class="imagedinamica" >
+				<img src="images/dinamica1.jpg">
+			</div>
+			<div class="tagdinamica regular12 grismedio">Recompensa</div>
+			<div class="infodinamica">
+				<div class="regular16 grismuyoscuro">
+					Gánate unos<br>Nike Mercurial
+				</div>
+				<div class="vigencia regular12 grisoscuro">Vigencia: FEB. 08 | 2018</div>
+			</div>
+			<footer class="grismedio">
+				<div>
+					<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+				<div class="social">
+					<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+			</footer>
+		</div>
+
+		<div class="dinamicacard2 puntero">
+			<div class="bartop"></div>
+			<div class="imagedinamica" >
+				<img src="images/dinamica2.jpg">
+			</div>
+			<div class="tagdinamica regular12 grismedio">Recompensa</div>
+			<div class="infodinamica">
+				<div class="regular16 grismuyoscuro">
+					El Campeonato <br>del Pacífico te espera.
+				</div>
+				<div class="vigencia regular12 grisoscuro">Vigencia: FEB. 08 | 2018</div>
+			</div>
+			<footer class="grismedio">
+				<div>
+					<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+				<div class="social">
+					<div class="fa fa-share-alt" style="margin-right:0.5em"></div>
+					<div>12345</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</section>
+
+	<section class="publicidad bloquesection">
+		<div class="wrapperp">
+			<img src="images/fondopublicidad.png">
+		</div>
+	</section>
+
+	<section class="lastrow">
+		<div class="fa fa-arrow-up scrolltotop" aria-hidden="true"></div>
+	</section>
+
+
+	<!-- <footer class="secciones">
+		<img class="brand" src="images/logo_telcel_blanco.png">
+		
+			<div class="bold18">GANADORES</div>
+		</nav>
+		<header></header>
+		<div class="socialwrapper blanco">
+			<div class="bold18" >SÍGUENOS</div>
+			<div class="social">
+				<div class="fa fa-google-plus grismuyoscuroBack" aria-hidden="true" ></div>
+				<div class="fa fa-twitter grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-facebook grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-instagram grismuyoscuroBack" aria-hidden="true"></div>
+				<div class="fa fa-youtube-play grismuyoscuroBack" aria-hidden="true"></div>
+			</div>
+			<div class="regular12">
+				¿Cómo funciona?<br>
+				Mapa del sitio<br>
+				Términos y Condiciones<br>
+				Políticas de privacidad<br>
+			</div>
+		</div>
+		<div class="legal regular12 grisclaro">Copyright 2018. Todos los derechos reservados</div>
+		<div class="newsletter blanco">
+			<div class="bold18" >NEWSLETTER</div>
+			<div class="regular12">Suscríbete a nuestro Newsletter</div>
+			<input type="input" name="NOMBRE" placeholder="NOMBRE">
+			<input type="input" name="EMAIL" placeholder="CORREO ELECTRÓNICO">
+			<div class="btn grismuyoscuro">SUSCRIBIRSE</div>
+		</div>
+		
+	</footer> -->
+
+<!-- </div> -->
+
+<!-- dinamica interccion 1 -->
+<div class="fondoventanasflotante"></div>
+
+
+<div class="trivia">
+
+	<!-- <div class="pagina"> -->
+	<div class="tiempopregunta">
+		<span class="fa fa-clock-o" aria-hidden="true"></span> 
+		<span class="cronometro no-seleccionable">
+			<span class="hora_">00</span>
+			:
+			<span class="minuto_">00</span>
+			:
+			<span class="segundo_">00</span>
+		</span>
+	</div>
+
+	<i class="fa fa-times close no-seleccionable" aria-hidden="true"></i>
+
+	<div class="portadav portadaprimera" data-slide="1" >
+		<img src="images/tecate1.jpg">
+	</div>
+
+
+	<div class="fondoamarilloslide1"></div>
+
+	<div class="textoportada" data-slide="1">
+		<p class="instruccion1 blanco"></p>
+
+		<p class="instruccion2"><span class="azulclarotexttelcel">¡Mucha suerte!</span></p>
+	</div>
+
+	
+
+	<div class="titulofinalportada bold" data-slide="7">
+		<div data-acierto="true" >¡Felicidades!</div>
+		<div data-acierto="false" >Gracias por participar</div>
+	</div>
+	<div class="felicidades" data-slide="5" data-acierto="true">
+		<div>Obtuviste <span class> </span> de X respuestas correctas en un tiempo de:
+			<span class="hora bold">00</span>:<span class="minuto bold">00</span>:<span class="segundo bold">00</span>.</div>
+		
+	</div>
+
+	<div class="losentimos" data-slide="5" data-acierto="false" >
+		<div></div>
+		
+	</div>
+
+
+
+
+	<div class="continuarp">
+		<div class="btn negro" data-slide="regresar">REGRESAR</div>
+		<div class="btn negro" data-slide="continuar">CONTINUAR</div>
+		<div class="btn negro" data-slide="finalizar" >FINALIZAR</div>
+		<div class="btn negro" data-slide="seguirjugando">SEGUIR JUGANDO</div>
+	</div>
+	<!-- </div> -->
+
+
+</div>
+
+<div class="palabras">
+	<div class="tiempopregunta">
+		<span class="fa fa-clock-o" aria-hidden="true"></span> 
+		<span class="cronometro no-seleccionable">
+			<span class="hora_">00</span>
+			:
+			<span class="minuto_">00</span>
+			:
+			<span class="segundo_">00</span>
+		</span>
+	</div>
+
+	<i class="fa fa-times close no-seleccionable" aria-hidden="true"></i>
+
+	<div class="portadav portadaprimera" data-slide="1" >
+		<img src="images/tecate1.jpg">
+	</div>
+
+	
+
+	<!-- <div class="imagender" data-slide="2" >
+		<img src="images/tecate2.jpg">
+	</div> 
+	<div class="imagenizq" data-slide="2" >
+		<img src="images/tecate2.jpg">
+	</div>  -->
+
+	<div class="fondoamarilloslide1"></div>
+
+	<div class="textoportada" data-slide="1">
+		<p class="instruccion1 blanco"></p>
+
+		<p class="instruccion2"><span class="azulclarotexttelcel">¡Mucha suerte!</span></p>
+	</div>
+
+	
+
+	<div class="titulofinalportada bold" data-slide="5">
+		<div data-acierto="true" >¡Felicidades!</div>
+		<div data-acierto="false" >Gracias por participar</div>
+	</div>
+	<div class="felicidades" data-slide="5" data-acierto="true">
+		<div>Obtuviste <span class> </span> de X respuestas correctas en un tiempo de:
+			<span class="hora bold">00</span>:<span class="minuto bold">00</span>:<span class="segundo bold">00</span>.</div>
+		
+	</div>
+
+	<div class="losentimos" data-slide="5" data-acierto="false" >
+		<div></div>
+		
+	</div>
+
+
+
+
+	<div class="continuarp">
+		<div class="btn negro" data-slide="regresar">REGRESAR</div>
+		<div class="btn negro" data-slide="continuar">CONTINUAR</div>
+		<div class="btn negro" data-slide="finalizar" >FINALIZAR</div>
+		<div class="btn negro" data-slide="seguirjugando">SEGUIR JUGANDO</div>
+	</div>
+
+</div>
+
+<div class="ventanaterminoscondiciones">
+	<div class="fa fa-times close" aria-hidden="true" ></div>
+	<div class="cuerpotexto">
+		<p class="titulo">Terminos y Condiciones</p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in 
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus
+		antium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+		<p>Neque porro quisquam est, qui dolorem ipsum
+		Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae
+		rat voluptatem. Ut enim ad minima veniam, quis nostrum Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>ea voluptate velit esse quam illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+	</div>
+	<div class="separador"></div>
+	<div class="checkbox">
+		<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem;"></div>
+		<div class="linkcyanmayuscula no-seleccionable ">Acepto los terminos y condiciones</div>
+	</div>
+	<div class="botones">
+		<div class="linkcyanmayuscula no-seleccionable cancelar">CANCELAR</div>
+		<div class="linkcyanmayuscula no-seleccionable aceptar">ACEPTAR</div>
+	</div>
+</div>
+
+<!-- fin dinamica interaccion 1 -->
+
+
+<script type="text/javascript">
+	var dinamicadataJson = {};
+	var dinamicadataJsonRespuesta = {};
+	var totalpreguntas;
+
+	var triviaslide = 1;
+	var acierto = false;
+	var ultimoslide = 5;
+
+	var servicioBeneficio;
+
+	var cuentaprogresiva;
+	var dia_ = '00'
+	var hora_ = '00'
+	var minuto_ = '00'
+	var segundo_ = '10';
+	comenzarCuentaProgresiva();
+
+	var cuentaregresiva;
+	var dia = '00'
+	var hora = '00'
+	var minuto = '00'
+	var segundo = '00';
+
+	var tipodinamica;
+
+	$('.dia').text(dia);
+	$('.hora').text(hora);
+	$('.minuto').text(minuto);
+	$('.segundo').text(segundo);
+
+	$('.dia_').text(dia_);
+	$('.hora_').text(hora_);
+	$('.minuto_').text(minuto_);
+	$('.segundo_').text(segundo_);
+
+	clearInterval( cuentaprogresiva);
+	clearInterval( cuentaregresiva);
+	cuentaregresiva = setInterval( function() {
+		segundo -= 1;
+		if ( segundo < 1 ) {
+			segundo = 60;
+			minuto -= 1;
+			if ( minuto < 1 ) {
+				minuto = 60;
+				hora -= 1;
+				if ( hora < 1 ) {
+					hora = 24;
+					dia -= 1;
+					if ( dia == 0) {
+						// se acabo
+					}
+				}
+			}
+		}
+		segf = ('0' + segundo).slice (-2);
+		minf = ('0' + minuto).slice (-2);
+		horf = ('0' + hora).slice (-2);
+		diaf = ('0' + dia).slice (-2);
+
+		
+		segf = ('0' + segundo).slice (-2);
+		$('.dia').text(diaf);
+		$('.hora').text(horf);
+		$('.minuto').text(minf);
+		$('.segundo').text( segf ) ;
+
+	}, 1000);
+
+	function comenzarCuentaProgresiva() {
+		//alert(1);
+
+		cuentaprogresiva = setInterval( function() {
+			//alert(3);
+			segundo_ += 1;
+			if ( segundo_ > 60 ) {
+				segundo_ = 0;
+				minuto_ += 1;
+					if ( minuto_ > 60 ) {
+					minuto_ = 0;
+					hora_ += 1;
+					if ( hora_ > 24 ) {
+						hora_ = 0;
+						dia_ += 1;
+						if ( dia_ > 0) {
+							// se acabo
+						}
+					}
+				}
+			}
+			segf_ = ('0' + segundo_).slice (-2);
+			minf_ = ('0' + minuto_).slice (-2);
+			horf_ = ('0' + hora_).slice (-2);
+			diaf_ = ('0' + dia_).slice (-2);
+
+			//alert(2);
+			segf_ = ('0' + segundo_).slice (-2);
+			$('.dia_').text(diaf_);
+			$('.hora_').text("23");
+			$('.minuto_').text(minf_);
+			$('.segundo_').text( segf_ ) ;
+			console.log(segf_);
+
+		}, 1000);
+	}
+
+	var aceptado = false;
+
+	function convertMS(ms) {
+	  var d, h, m, s;
+	  s = Math.floor(ms / 1000);
+	  m = Math.floor(s / 60);
+	  s = s % 60;
+	  h = Math.floor(m / 60);
+	  m = m % 60;
+	  d = Math.floor(h / 24);
+	  h = h % 24;
+	  return { d: d, h: h, m: m, s: s };
+	};
+
+	$(document).ready( function() {
+
+
+
+        var dinamicaJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
+        	dinamicadataJson = data;
+        	dinamicadataJsonRespuesta = [ {'name':'promo','value': id_dinamica}, {'name':'uspk','value':upk} ];
+        	// alert( dinamicadataJson.promocion.dinamica);
+        	var fechacierre = data.promocion.vigenciaUTC;
+        	var fechaactual =  data.promocion.tiempoahora;
+        	var objtiemporestante = convertMS(fechacierre - fechaactual);
+        	dia = objtiemporestante.d;
+        	hora = objtiemporestante.h;
+        	minuto = objtiemporestante.m;
+        	segundo = objtiemporestante.s;
+ 
+        	$(".ladinamica .portada img").attr("src", data.promocion.imagen_lg);
+        	$(".ladinamica .info h2").text(data.promocion.titulo);
+        	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
+        	// 
+        	$(".ladinamica .socialdata .valorlikes").text(data.promocion.likes);
+        	$(".ladinamica .socialdata .valorshares").text(data.promocion.shares);
+        	$(".bases").html(data.promocion.bases);
+        	$(".premios").html(data.promocion.premio);
+
+        	tipodinamica = data.promocion.dinamica;
+        	if ( data.promocion.segmentos.length > 0  ) {
+        		if (  data.promocion.segmentos.indexOf(servicioUser) > 0 ) {
+        			servicioBeneficio = true;
+        		};
+        	}
+        	switch(tipodinamica) {
+			    case 'trivia':
+			        ultimoslide = data.promocion.preguntas.length+2;
+			        totalpreguntas = data.promocion.preguntas.length;
+
+					$('.portadaprimera img').attr("src", data.promocion.imagen);
+			        $(".textoportada .instruccion1").html(data.promocion.inicio_juego_txt);
+			        var preguntaimagenHTML = '';
+			         var preguntaHTML = '';
+			        for(var i=0; i<data.promocion.preguntas.length; i++) {
+			        	preguntaHTML += '<div class="portadav" data-slide="'+(i+2)+'" >'
+						preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img+'">'
+						preguntaHTML += '</div>'
+
+						if ( servicioBeneficio && i==0 ) {
+							preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+							preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+							preguntaHTML += '	<p>Beneficio <img src="images/claro-musica.png" width="100" >: esta respuesta te la mereces</p>'
+							preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+							preguntaHTML += '</div>'
+						} else {
+							preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+							preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+							preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+							preguntaHTML += '</div>'
+						}
+						
+						 
+ 						console.log( data.promocion.segmentos)
+						for(var o=0; o<data.promocion.preguntas[i].options.length; o++) {
+							// if ( servicioBeneficio ) {
+								if ( o == 0  && servicioBeneficio && i==0) {
+									preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+									preguntaHTML += '	<i class="fa fa-dot-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+									preguntaHTML += '</div>'
+								} else {
+									preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+									preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+									preguntaHTML += '</div>'
+								}
+								
+							// } else {
+							// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+							// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+							// 	preguntaHTML += '</div>'
+							// }
+							
+							// console.log( data.promocion.preguntas[i].options[o].texto )
+						}
+
+						$( ".trivia .titulofinalportada" ).data( "slide", ultimoslide );
+						$( ".trivia .felicidades" ).data( "slide", ultimoslide );
+						$( ".trivia .losentimos" ).data( "slide", ultimoslide );
+						$( ".trivia .portadafinal").data( "slide", ultimoslide );
+						$( ".trivia .portadafinal img").attr("src", data.promocion.imagen);
+						
+						
+			        }
+
+			        preguntaHTML += '<div class="portadav portadafinal" data-slide="'+ ultimoslide+'" >'
+					preguntaHTML += '	<img src="'+data.promocion.imagen+'">'
+					preguntaHTML += '</div>'
+
+			        // $(".trivia").append(preguntaimagenHTML);
+			        $(".trivia").append(preguntaHTML);
+
+			        break;
+			    case 'palabras':
+			    	ultimoslide = data.promocion.preguntas.length+2;
+			        totalpreguntas = data.promocion.preguntas.length;
+			        //alert( ultimoslide );
+					$('.portadaprimera img').attr("src", data.promocion.imagen);
+					// $('.portadafinal').data("slide",ultimoslide);
+					// $('.portadafinal img').attr("src", data.promocion.imagen);
+					// alert( "data-slide"+$('.portadafinal').data("slide") ).
+			        $(".textoportada .instruccion1").html(data.promocion.inicio_juego_txt);
+			        var preguntaimagenHTML = '';
+			         var preguntaHTML = '';
+			         //alert( "length"+data.promocion.preguntas.length );
+			        for(var i=0; i<data.promocion.preguntas.length; i++) {
+			        	// alert(i);
+			   //      	preguntaHTML += '<div class="portadav" data-slide="'+(i+2)+'" >'
+						// preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img+'">'
+						// preguntaHTML += '</div>'
+
+						preguntaHTML += '<div class="imagenizq" data-slide="'+(i+2)+'" >'
+						preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img[0]+'">'
+						preguntaHTML += '</div>'
+
+						preguntaHTML += '<div class="imagender" data-slide="'+(i+2)+'" >'
+						preguntaHTML += '	<img src="'+data.promocion.preguntas[i].img[1]+'">'
+						preguntaHTML += '</div>'
+
+
+
+						if ( servicioBeneficio && i==0 ) {
+							// preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+							// preguntaHTML += '	<p class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</p>'
+							// preguntaHTML += '	<p>Beneficio <img src="images/claro-musica.png" width="100" >: esta respuesta te la mereces</p>'
+							// preguntaHTML += '	<p >'+data.promocion.preguntas[i].pregunta+'</p>'
+							// preguntaHTML += '</div>'
+						} else {
+							preguntaHTML += '<div class="pregunta" data-slide="'+(i+2)+'" data-pk="'+data.promocion.preguntas[i].pk+'">'
+							preguntaHTML += '	<div class="numeropregunta" >'+(i+1)+' de '+data.promocion.preguntas.length+'</div>'
+							preguntaHTML += '	<div class="description">'+data.promocion.preguntas[i].description+'</div>'
+							preguntaHTML += '	<input class="palabra" type="text" value="">';
+							preguntaHTML += '</div>'
+							
+						}
+						
+						 
+ 						console.log( data.promocion.segmentos)
+						// for(var o=0; o<data.promocion.preguntas[i].options.length; o++) {
+							// if ( servicioBeneficio ) {
+								// if ( o == 0  && servicioBeneficio && i==0) {
+								// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+								// 	preguntaHTML += '	<i class="fa fa-dot-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+								// 	preguntaHTML += '</div>'
+								// } else {
+								// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+								// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+								// 	preguntaHTML += '</div>'
+								// }
+								
+							// } else {
+							// 	preguntaHTML += '<div class="opcion'+(o+1)+' opciones no-seleccionable" data-slide="'+(i+2)+'" data-rpk="'+data.promocion.preguntas[i].options[o].rpk+'"  data-pk="'+data.promocion.preguntas[i].pk+'">'
+							// 	preguntaHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+data.promocion.preguntas[i].options[o].texto+' ';
+							// 	preguntaHTML += '</div>'
+							// }
+							
+							// console.log( data.promocion.preguntas[i].options[o].texto )
+						// }
+
+						$( ".palabras .titulofinalportada" ).data( "slide", ultimoslide );
+						$( ".palabras .felicidades" ).data( "slide", ultimoslide );
+						$( ".palabras .losentimos" ).data( "slide", ultimoslide );
+						// $( ".palabras .portadafinal").data( "slide", ultimoslide );
+						// $( ".palabras .portadafinal img").attr("src", data.promocion.imagen);
+						
+						
+			        }
+			        preguntaHTML += '<div class="portadav portadafinal" data-slide="'+ ultimoslide+'" >'
+					preguntaHTML += '	<img src="'+data.promocion.imagen+'">'
+					preguntaHTML += '</div>'
+			        // $(".trivia").append(preguntaimagenHTML);
+			        $(".palabras").append(preguntaHTML);
+			        break;
+			    case 'panorama':
+			        // alert('panorama')
+			        break;
+			    default:
+			        
+			}
+
+        	
+        	//alert(ultimoslide);
+        	
+        })
+
+
+        data = [
+
+    {'name':'promo','value':32},
+
+    {'name':'uspk','value':29},
+
+    ]
+
+
+		$(".fondoventanasflotante").hide();
+		
+		// $(".comenzar").removeClass("disabled");
+		// contenido de las trivias de la dinamica
+
+		$(".palabras").hide();
+		$(".trivia").hide();
+		$('[data-slide="regresar"]').hide();
+		$('[data-slide="finalizar"]').hide();
+		$('[data-slide="seguirjugando"]').hide();
+		$('[data-slide="1"]').hide();
+		$('[data-slide="2"]').hide();
+		$('[data-slide="3"]').hide();
+		$('[data-slide="4"]').hide();
+		$('[data-slide="5"]').hide();
+		$('[data-slide="6"]').hide();
+		$('[data-slide="7"]').hide();
+		$('[data-slide="8"]').hide();
+		$('[data-slide="9"]').hide();
+		$('[data-slide="10"]').hide();
+		
+		$(".wrapperventanaterminoscondiciones").hide();
+		$(".ventanaterminoscondiciones").hide();
+
+		// $(".comenzar").not(".disabled").click( function() {
+		// 	$(".fondoventanaflotante").show();
+		// 	$(".ventanaflotante").show();
+		// });
+
+		// $( "body" ).undelegate(  ".comenzar:not(.disabled)", "click").delegate( ".comenzar:not(.disabled)", "click", function() {
+		$( ".comenzar" ).click( function() {	
+			// alert("comenzar");
+
+			$(".aceptoterminoscondiciones").addClass("disabled");
+		  	$(".fondoventanasflotante").show();
+
+		  	switch(tipodinamica) {
+			    case 'trivia':
+			        triviaslide = 1;
+					$('[data-slide="continuar"]').show();
+					$('[data-slide="finalizar"]').hide();
+					$('[data-slide="regresar"]').hide();
+					$('[data-slide="seguirjugando"]').hide();
+					$('[data-slide="1"]').hide();
+					$('[data-slide="2"]').hide();
+					$('[data-slide="3"]').hide();
+					$('[data-slide="4"]').hide();
+					$('[data-slide="5"]').hide();
+					$('[data-slide="6"]').hide();
+					$('[data-slide="7"]').hide();
+					$('[data-slide="8"]').hide();
+					$('[data-slide="9"]').hide();
+					$('[data-slide="10"]').hide();
+					$(".trivia").show();
+					$('[data-slide="1"]').show();
+			        break;
+			    case 'palabras':
+			         triviaslide = 1;
+					$('[data-slide="continuar"]').show();
+					$('[data-slide="finalizar"]').hide();
+					$('[data-slide="regresar"]').hide();
+					$('[data-slide="seguirjugando"]').hide();
+					$('[data-slide="1"]').hide();
+					$('[data-slide="2"]').hide();
+					$('[data-slide="3"]').hide();
+					$('[data-slide="4"]').hide();
+					$('[data-slide="5"]').hide();
+					$('[data-slide="6"]').hide();
+					$('[data-slide="7"]').hide();
+					$('[data-slide="8"]').hide();
+					$('[data-slide="9"]').hide();
+					$('[data-slide="10"]').hide();
+					$(".palabras").show();
+					$('[data-slide="1"]').show();
+			        break;
+			        break;
+			    case 'panorama':
+			        // alert('panorama')
+			        break;
+			    default:
+			        
+			} 
+		  	/********* trivia **********/
+		  	
+			/*****************************/
+		});
+
+		// , .wrapperventanaterminoscondiciones
+		$(".fondoventanasflotante, .trivia .close, .palabras .close").click( function() {
+			$(".fondoventanasflotante").hide();
+			$(".palabras").hide();
+			$(".trivia").hide();
+			$(".ventanaterminoscondiciones").hide();
+		})
+
+		$(".ventanaterminoscondiciones .close, .ventanaterminoscondiciones .aceptar, .ventanaterminoscondiciones  .cancelar").click( function() {
+			$(".fondoventanasflotante").hide();
+			// $(".ventanaflotante").hide();
+			$(".ventanaterminoscondiciones").hide();
+		})
+
+		$(".dinamicacard2").click( function() {
+			$(".containergrid").fadeTo(400,0.0, function() {
+				$('html, body').scrollTop(0);
+				$(".containergrid").load("secciones/dinamica.html", function() {
+					$(".containergrid").fadeTo(400,1.0);
+				});
+			})
+		})
+
+
+		$( "body" ).undelegate(  ".opciones", "click").delegate( ".opciones", "click", function() {
+			$(".opciones").find( ".fa" ).removeClass("fa-dot-circle-o");
+			$(".opciones").find( ".fa" ).addClass("fa-circle-o");
+			$(this).find( ".fa" ).removeClass("fa-circle-o");
+			$(this).find( ".fa" ).addClass("fa-dot-circle-o");
+			// alert(triviaslide );
+			// alert( $(this).data("pk") )
+			// alert($(this).data("rpk") );
+			dinamicadataJsonRespuesta.push( {'name':'pregunta','value': $(this).data("pk") })
+			dinamicadataJsonRespuesta.push( {'name':'resp_'+$(this).data("pk"),'value': $(this).data("rpk") })
+
+		})
+
+		$( "body" ).undelegate(  ".aceptoterminoscondiciones:not(.disabled)", "click").delegate( ".aceptoterminoscondiciones:not(.disabled)", "click", function() {
+			// console.log(3);
+			$(".aceptoterminoscondiciones").toggleClass("fa-check-square");
+			aceptado =  $(".aceptoterminoscondiciones").hasClass("fa-check-square");
+			$(".comenzar").toggleClass("disabled");
+		});
+
+
+
+		$(".terminoscondiciones").click( function() {
+			// $(".fondoventanasflotante").show();
+			$(".fondoventanasflotante").show();
+			// $(".ventanaflotante").show();
+			$(".ventanaterminoscondiciones").show();
+			
+			// $(".wrapperventanaterminoscondiciones").show();
+			
+			//$(".ventanaflotante").show();
+			
+			// $(".aceptoterminoscondiciones").toggleClass("fa-check-square");
+			// alert(  $(".aceptoterminoscondiciones").hassClass("fa-check-square") );
+			// $(".comenzar").toggleClass("disabled");
+		})
+
+		// $( "body" ).undelegate(  ".trivia .continuarp", "click").delegate( ".trivia .continuarp", "click", function() {
+
+		$('[data-slide="continuar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+			triviaslide += 1;
+			switch(triviaslide) {
+			    case 1:
+			    	comenzarCuentaProgresiva();
+			        $('[data-slide="regresar"]').hide();
+			        $('[data-slide="finalizar"]').hide();
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        break;
+			    case 2:
+			    	$('[data-slide="regresar"]').fadeIn(600);
+			    	// $('[data-slide="continuar"]').fadeIn(600);
+			    	// $('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	$.get('https://admin.experienciastelcel.com/restful/participando/'+upk+'/'+id_dinamica+'/',function(response){
+					    console.log(response);
+					});
+			    	break;
+			    case (ultimoslide-1):
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	var resultadoJson =  [
+					    {'name':'promo','value':id_dinamica},
+					    {'name':'uspk','value':upk},
+					    {'name':'pregunta','value':13}, 
+					    {'name':'resp_13','value':'bilbbo'},
+					    {'name':'pregunta','value':24},
+					    {'name':'resp_24','value':'sauron'}
+				    ]
+			    	break;
+			    case ultimoslide:
+			    	$('[data-slide="regresar"]').hide();
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="seguirjugando"]').fadeIn(600);
+
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        if ( acierto == true ) {
+			        	$('[data-acierto="false"]').hide();
+						$('[data-acierto="true"]').fadeIn(600);
+					} else {
+						$('[data-acierto="true"]').hide();
+						$('[data-acierto="false"]').fadeIn(600);
+					}	
+			        break;
+			    default:
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			}
+		})
+
+		$('[data-slide="regresar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+			triviaslide -= 1;
+			switch(triviaslide) {
+			    case 1:
+			    	comenzarCuentaProgresiva();
+			        $('[data-slide="regresar"]').hide();
+			        $('[data-slide="finalizar"]').hide();
+			        $('[data-slide="continuar"]').fadeIn(600);
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        break;
+			    case 2:
+			    	// $('[data-slide="regresar"]').fadeIn(600);
+			    	// $('[data-slide="continuar"]').fadeIn(600);
+			    	// $('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case (ultimoslide-2):
+			    	$('[data-slide="finalizar"]').hide();
+			    	$('[data-slide="continuar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case (ultimoslide-1):
+			    	$('[data-slide="finalizar"]').fadeIn(600);
+			    	$('[data-slide="regresar"]').fadeIn(600);
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			    	break;
+			    case ultimoslide:
+			    	$('[data-slide="regresar"]').hide();
+			    	$('[data-slide="continuar"]').hide();
+			    	$('[data-slide="finalizar"]').hide();
+
+			    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			        if ( acierto == true ) {
+			        	$('[data-acierto="false"]').hide();
+						$('[data-acierto="true"]').fadeIn(600);
+					} else {
+						$('[data-acierto="true"]').hide();
+						$('[data-acierto="false"]').fadeIn(600);
+					}
+					$('[data-slide="seguirjugando"]').fadeIn(600);
+			        break;
+			    default:
+			        $('[data-slide="'+triviaslide+'"]').fadeIn(600);
+			}
+		})
+
+		$('[data-slide="finalizar"]').click( function() {
+			$('[data-slide="'+triviaslide+'"]').hide();
+
+			triviaslide += 1;
+
+			$('[data-slide="regresar"]').hide();
+	    	$('[data-slide="continuar"]').hide();
+	    	$('[data-slide="finalizar"]').hide();
+
+	    	$('[data-slide="'+triviaslide+'"]').fadeIn(600);
+	        if ( acierto == true ) {
+	        	$('[data-acierto="false"]').hide();
+				$('[data-acierto="true"]').fadeIn(600);
+			} else {
+				$('[data-acierto="true"]').hide();
+				$('[data-acierto="false"]').fadeIn(600);
+			}
+			$('[data-slide="seguirjugando"]').fadeIn(600);
+
+			// console.log( dinamicadataJsonRespuesta );
+			$.ajax({'url':'https://admin.experienciastelcel.com/restful/finaltrivia/',
+		          'type':'GET',
+		          'dataType':'json',
+		          'data':dinamicadataJsonRespuesta,
+		          'success':function(response){
+		            	// console.log(response.tiempoUTC);
+		            	var tiempoJuego = convertMS(response.tiempoUTC);
+		            	console.log(tiempoJuego.d)
+		            	console.log(tiempoJuego.h)
+		            	console.log(tiempoJuego.m)
+		            	console.log(tiempoJuego.s)
+
+		            	console.log(response.correctas);
+		            	console.log(totalpreguntas)
+
+		            	var respuesta = '<p style="font-size:1rem;">Obtuviste '+response.correctas+' de '+totalpreguntas+' respuestas correctas<br>en un tiempo de:</p>'
+						respuesta += '<p style="font-size:2rem;">'+tiempoJuego.h+":"+tiempoJuego.m+":"+tiempoJuego.s+'</p>'
+						respuesta += '<p style="font-size:1rem;">Los resultados se darán a conocer una semana despues de cerrado el evento</p>'
+						respuesta += '<p style="font-size:2rem;">¡Mucha suerte!</p>'
+
+						$(".losentimos").html(respuesta);
+
+		          }
+		     });
+			
+		})
+
+		$('[data-slide="seguirjugando"]').click( function() {
+			cargaContenido( "inicio.html?" );
+		});
+
+		
+
+		$(".scrolltotop").click( function() {
+			$('html, body').animate({
+		        scrollTop: 0 
+		    }, 1000);
+		})
+
+
+		
+		$(".publicidad").click( function() {
+			window.open( "https://consumer.huawei.com/mx/phones/mate10/", "blank")
+		})
+
+		
+	});
+
+
+
+</script>
