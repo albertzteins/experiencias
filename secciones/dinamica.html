@@ -706,13 +706,14 @@
 	.ventanaterminoscondiciones {
 		position: fixed;
 		left: 50%;
-		top: 50%;
+		top: 0px;
 		width: 462px;
 		height: 594px;
 		/*margin-left: -231px;*/
 		/*margin-top: -297px;*/
 		margin-left: calc(462px/-2);
-		margin-top: calc(594px/-2);
+		margin-top: 10px;
+		/*margin-top: calc(594px/-2);*/
 		background-color: white;
 		z-index: 17;
 		border: 4px solid #fff;
@@ -1328,7 +1329,7 @@
 
 			$(".aceptoterminoscondiciones").addClass("disabled");
 		  	$(".fondoventanasflotante").show();
-
+		  	parent.postMessage('scrollthem,0', '*');
 			// carga lal dinamica que corresponde, el archivo html debe llamarse como la dinamica
 			// el div principal de tener a clase ".ventanadinamica"
 			// para poder cerrase haciedo click en el area negro translucido
@@ -1342,7 +1343,7 @@
 					 	$(divbox).attr('id','boxdinamica');
 					 	$(divbox).append(data_d); 
 		                $("#main-wrapper").append(divbox);
-
+		                
 		                // var scrollTopContent = $('#boxdinamica').offset().top+100;
 			            // alert( scrollTopContent );
 			            // parent.postMessage('scrollthem,'+scrollTopContent+'', '*');
@@ -1365,6 +1366,7 @@
 			$(".fondoventanasflotante").hide();
 			$( ".ventanadinamica" ).remove();
 			$(".ventanaterminoscondiciones").hide();
+			$('#boxdinamica').hide();
 			clearInterval(sizeWindowparent);
 			// if ( finalizoDinamica ) {
 			// 	$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
@@ -1402,6 +1404,7 @@
 		$(".terminoscondiciones").click( function() {
 			$(".fondoventanasflotante").show();
 			$(".ventanaterminoscondiciones").show();
+			parent.postMessage('scrollthem,0', '*');
 		})
 
 

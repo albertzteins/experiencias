@@ -8,13 +8,13 @@
 	    height: auto;
 	    width: 599px;
 	    background: #fff;
-	    top:50%;
+	    top:0px;
 	    left:50%;
 		border-radius: 0.4em;
 		overflow: hidden;
 		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
 		margin-left: calc(599px/-2);
-		margin-top: calc(595px/-2);
+		margin-top: 10px;
 	}
 
 

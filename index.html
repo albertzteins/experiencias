@@ -123,17 +123,6 @@
 		     
 		}
 
-		//Every two seconds....
-		// setInterval(function() {
-		// 	var height = $(".container-iframe").height() + 100;
-		// 	// parent.postMessage(height,"*");
-		// 	console.log(height);
-		// 	var dataToParentWindow = {
-		// 		"height": height;
-		// 	}
-		// 	parent.postMessage(dataToParentWindow,"*");
-
-		// },150);
 
 		setInterval(function() {
 			var height = $(".container-iframe").height() + 100;
@@ -155,8 +144,6 @@
 	var region = 0;
 	window.addEventListener("message",
           function (e) {
-            
-
             if (e.origin !== "uat.mitelcel.com") {
               //return;
 			  noe_s = true;
@@ -166,7 +153,7 @@
             	var datosUsuario = JSON.parse(e.data);
             }
             catch(err){
-            	var datosUsuario = {};
+            	er = err;
             }
 
             if(typeof(datosUsuario)=='number'){
@@ -174,40 +161,40 @@
             	// document.cookie="upk=2";
             }
             else{
-            	
-				urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
-				data = {'correo':datosUsuario.correo};
+            	try{
+					urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
+					data = {'correo':datosUsuario.correo};				
+					$.ajax({
+						'url':urls,
+						'method':'GET',
+						'dataType':'json',
+						data:data,
+						'success':function(response){
+							//alert( response );
+							document.cookie="upk="+response.userpk; 
+							upk = response.userpk; 
+							getUser(); 
+							
+						}
+					});
 
-				
-				$.ajax({
-					'url':urls,
-					'method':'GET',
-					'dataType':'json',
-					data:data,
-					'success':function(response){
-						//alert( response );
-						document.cookie="upk="+response.userpk; 
-						upk = response.userpk; 
-						getUser(); 
-						
-					}
-				});
-
-
-
+            	}
+            	catch(err){
+            		er = err;
+            	}
             }
 
-
-
-
-
           },false
-        );
+        );	
 
+	/* MOVE THIS LINES ON PRODUCTION MODE   */
 
+		upk = 162; 
+		getUser();
 
-
+	/* RELLY ______ MOVE IT */
 	
+
 	</script>
 
 

@@ -303,11 +303,13 @@
 		color: white;
 		position: fixed;
 		left: 50%;
-		top: 50%;
+		/*top: 50%;*/
+		top: 0px;
 		width: 80%;
-		height: 80%;
+		height: auto;
 		margin-left: -40%;
-		margin-top: -40vh;
+		/*margin-top: -40vh;*/
+		margin-top: 10px;
 		/*background-color: yellow;*/
 		z-index: 20;
 
@@ -551,18 +553,6 @@
 
 
 			<div class="galeriafotos">
-				<!-- <div class="wrapperfoto">
-					<img src="images/ganadoresblanco.png">
-				</div>
-				<div class="wrapperfoto">
-					<img src="images/ganadoresblanco.png">
-				</div>
-				<div class="wrapperfoto">
-					<img src="images/ganadoresblanco.png">
-				</div> -->
-				<!-- <div class="wrapperfoto">
-					<img src="images/ganadoresblanco.png">
-				</div> -->
 			</div>
 				
 			<!-- </div> -->
@@ -651,6 +641,7 @@
 			$(".wrappercarruselflotante").show();
 			// $(".wrappercarruselflotante img" ).attr( "src", $(this).find("img").attr("src") ); //wrapperfoto img
 			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
+			parent.postMessage('scrollthem,0', '*');
 			// indexGaleriaFoto
 		})
 

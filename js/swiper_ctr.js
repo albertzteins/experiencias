@@ -1,4 +1,4 @@
-var id_dinamica = 17;
+var id_dinamica = 63;
 
 (function(angular) {
     'use strict';
@@ -39,36 +39,16 @@ var id_dinamica = 17;
         $scope.status = null;
         $scope.startgame = 1;
         $scope.tiempofinal = 0;
-        $scope.path_site = 'http://telcelbk.local/';
-
-        $scope.rowx = [
-            {'rpk':1,'pregunta':'Cual de los dos es el director tecnico de la selección',
-              'options':[
-              {'img':'/images/portadasperfil/portada1.jpg'},
-              {'img':'/images/portadasperfil/portada2.jpg'},
-              {'img':'/images/portadasperfil/portada3.jpg'},
-              {'img':'/images/portadasperfil/portada4.jpg'}
-              ]
-
-            }
-        ];
-
-
+        $scope.path_site = 'http://adm.experienciastelcel.com/';
         $scope.iniciar = function(){
           $scope.startgame = 1;
         }
-
 
         $http.get($scope.path_site+'restful/promocion/'+id_dinamica+"/")
         .then(function(response) {
           $scope.dinamica = response.data.promocion;
         });
-       
-
-
     });
-
-
 
 })(window.angular);
 
