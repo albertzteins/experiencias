@@ -11,8 +11,9 @@ var ventaja_fecha;
 var sizeWindowparent;
 var finalizoDinamica = false;
 
-
-
+// upk = 159; //////////////////////////////////////////  quitar!!
+// getUser() //////////////////////////////////////////  quitar!!
+// console.log("upk inicio "+upk);
 
 function getCookie(cname) {
     var name = cname + "=";

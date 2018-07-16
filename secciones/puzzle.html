@@ -6,9 +6,10 @@
 <div class="trivia" id="puzzle-canvas" ng-app="puzzleApp">
 
 
-	<div style="padding:20px;font-size: 1.4rem;">
+	<div style="padding:20px;font-size: 1.1rem;">
 		<!-- <div class="pagina"> -->
-		<div  contador-juego style="float: left;">
+		<div id="ventaja_informa" style="display: none;float: left;">Tienes ventaja de 30 seg</div>
+		<div id="counterup"  contador-juego style="float: left;">
 			<span class="fa fa-clock-o" aria-hidden="true"></span> &nbsp;&nbsp;
 			<span class="cronometro no-seleccionable">
 				<span id="days" class="hora_">00</span>
@@ -31,10 +32,18 @@
 	<section ng-show="startgame==0">
 			<div class="blue-box" >
 				<div id="txt-html"></div>
-				<div class="continuarp" style="margin: 20px 0px;">
-					<div class="btn negro iniciar-pz" >Iniciar Juego</div>
+				<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>
+
+		 		<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">
+					<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">
+						<input type="checkbox" name="aplicaventaja" style="padding-top: 5px;" check-ventaja>
+						<span style="margin:0px 5px;">Tengo el servicio</span>
+						 <span class="ventaja_titulo bold">{{ventaja}}</span></div>
+
+					<div class="continuarp" style="margin: 20px 0px;">
+						<div id="iniciador" class="btn negro iniciar-pz">Iniciar Juego</div>
+					</div>
 				</div>
-			</div>
 	</section>
 
 	<section id="jugando-puzzle" ng-show="startgame==1">
@@ -77,9 +86,9 @@
 	<script type="text/javascript">
 		
 			$(".close").click( function() {
-	                    $(".fondoventanasflotante").hide();	               
-	                    $('#boxdinamica').hide();  
-			})		
+				$(".fondoventanasflotante").hide();
+				$('#boxdinamica').hide();	
+			});		
 
 	</script>
     <script type="text/javascript" src="/puzz/js/lib/angular/angular.js"></script>

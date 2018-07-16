@@ -36,10 +36,15 @@ jQuery('.iniciar-pz').click(function(){
     inicia =  new Date(Date.now());
 
     if(userConVentaja==true){
+      $('#ventaja_informa').show();
+      $('#counterup').hide();
       
       setTimeout(function () {
+          $('#ventaja_informa').hide();
+          $('#counterup').show();
           inicia =  new Date(Date.now());
-          upTime(inicia);  
+          upTime(inicia);
+
       }, 30000);
 
     }
@@ -65,6 +70,40 @@ jQuery('.iniciar-pz').click(function(){
 
 
 
+    angular.module("puzzleApp").directive('checkVentaja', ['$http',function($http) {
+      return {
+        restrict: 'A',
+        link: function(scope, elm, attrs) { 
+        
+          elm.click(function(e){
+            jQuery('#iniciador').hide();
+            console.log(scope);
+            console.log(url_rest);
+            var uri = url_rest + '/settuser/?u='+upk+'&servicios='+ventaja;
+            console.log(uri);
+
+            $http.get(uri)
+            .then(function(response) {
+                    userConVentaja = true;
+                    jQuery('#iniciador').show();
+                    console.log(response,userConVentaja);
+
+            });
+
+
+          });
+
+
+        }
+      };
+
+    }]);
+
+
+
+
+
+
     /**
      * Config
      */
@@ -81,6 +120,13 @@ jQuery('.iniciar-pz').click(function(){
         $rootScope.finalizado = false;
         $rootScope.hiddens = true;
         $rootScope.startgame = 0;
+        $rootScope.ventaja = ventaja_titulo;
+        $rootScope.ventaja_slug = ventaja;
+
+
+
+
+
 
         $http.get("https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/")
         .then(function(response) {

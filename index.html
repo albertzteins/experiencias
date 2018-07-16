@@ -63,6 +63,7 @@
 	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/breakpoints.js"></script>
 	<script type="text/javascript" src="js/main-header.js"></script>
+	<script type="text/javascript" src="/js/sets.js"></script>
 	
 	<!-- codigo para quitar scroll porveido por IT Telcel -->
 	<script type="text/javascript">
@@ -123,6 +124,17 @@
 		     
 		}
 
+		//Every two seconds....
+		// setInterval(function() {
+		// 	var height = $(".container-iframe").height() + 100;
+		// 	// parent.postMessage(height,"*");
+		// 	console.log(height);
+		// 	var dataToParentWindow = {
+		// 		"height": height;
+		// 	}
+		// 	parent.postMessage(dataToParentWindow,"*");
+
+		// },150);
 
 		setInterval(function() {
 			var height = $(".container-iframe").height() + 100;
@@ -144,6 +156,8 @@
 	var region = 0;
 	window.addEventListener("message",
           function (e) {
+            
+
             if (e.origin !== "uat.mitelcel.com") {
               //return;
 			  noe_s = true;
@@ -153,7 +167,7 @@
             	var datosUsuario = JSON.parse(e.data);
             }
             catch(err){
-            	er = err;
+            	var er = err;
             }
 
             if(typeof(datosUsuario)=='number'){
@@ -161,9 +175,13 @@
             	// document.cookie="upk=2";
             }
             else{
+
             	try{
+	            	
 					urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
-					data = {'correo':datosUsuario.correo};				
+					data = {'correo':datosUsuario.correo};
+
+					
 					$.ajax({
 						'url':urls,
 						'method':'GET',
@@ -178,14 +196,20 @@
 						}
 					});
 
-            	}
-            	catch(err){
-            		er = err;
-            	}
+				}
+				catch(err){
+					er = err;
+				}
+
             }
 
+
+
+
+
           },false
-        );	
+        );
+
 
 	/* MOVE THIS LINES ON PRODUCTION MODE   */
 
@@ -195,6 +219,7 @@
 	/* RELLY ______ MOVE IT */
 	
 
+	
 	</script>
 
 

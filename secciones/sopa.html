@@ -8,8 +8,9 @@
 			<!-- <div class="pagina"> -->
 			
 			<div style="padding:20px;;">
-			
-			 <div style="float:left;">
+			<div id="ventaja_informa" style="display: none;float: left;">Tienes ventaja de 30 seg</div>
+
+			 <div style="float:left;" id="counterup">
 			    <div class="tiempopregunta" contador-juego>
 				<span class="fa fa-clock-o" aria-hidden="true" style="padding:0px 20px;"></span> 
 				<span class="cronometro no-seleccionable">
@@ -38,9 +39,22 @@
 				<div class="blue-box" ng-show="startgame==0">
 					<div ng-bind-html="dinamica.inicio_juego_txt">{{dinamica.inicio_juego_txt}}</div>
 
+
+
+				<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>
+
+		 		<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">
+					<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">
+						<input type="checkbox" name="aplicaventaja" style="padding-top: 5px;" check-ventaja>
+						<span style="margin:0px 5px;">Tengo el servicio</span>
+						 <span class="ventaja_titulo bold">{{ventaja}}</span></div>
+
 					<div class="continuarp" style="margin: 20px 0px;">
-						<div class="btn negro" ng-click="iniciar();">Iniciar Juego</div>
+						<div id="iniciador" class="btn negro iniciar-pz" ng-click="iniciar();">Iniciar Juego</div>
 					</div>
+				</div>
+
+
 
 				</div>
 				
@@ -90,7 +104,8 @@
 
 	        <script type="text/javascript">	                
 	            $(".closes").click( function() {       
-	                    $(".fondoventanasflotante").hide();	               
+	                    $(".fondoventanasflotante").hide();
+	                    
 	                    $('#boxdinamica').hide();  
 
 	            });
