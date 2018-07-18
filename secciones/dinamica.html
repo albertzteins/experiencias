@@ -1,56 +1,17 @@
 <style type="text/css">
 	
-	.grid {
-		/*min-width: 1024px;*/
-		width: 960px;
-		/*width: 914px; */  /* size mac 1280 */
-
-		display: flex;
-		flex-direction: column;
-
-		/*display: grid;
-		grid-template-columns: 1fr;*/
-
-		/*grid-template-columns: 40px repeat(12, 1fr) 40px;
-		grid-template-rows: 770px 723px 675px 692px 580px 525px;*/
-		/*grid-template-rows: repeat(6, auto);*/
-		/*grid-column-gap: 20px;
-		grid-row-gap: 2px;*/
-
-
-		/*grid-auto-flow: auto;*/
-		margin: auto;
-
-	}
-
-
-
 	.categoriadinamica {
 		padding-top: 52px;
-		/*padding-left: 40px;*/
-		/*padding-right: 40px;*/
 		padding-bottom: 52px;
 		width: 920px;
 		margin: auto;
 
-		/*width: 920px; */
-		/*height: 448px;*/
-		/*margin: auto;*/
-
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-
-		/*display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-auto-rows:464px;
-		grid-column-gap: 20px;
-		grid-row-gap: 20px;*/
-
 	}
 
 
-	/* css header subcategoria*/
 	.headerdinamica {
 		width: 960px;
 		margin: auto;
@@ -88,11 +49,6 @@
  		justify-content: space-between;
  	}
 
- 	/* fin css header subcategoria*/
-
- 	/* css dinamica car en contexto */
-
- 	
 
 	.invisible {
 		opacity: 0;
@@ -106,7 +62,6 @@
 		font-weight: bold;
 		line-height: 1.2rem;
 		width: 100%;
-		/*flex-shrink:2;*/
 	}
 
 	.dinamicacard {
@@ -114,9 +69,6 @@
 		height: 423px;
 
 		margin: 10px;
-
-		/*width: 100%;
-		height: 423px;*/
 
 		display: -ms-grid;
 	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -135,22 +87,14 @@
 		border-radius: 0.4em;
 		overflow: hidden;
 		border: 0.5px solid #baccd3;
-		/*box-shadow:2px 2px 6px rgba(0,0,0,0.5);*/
 
 		cursor: pointer;
-
-		/*margin-left: 20px;*/
 
 		font-size: 0.8rem;
 		font-weight: normal;
 		line-height: 0.8rem;
 	}
 	
-
-	/*.dinamicacard:first-child {
-		margin-left: 0px;
-	}*/
-
 	.dinamicacard .bartop {
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 12;
@@ -174,12 +118,6 @@
 		grid-row: 2 / span 2;
 
 	}
-
-	/*.dinamicacard .imagedinamica img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}*/
 
 	.dinamicacard .proximamentetext {
 		-ms-grid-column: 2;
@@ -218,15 +156,13 @@
 
 		grid-column: 2 / 4;
 		grid-row: 2 / 3;
-		/*text-align: center;*/
+		
 		background-color: rgb(62,62,62);
 		color: white;
-		/*line-height: 36px;*/
-
+		
 		display: flex;
 		flex-direction: column;
 		
-		/*align-content: center;*/
 		align-items: center;
 		justify-content: center;
 
@@ -257,7 +193,7 @@
 
 		grid-column: 10 / 12;
 		grid-row: 2 / 3;
-		/*text-align: center;*/
+		
 		background-color: #f5f5f5;
 
 		border-radius: 0rem 0rem 0.5rem 0rem;
@@ -322,7 +258,6 @@
 	.ladinamica {
 		width: 960px;
 		margin: auto;
-		/*padding-top: 64px;*/
 
 		display: -ms-grid;
 		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
@@ -348,12 +283,6 @@
 		
 	}
 
-	/*.portada img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-*/
 	.infosombra {
 		-ms-grid-column: 5;
 		-ms-grid-column-span: 9;
@@ -423,7 +352,6 @@
 	.wrapperdiaeventociudad .diaevento .diacard {
 		font-size: 1.5rem;
 		font-weight: 300;
-		/*line-height: 1rem;*/
 	}
 
 	.wrapperdiaeventociudad .diaevento .mescard {
@@ -450,7 +378,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		/*align-content: center; */
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -459,9 +386,7 @@
 
 		display: flex;
 		flex-direction: row;
-		/*justify-content: space-between;*/
 		align-items: center; 
-		/*align-content: center;*/
 		font-size: 0.8rem;
 
 	}
@@ -491,17 +416,10 @@
 
 	.contadorregresivo .numeros > div{
 		font-size: 6rem;
-		/*display: flex;
-		flex-direction: column;
-		justify-content: center;*/
 	}
 
 	.contadorregresivo .numeros .numero {
-		/*display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		height: 3rem;*/
+
 	}
 
 	.contadorregresivo .numeros .tagnumero{
@@ -551,7 +469,7 @@
 	}
 
 	.terminoscondiciones {
-		/*display: inline-block;*/
+		
 	}
 
 	#wrapperterminosycondiciones {
@@ -571,9 +489,8 @@
 		grid-row: 6/7;
 		text-align: center;
 
-		/*margin-top: 3rem;*/
 		margin-bottom: 2rem;
-		/*line-height: 1.4rem;*/
+		
 		cursor: pointer;
 
 	}
@@ -589,7 +506,6 @@
 		grid-row: 5/6;
 
 		margin-top: 3rem;
-		/*margin-bottom: 3rem;*/
 
 		display: flex;
 		flex-direction: column;
@@ -615,7 +531,6 @@
 	.formulario input {
 		width: 100%;
 		height: 3rem;
-		/*margin-bottom: 3rem;*/
 	}
 
 	.formulario .btn {
@@ -639,7 +554,6 @@
 		width: 120px;
 		background-color: #fa6400;
 		padding: 5px 15px 5px 15px;
-		/*box-shadow:2px 2px 6px rgb(180,180,180);*/
 		box-shadow:2px 2px 6px rgba(0,0,0,.5);
 		color: white;
 	}
@@ -649,7 +563,6 @@
 		width: 120px;
 		background-color: white;
 		padding: 5px 15px 5px 15px;
-		/*box-shadow:2px 2px 6px rgb(180,180,180);*/
 		box-shadow:2px 2px 6px rgba(0,0,0,.5);
 		color: #fa6400;
 	}
@@ -668,7 +581,6 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		/*margin-top: 3rem;*/
 	}
 	.wrappercomodin div {
 		font-size: 3rem;
@@ -709,17 +621,13 @@
 		top: 0px;
 		width: 462px;
 		height: 594px;
-		/*margin-left: -231px;*/
-		/*margin-top: -297px;*/
 		margin-left: calc(462px/-2);
 		margin-top: 10px;
-		/*margin-top: calc(594px/-2);*/
 		background-color: white;
 		z-index: 17;
 		border: 4px solid #fff;
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		/*grid-template-rows: 38px 370px 20px 108px  58px;*/
 		grid-template-rows: 0.06fr 0.62fr 0.03fr 0.181fr 0.09fr;
 		grid-column-gap: 20px;
 	}
@@ -728,7 +636,6 @@
 		grid-column: 1 / -1;
 		grid-row: 2 / 3;
 		overflow-y: scroll;
-		/*padding: 20px 20px 20px 20px;*/
 		padding-left: 20px;
 		padding-right: 20px;
 		font-size: 0.6rem;
@@ -737,7 +644,6 @@
 
 	.ventanaterminoscondiciones .cuerpotexto .titulo {
 		font-size: 1rem;
-		/*margin-bottom: 2rem;*/
 	}
 
 	.ventanaterminoscondiciones .cuerpotexto p {
@@ -748,8 +654,6 @@
 		height: 100%;
 		grid-column: 1 / -1;
 		grid-row: 3 / 4;
-		/*padding-left: 20px;*/
-		/*padding-right: 20px;*/
 		border-bottom: 1px solid #444;
 	}
 
@@ -780,7 +684,6 @@
 	.ventanaterminoscondiciones .close {
 		grid-column: -2 / -1;
 		grid-row: 1 / 2;
-		/*align-self: center;*/
 		justify-self: end;
 		font-size: 1rem;
 		padding-right: 2px;
@@ -795,12 +698,7 @@
 	
 
 	#dinamicaloaded {
-		/*position: fixed;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		height: 100%;*/
-		/*pointer-events: none;*/
+
 	}
 
 	/************************************************/
@@ -857,39 +755,15 @@
 		}
 
 		.headerdinamica .linea {
-	 		/*grid-column: 1 / -1;*/
+	 		/
 	 	}
 
 	 	.headerdinamica h1 {
-	 		/*grid-column: 1 / span 5;*/
+	 		
 	 	}
 
-		/*.headerdinamica {
-			width: 960px;
-			margin: auto;
-			padding-top: 84px;	
-			display: grid;
-			grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
-			grid-column-gap: 20px;
-
-	 	}*/
 
 		.categoriadinamica {
-			/*padding-left: 10px;
-			padding-right: 10px;*/
-			/*padding-top: 52px;
-			padding-left: 40px;
-			padding-right: 40px;
-			padding-bottom: 52px;
-			width: 960px;
-			margin: auto;*/
-
-			/*display: grid;*/
-			/*grid-template-columns: 1fr;
-			grid-auto-rows:464px;
-			grid-column-gap: 20px;
-			grid-row-gap: 20px;*/
-
 			justify-content: center;
 		}
 
@@ -910,15 +784,11 @@
 			left: 0px;
 			top: 0px;
 			width: 100%;
-			height: 100%;
-			/*margin-left: -231px;*/
-			/*margin-top: -297px;*/
+			/*height: 100%;*/
 			margin-left: 0px;
 			margin-top: 0px;
-			background-color: white;
-			
-			/*grid-template-rows: 38px 370px 20px 108px  58px;*/
-			grid-template-rows: 0.06fr 0.62fr 0.03fr 0.181fr 0.09fr;
+			/*background-color: white;*/
+
 
 		}
 
@@ -927,12 +797,12 @@
 
 
 </style>
-<!-- <div class="grid"> -->
+
 
 	<section class="ladinamica"  >
 
 		<div class="portada">
-			<!-- <img src="images/portadablanca.jpg"> -->
+
 		</div>
 
 		
@@ -940,7 +810,6 @@
 		<div class="infosombra"></div>
 
 		<div class="info">
-			<!-- <div>Recompensas</div> -->
 			<div class="wrapperdiaeventociudad">
 				<div class="diaevento" >
 					<div class="diae grismuyoscuro"></div>
@@ -951,10 +820,8 @@
 
 			<h2 class="typotitulocard"></h2>
 			<div class="vigencia">Vigencia: <span></span></div>
-			<!-- <div class="viral"><span>Me gusta</span> <span>Compartir</span></div> -->
 		</div>
 
-		<!-- data-id="'+data.dinamicas[i].pk+'" -->
 		<div class="socialdata">
 			<div class="likes manita" data-id="-1">
 				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
@@ -1002,22 +869,14 @@
 
 			<div class="bases"></div>
 
-			<!-- <h3>Premio</h3>
-
-			<div class="premios">Morbi interdum pellentesque lobortis. Nullam vitae pulvinar risus. Nulla eget libero sed nulla venenatis ornare sed non augue. Sed sed elit erat. Mauris facilisis iaculis libero eu aliquam. Morbi ultrices purus sed ex porta, id imperdiet arcu congue. Morbi commodo nibh eu tellus tempus semper. Nullam vel magna sagittis magna suscipit elementum.</div>
-
-			<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem;"></div>
-			<h4 class="terminoscondiciones linkcyanmayuscula no-seleccionable"> VER TÉRMINOS Y CONDICIONES</h4> -->
 		</div>
-		<!-- <div class="btn comenzar no-seleccionable disabled">COMENZAR</div> -->
-
 
 		<div class="formulario">
 
 			<h3 class="titulopremio">Ventaja</h3>
 
 			<div class="wrapperventaja">
-				<img src="images/icono-claro-musica2.png" class="iconoventaja">
+				<img src="images/iconoventaja.png" class="iconoventaja">
 				<div class="premios textoventaja">Recuerda que del  <span id="ventaja_fecha">16 al 31 de mayo</span> <span class="servicioventaja bold" id="ventaja_titulo">Claro Música</span> le está dando una ventaja a todos los contratantes del servicio.</div>
 			</div>
 
@@ -1095,13 +954,6 @@
 </div>
 
 
-<!-- la dinamica a participar -->
-<!-- <div id="dinamicaloaded" >
-	
-</div> -->
-
-
-<!-- fin dinamica interaccion 1 -->
 
 
 <script type="text/javascript">
@@ -1129,10 +981,6 @@
 	$('.minuto').text(minuto);
 	$('.segundo').text(segundo);
 
-	// $('.dia_').text(dia_);
-	// $('.hora_').text(hora_);
-	// $('.minuto_').text(minuto_);
-	// $('.segundo_').text(segundo_);
 
 	clearInterval( cuentaprogresiva);
 	clearInterval( cuentaregresiva);
@@ -1196,7 +1044,6 @@
 			$('.hora_').text(horf_);
 			$('.minuto_').text(minf_);
 			$('.segundo_').text( segf_ ) ;
-			// console.log(segf_);
 
 		}, 1000);
 	}
@@ -1224,11 +1071,7 @@
 
 
 		var getStatusJson = $.getJSON( "https://admin.experienciastelcel.com/restful/participando/"+upk+"/"+id_dinamica+"/", function(data) {
-			//console.log( data.status )
-			// ya finalizo
 			if ( data.status == "finalizo" ) {
-			//if ( true ) {
-			//if ( data.status == "finalizo" ) {
 				$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
 				$(".graciasporparticipar").show();
 			} else {
@@ -1263,13 +1106,9 @@
 		    $(".ladinamica .portada").css("background-size", "cover");
 		    $(".ladinamica .portada").css("background-position", "right center");
 
-        	// $(".ladinamica .portada img").attr("src", data.promocion.imagen_lg);
-
         	$(".ladinamica .info h2").text(data.promocion.titulo);
         	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
-        	// 
-        	// console.log( "data.promocion.liked "+data.promocion.liked );
-        	// console.log(  data.promocion.liked == 1 )
+
         	if ( data.promocion.liked == 1 ) {
         		$(".ladinamica .socialdata .likes").removeClass("manita");
         		$(".ladinamica .socialdata .likes .fa").removeClass("fa-heart-o");
@@ -1281,23 +1120,11 @@
         		$(".ladinamica .socialdata .likes").data("id", data.promocion.pk);   		
         	}
         	
-   			// <div class="socialdata">
-				// 	<div class="likes manita" data-id="-1">
-				// 		<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
-				// 		<div class="valorlikes totallikes"></div>
-				// 	</div>
-				// 	<div class="social">
-				// 		<div class="fa fa-user-o" style="margin-right:0.5em"></div>
-				// 		<div class="valorshares"></div>
-				// 	</div>
-			// </div>
 
         	$(".ladinamica .socialdata .valorlikes").text(data.promocion.likes);
         	$(".ladinamica .socialdata .valorshares").text(data.promocion.shares);
         	$(".bases").html(data.promocion.bases);
-        	// $(".premios").html(data.promocion.premio);
-
-        	
+	
 
         	tipodinamica = data.promocion.dinamica;
 
@@ -1311,18 +1138,16 @@
         })
 
 
-        data = [
+     //    data = [
 
-		    {'name':'promo','value':32},
+		   //  {'name':'promo','value':32},
 
-		    {'name':'uspk','value':29},
+		   //  {'name':'uspk','value':29},
 
-	    ]
+	    // ]
 
 
-		
-		
-		
+				
 		
 		$( "body" ).undelegate(  ".comenzar:not(.disabled)", "click").delegate( ".comenzar:not(.disabled)", "click", function() {
 			
@@ -1330,9 +1155,6 @@
 			$(".aceptoterminoscondiciones").addClass("disabled");
 		  	$(".fondoventanasflotante").show();
 		  	parent.postMessage('scrollthem,0', '*');
-			// carga lal dinamica que corresponde, el archivo html debe llamarse como la dinamica
-			// el div principal de tener a clase ".ventanadinamica"
-			// para poder cerrase haciedo click en el area negro translucido
 
 			contenidodinamica = $('#boxdinamica').html();
 
@@ -1344,9 +1166,6 @@
 					 	$(divbox).append(data_d); 
 		                $("#main-wrapper").append(divbox);
 		                
-		                // var scrollTopContent = $('#boxdinamica').offset().top+100;
-			            // alert( scrollTopContent );
-			            // parent.postMessage('scrollthem,'+scrollTopContent+'', '*');
 		             });
 
 
@@ -1367,15 +1186,10 @@
 			$( ".ventanadinamica" ).remove();
 			$(".ventanaterminoscondiciones").hide();
 			clearInterval(sizeWindowparent);
-			// if ( finalizoDinamica ) {
-			// 	$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
-			// 	$(".graciasporparticipar").show();
-			// }
 		})
 
 		$(".ventanaterminoscondiciones .close, .ventanaterminoscondiciones .aceptar, .ventanaterminoscondiciones  .cancelar").click( function() {
 			$(".fondoventanasflotante").hide();
-			// $(".ventanaflotante").hide();
 			$(".ventanaterminoscondiciones").hide();
 		})
 
@@ -1389,10 +1203,7 @@
 		})
 
 
-		
-
 		$( "body" ).undelegate(  ".aceptoterminoscondiciones:not(.disabled)", "click").delegate( ".aceptoterminoscondiciones:not(.disabled)", "click", function() {
-			// console.log(3);
 			$(".aceptoterminoscondiciones").toggleClass("fa-check-square");
 			aceptado =  $(".aceptoterminoscondiciones").hasClass("fa-check-square");
 			$(".comenzar").toggleClass("disabled");
@@ -1406,67 +1217,77 @@
 			parent.postMessage('scrollthem,0', '*');
 		})
 
-
-		function cargaRecomendaciones() {
+		function cargaRecomendacionesLiked() {
 			$( ".dinamicas .carruselcards .mascara .wrappercards" ).empty();
-			var url = "https://admin.experienciastelcel.com/restful/promos/?destacados=true&upk="+upk;
-			var dinamicasJson = $.getJSON( url , function( data ) {
-				var dinamicasHTML = '';
-				// for(i=0; i<data.dinamicas.length; i++) {
-				for(i=0; i<3; i++) {
-					if ( data.dinamicas[i].status == "proximamente" ) {
-						dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
-					} else {
-						dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
-					}
-					// dinamicasHTML += '<div class="dinamicacard puntero shadowcard"  data-id="'+data.dinamicas[i].pk+'" >'
+            
+            var url = "https://admin.experienciastelcel.com/restful/promos/?destacados=true&upk="+upk;
+
+            var dinamicasJson = $.getJSON( url , function( data ) {
+                var dinamicasHTML = '';
+                for(i=0; i<3; i++) {
+
+                    if ( data.dinamicas[i].status == "proximamente" ) {
+                        dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
+                    } else {
+                        dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
+                    }
 
 
-					dinamicasHTML += '	<div class="bartop"></div>'
+                    dinamicasHTML += '  <div class="bartop"></div>'
 
-					
-					dinamicasHTML += '	<div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
-					dinamicasHTML += '	</div>'
 
-					if ( data.dinamicas[i].status == "proximamente" ) {
-						dinamicasHTML += '	<div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
-					} else {
-						dinamicasHTML += '	<div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
-						dinamicasHTML += '	<div class="diaevento grismedio" >';
-						dinamicasHTML += '		<div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
-						dinamicasHTML += '		<div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
-						dinamicasHTML += '	</div>'
-					}
+                    dinamicasHTML += '   <div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+                    dinamicasHTML += '  </div>'
 
-					dinamicasHTML += '	<div class="infodinamica">'
-					dinamicasHTML += '		<div class="titulodinamica grismuyoscuro">'
-					dinamicasHTML += '			'+data.dinamicas[i].titulo_completo
-					dinamicasHTML += '		</div>'
+                    if ( data.dinamicas[i].status == "proximamente" ) {
+                        dinamicasHTML += '  <div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+                    } else {
+                        dinamicasHTML += '  <div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
+                        dinamicasHTML += '  <div class="diaevento grismedio" >';
+                        dinamicasHTML += '      <div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
+                        dinamicasHTML += '      <div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
+                        dinamicasHTML += '  </div>'
+                    }
 
-					// dinamicasHTML += '		<div class="vigencia typovigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
 
-					if ( data.dinamicas[i].status != "proximamente" ) {
-						dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
-					}
-					dinamicasHTML += '	</div>'
-					dinamicasHTML += '	<footer class="grismedio">'
-					dinamicasHTML += '		<div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
-					dinamicasHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
-					dinamicasHTML += '			<div class="totallikes">'+data.dinamicas[i].likes+'</div>'
-					dinamicasHTML += '		</div>'
-					dinamicasHTML += '		<div class="social">'
-					dinamicasHTML += '			<div class="fa fa-user-o" style="margin-right:0.5em"></div>'
-					dinamicasHTML += '			<div>'+data.dinamicas[i].participaciones+'</div>'
-					dinamicasHTML += '		</div>'
-					dinamicasHTML += '	</footer>'
-					dinamicasHTML += '</div>'
+                    dinamicasHTML += '  <div class="infodinamica">'
+                    dinamicasHTML += '      <div class="typotitulocard grismuyoscuro">'
+                    dinamicasHTML += '          '+data.dinamicas[i].titulo_completo
+                    dinamicasHTML += '      </div>'
 
-				}
-				$(".categoriadinamica").append( dinamicasHTML );
-			});
+                    if ( data.dinamicas[i].status != "proximamente" ) {
+                        dinamicasHTML += '      <div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+                    }
+                    
+
+                    dinamicasHTML += '  </div>'
+                    dinamicasHTML += '  <footer class="grismedio">'
+
+                    if ( data.dinamicas[i].liked == 1 ) {
+                        dinamicasHTML += '      <div class="liked grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+                        dinamicasHTML += '          <div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+                    } else {
+                        dinamicasHTML += '      <div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+                        dinamicasHTML += '          <div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+                    }
+
+
+                    dinamicasHTML += '          <div class="totallikes">'+data.dinamicas[i].likes+'</div>'
+                    dinamicasHTML += '      </div>'
+                    dinamicasHTML += '      <div class="social">'
+                    dinamicasHTML += '          <div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+                    dinamicasHTML += '          <div>'+data.dinamicas[i].participaciones+'</div>'
+                    dinamicasHTML += '      </div>'
+                    dinamicasHTML += '  </footer>'
+                    dinamicasHTML += '</div>'
+
+                }
+                $(".categoriadinamica").append( dinamicasHTML );
+            });
 		}
 
-		cargaRecomendaciones();
+
+		cargaRecomendacionesLiked();
 
 		
 		

@@ -12,9 +12,8 @@
 		height: 595px;
 
 		margin-left: calc(459px/-2);
-		/*margin-top: calc(595px/-2);*/
+
 		margin-top: 10px;
-		/*margin-top: -384.5px;*/
 		
 		background-color: white;
 		z-index: 18;
@@ -53,7 +52,6 @@
 		align-items: center;
 		padding-left: 12px;
 		padding-right: 16px;
-		/*background-color: red;*/
 	}
 
 
@@ -63,7 +61,6 @@
 	}
 
 	.ventanadinamica .tiempopregunta .cronometro {
-		/*color: black;*/
 		margin-left: 0.8rem;
 	}
 
@@ -133,27 +130,6 @@
 		align-items: center;
 	}
 
-	/*.ventanadinamica .textoportada {
-		-ms-grid-column: 2;
-		-ms-grid-column-span: 6;
-
-		-ms-grid-row: 3;
-		-ms-grid-row-span: 3;
-
-		grid-column: 2 / -2;
-		grid-row:  3 / span 3;
-
-		padding-top: 2.0rem;
-		padding-bottom: 2.0rem;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		color: white;
-
-		z-index: 18;
-		background-color: #ffd100;
-	}*/
 
 	.ventanadinamica .instruccion1 {
 		font-size: 0.9rem;
@@ -163,7 +139,7 @@
 	.ventanadinamica .instruccion2 {
 		font-size: 1.8rem;
 		line-height: 1.8rem;
-		/*font-weight: bold;*/
+
 	}
 
 
@@ -188,16 +164,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		/*align-items: flex-start;*/
 		width: 100%;
 		height: 130px;
 		padding: 1.4rem;
 	}
 
-	/*.tengolaventaja {
-		
-	}*/
-	/*comprobar ventaja */
+
 
 
 	.ventanadinamica .numeropregunta {
@@ -278,13 +250,13 @@
 			left: 0px;
 			top: 0px;
 			width: 100vw;
-			height: 100vh;
+			
+
+			/*height: 100vh;*/
 
 			margin-left: 0px;
 			margin-top: 0px;
 
-			
-			/*grid-template-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;*/
 		
 		}
 		
@@ -297,7 +269,7 @@
 
 <div class="ventanadinamica">
 
-	<!-- <div class="pagina"> -->
+
 	<div class="wrappertopbar">
 		<div class="tiempopregunta">
 			<span class="fa fa-clock-o iconoreloj" aria-hidden="true"></span> 
@@ -313,7 +285,6 @@
 	</div>
 	
 	<div class="portadav" >
-		<!-- <img src="images/blanco.jpg"> -->
 	</div>
 
 
@@ -331,9 +302,8 @@
 <script type="text/javascript">
 	
 
-	// var dinamicadataJson = {};
 	var dinamicadataJsonRespuesta = {};
-	// var totalpreguntas;
+
 
 	var acomenzado = false;
 	var trivia;
@@ -342,21 +312,9 @@
 	var confirmacionventaja = false;
 	var confirmacionventajaurl = "";
 
-	// var triviaslide = 1;
-	// var acierto = false;
-	// var ultimoslide = 5;
-
-	// var slides;
-	// var slideNum = 0;
 
 	$(document).ready( function() {
-		var mensajeventaja = '';
-		// $("#ventaja_titulo").text(ventaja_titulo);
-		// $('.dia_').text(dia_);
-		// $('.hora_').text(hora_);
-		// $('.minuto_').text(minuto_);
-		// $('.segundo_').text(segundo_);	
-
+		var mensajeventaja = '';	
 		segf_ = ('0' + segundo_).slice (-2);
 		minf_ = ('0' + minuto_).slice (-2);
 		horf_ = ('0' + hora_).slice (-2);
@@ -367,13 +325,10 @@
 		$('.minuto_').text(minf_);
 		$('.segundo_').text( segf_ ) ;
 
-		// alert ( inicio_p )
 
 		console.log( "userConVentaja "+userConVentaja )
 
 		var dinamicaJsonTrivia = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
-		 	// alert(userConVentaja);
-		 	// userConVentaja = true;
 
 
 			dinamicadataJsonRespuesta = [ {'name':'promo','value': id_dinamica}, {'name':'uspk','value':upk} ];
@@ -426,7 +381,6 @@
 
 	$(".ventanadinamica .close").click( function() {
 		$(".fondoventanasflotante").hide();
-		//$( ".ventanadinamica" ).remove();
 		$('#boxdinamica').hide();
 	})
 
@@ -494,7 +448,6 @@
 				resultado += '<p style="font-size:2rem; margin-top:1.5rem">'+response.tiempo+'</p>'
 				resultado += '<p style="font-size:1rem;margin-top:1.5rem">Los resultados se darán a conocer una semana después de cerrado el evento</p>'
 				resultado += '<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>'
-				// finalizoDinamica = true;
 				$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
 				$(".graciasporparticipar").show();
 				finalTrivia();
@@ -512,7 +465,7 @@
 	})
 	
 	$( "body" ).undelegate(  ".aceptoventaja", "click").delegate( ".aceptoventaja", "click", function() {
-		// console.log(3);
+
 		$(".aceptoventaja").toggleClass("fa-check-square");
 		if ( $(".aceptoventaja").hasClass("fa-check-square") ) {
 			confirmacionventaja = true;
@@ -523,11 +476,10 @@
 			confirmacionventajaurl = '';
 			userConVentaja = false;
 		}
-		// $(".comenzar").toggleClass("disabled");
+
 	});
 
 	function portadaTrivia() {
-		//alert(ventaja_titulo)
 		$(".ventanadinamica .portadav").css("background", "url("+trivia[0].imagen+")" );
         $(".ventanadinamica .portadav").css("background-repeat","no-repeat" );
         $(".ventanadinamica .portadav").css("background-size","cover" );
@@ -550,7 +502,7 @@
         htmlcontent = '<div class="btn continuar" >Continuar</div>';
         $(".triviacontroles").empty();
         $(".triviacontroles").append( htmlcontent );
-		// $(".ventaja_titulo").text(ventaja_titulo);
+
 	}
 
 	function preguntaTrivia() {
@@ -565,10 +517,6 @@
         if ( triviaindex > 1 ) {
         	mensajeventaja = '';
         }
-		// var preguntaHTML = '<div class="wrapperpregunta"  data-pk="'+trivia[triviaindex].pk+'">'
-		//     preguntaHTML += '	<div class="numeropregunta" >'+triviaindex+' de '+(trivia.length-2)+' <span class="mensajeventaja">'+mensajeventaja+'</span></div>'
-		//     preguntaHTML += '	<div class="pregunta">'+trivia[triviaindex].pregunta+'</div>'
-		//     preguntaHTML += '</div>'
 
 		var preguntaHTML = '<div class="wrapperpregunta"  data-pk="'+trivia[triviaindex].pk+'">'
 		    preguntaHTML += '	<div class="numeropregunta" >'+triviaindex+' de '+(trivia.length-2)+' </div>'
@@ -642,7 +590,6 @@
 
 	function finalTrivia() {
 		$(".triviacontenido").empty();
-	    // $(".triviacontenido").css("padding", "0rem");
 	    $(".triviacontenido").css("padding", "2.6rem");
 
 	    $(".ventanadinamica .portadav").css("background", "url("+trivia[triviaindex].imagen+")" );

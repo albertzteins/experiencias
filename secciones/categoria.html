@@ -3,8 +3,7 @@
 
 	.headercategoria {
 
-		width: 960px; /*58.75rem;*/ /*960 980*/
-		/*height: 448px;*/
+		width: 960px;
 		margin: auto;
 
 		display: -ms-grid;
@@ -15,13 +14,8 @@
 		grid-template-columns: 10px repeat(5, 1fr) [datasocial-inicio] repeat(7, 1fr) [datasocial-final] 10px ;
 		grid-template-rows: 113px ;
 
-		/*grid-template-rows: repeat(14, 1fr);*/
-		/*grid-auto-rows:464px;*/
 		grid-column-gap: 20px;
-		/*grid-row-gap: 20px;*/
-
 		color: white;
-
 		border-bottom: 1px solid rgb(180,180,180);
 
 	}
@@ -41,7 +35,7 @@
 
  		grid-column: 2 / -2;
  		grid-row: 1 / 2;
- 		/*height: 1rem;*/
+ 		
  		border-bottom: 1px solid rgb(180,180,180);
  	}
 
@@ -58,67 +52,30 @@
  		padding-bottom: 1.2rem;
  	}
 
-/* 	.headercategoria .wrapper {
- 		grid-column: datasocial-inicio/datasocial-final;
- 		grid-row: 1 / 2;
-
- 		display: flex;
- 		flex-direction: row;
- 		align-items: end;
- 		justify-content: space-between;
-
- 		padding-bottom: 0.6rem;
-
- 		font-size: 0.8rem;
-		font-weight: normal;
-		line-height: 0.8rem;
- 	}*/
 
 
 
  	.wrappercategoria {
- 		width: 920px; /*58.75rem;*/ /*960 980*/
-		/*height: 448px;*/
+ 		width: 920px; 
 		margin: auto;
 
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		
-		/*align-content: flex-end;*/
-		/*justify-content: center;*/
-		/*justify-content: space-between;*/
-		/*align-content: center;*/
-
-		/*flex-wrap: nowrap | wrap | wrap-reverse;*/
-		/**/
-		/*display: -ms-grid;
-	    -ms-grid-columns: -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-		-ms-grid-rows: 113px;
-
-
-		display: grid;
-		grid-template-columns: repeat(3, 1fr)  ;
-
-		grid-column-gap: 20px;
-		grid-row-gap: 20px;*/
-		/**/
-
 		color: white;
 		padding-top: 40px;
+		padding-bottom: 2.5rem;
  	}
 
 
  	.dinamicacard {
-		/*width: 100%;*/
+		
 		width: 286px;
 		height: 423px;
 
 		margin: 10px;
-		/*align-self: flex-start;*/
-		/*align-self: auto;*/
-		/*margin-right: 10px;
-		margin-bottom: 20px;*/
+
 
 		display: -ms-grid;
 	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -129,28 +86,19 @@
 		grid-template-rows: 8px 36px 177px 154px [footer] 48px;
 
 
-
-		/*font-size: 1rem;*/
 		background-color: white;
 
 		border-radius: 0.4em;
 		overflow: hidden;
 		border: 0.5px solid #baccd3;
-		/*box-shadow:2px 2px 6px rgba(0,0,0,0.5);*/
 
 		cursor: pointer;
-
-		/*margin-left: 20px;*/
 
 		font-size: 0.8rem;
 		font-weight: normal;
 		line-height: 0.8rem;
 	}
 	
-
-	/*.dinamicacard:first-child {
-		margin-left: 0px;
-	}*/
 
 	.dinamicacard .bartop {
 		-ms-grid-column: 1;
@@ -176,11 +124,6 @@
 
 	}
 
-	/*.dinamicacard .imagedinamica img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}*/
 
 	.dinamicacard .proximamentetext {
 		-ms-grid-column: 2;
@@ -219,15 +162,14 @@
 
 		grid-column: 2 / 4;
 		grid-row: 2 / 3;
-		/*text-align: center;*/
+		
 		background-color: rgb(62,62,62);
 		color: white;
-		/*line-height: 36px;*/
+		
 
 		display: flex;
 		flex-direction: column;
 		
-		/*align-content: center;*/
 		align-items: center;
 		justify-content: center;
 
@@ -258,7 +200,7 @@
 
 		grid-column: 10 / 12;
 		grid-row: 2 / 3;
-		/*text-align: center;*/
+		
 		background-color: #f5f5f5;
 
 		border-radius: 0rem 0rem 0.5rem 0rem;
@@ -318,25 +260,6 @@
 
 	
 
-	.wrappermostrarmas {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 120px;
-	}
-	.wrappermostrarmas .btn {
-		width: 180px;
-		height: 36px;
-		text-align: center;
-		line-height: 36px;
-		box-shadow:2px 2px 6px rgb(200,200,200);
-	}
-
-
-	
-
 	@media only screen and (max-width: 960px) { 
 		.headercategoria {
 			width: 100%; 
@@ -349,7 +272,6 @@
 	 	}
 
 	 	.headercategoria .wrapper {
-	 		/*grid-column: datasocial-inicio/datasocial-final;*/
 	 		grid-row: 2 / 3;
 	 		font-size: 0.4rem;
 	 	}
@@ -360,8 +282,6 @@
 
 		.wrappercategoria {
 			width: calc(100% - 40px);
-			/*width: 80%;*/
-			/*grid-template-columns: repeat(1, 1fr)  ;*/
 			justify-content: center;
 		}
 
@@ -373,23 +293,12 @@
 
 <header class="headercategoria">
 	<h1 class="titulocategoria typotituloseccion grisoscuro"></h1>
-	<!-- <div class="linea"></div> -->
 </header>
-
-<!-- <section class="categoriadinamica "> -->
-	
-	
 
 
 <div class="wrappercategoria">
-	
 </div>
 
-	<div class="wrappermostrarmas">
-			<!-- <div class="btn azulmuyclaroBack no-seleccionable">MOSTRAR MÁS</div> -->
-	</div>
-	
-<!-- </section> -->
 
 <section class="publicidad" data-url="https://www.telcel.com/promociones/planes/doble-de-megas-por-doce-meses" >
 	<div class="wrapperp">
@@ -408,7 +317,6 @@
 		
 		$(".titulocategoria").text(categoriaTitulo);
 		
-		// https://admin.experienciastelcel.com/restful/promos=musica
 		var dinamicasJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promosby/?search="+categoria+"&upk="+upk , function( data ) {
 
 			var dinamicasHTML = '';
@@ -421,12 +329,11 @@
 				
 				dinamicasHTML += '	<div class="bartop"></div>'
 				
-				// foto a pasar a Back
-				// dinamicasHTML += '	<div class="imagedinamica">'
+				
 				dinamicasHTML += '	<div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center;" >'
 				
 				dinamicasHTML += '	</div>'
-				//
+				
 
 				if ( data.dinamicas[i].status == "proximamente" ) {
 					dinamicasHTML += '	<div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
@@ -438,13 +345,7 @@
 					dinamicasHTML += '	</div>'
 				}
 
-				
 
-
-
-				// if ( i==5 ) {
-				// 	dinamicasHTML += '	<div class="segmento"><img src="images/icono_claromusica.png" ></div>';
-				// }
 				dinamicasHTML += '	<div class="infodinamica">'
 				dinamicasHTML += '		<div class="typotitulocard grismuyoscuro">'
 				dinamicasHTML += '			'+data.dinamicas[i].titulo_completo
@@ -454,12 +355,9 @@
 					dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
 				}
 				
-				// dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
-
-
 				dinamicasHTML += '	</div>'
 				dinamicasHTML += '	<footer class="grismedio">'
-				//dinamicasHTML += '		<div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+
 				if ( data.dinamicas[i].liked == 1 ) {
 					dinamicasHTML += '		<div class="liked grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
 					dinamicasHTML += '			<div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'

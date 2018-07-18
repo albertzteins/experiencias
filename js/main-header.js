@@ -12,6 +12,7 @@ var sizeWindowparent;
 var finalizoDinamica = false;
 
 // upk = 159; //////////////////////////////////////////  quitar!!
+// document.cookie="upk="+upk; 
 // getUser() //////////////////////////////////////////  quitar!!
 // console.log("upk inicio "+upk);
 
@@ -273,6 +274,7 @@ $(document).ready(function() {
 	});
 	
 	$(window).bind('enterBreakpoint960',function() {
+		resetMenuMobile();
 		// $("#main-header nav").show();
 		$("#experiencias .fa").removeClass("fa-caret-right");
 		$("#experiencias .fa").addClass("fa-caret-down");

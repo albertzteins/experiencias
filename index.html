@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/site.css">
 	<link rel="stylesheet" type="text/css" href="css/main-header.css">
 
@@ -58,16 +56,17 @@
 		</div>
 
 	</div>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/breakpoints.js"></script>
 	<script type="text/javascript" src="js/main-header.js"></script>
-	<script type="text/javascript" src="/js/sets.js"></script>
 	
 	<!-- codigo para quitar scroll porveido por IT Telcel -->
 	<script type="text/javascript">
 		var upk;
+		var whereishome = window.location.host;
+
 		// autoprefixer({ grid: true })
 
 		var _layout_anonymous_shift_pressed = false;
@@ -124,106 +123,83 @@
 		     
 		}
 
-		//Every two seconds....
-		// setInterval(function() {
-		// 	var height = $(".container-iframe").height() + 100;
-		// 	// parent.postMessage(height,"*");
-		// 	console.log(height);
-		// 	var dataToParentWindow = {
-		// 		"height": height;
-		// 	}
-		// 	parent.postMessage(dataToParentWindow,"*");
-
-		// },150);
-
 		setInterval(function() {
 			var height = $(".container-iframe").height() + 100;
-			var dataToParentWindow = {
-				"height":height
-			}
-			// parent.postMessage(dataToParentWindow,"*");
 			parent.postMessage(height,"*");
 		},100);
 		  
-		  
 
-		</script>
+	</script>
 	<!-- fin codigo para quitar scroll porveido por IT Telcel -->
 
-
-
 	<script type="text/javascript">
-	var region = 0;
-	window.addEventListener("message",
-          function (e) {
-            
-
-            if (e.origin !== "uat.mitelcel.com") {
-              //return;
-			  noe_s = true;
-            }
-            
-            try{ 
-            	var datosUsuario = JSON.parse(e.data);
-            }
-            catch(err){
-            	var er = err;
-            }
-
-            if(typeof(datosUsuario)=='number'){
-            	return true;
-            	// document.cookie="upk=2";
-            }
-            else{
-
-            	try{
-	            	
-					urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
-					data = {'correo':datosUsuario.correo};
-
-					
-					$.ajax({
-						'url':urls,
-						'method':'GET',
-						'dataType':'json',
-						data:data,
-						'success':function(response){
-							//alert( response );
-							document.cookie="upk="+response.userpk; 
-							upk = response.userpk; 
-							getUser(); 
-							
-						}
-					});
-
-				}
-				catch(err){
-					er = err;
-				}
-
-            }
+		
+		function forGet(parameterName) {
+		    var result = null,
+		        tmp = [];
+		    var items = location.search.substr(1).split("&");
+		    for (var index = 0; index < items.length; index++) {
+		        tmp = items[index].split("=");
+		        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+		    }
+		    return result;
+		}
 
 
 
+		var region = 0;
+		window.addEventListener("message",
+	         function (e) {
+	            
+	            if (e.origin !== "uat.mitelcel.com") {
+				  noe_s = true;
+	            }
+	            
+	            try{ 
+	            	var datosUsuario = JSON.parse(e.data);
+	            }
+	            catch(err){
+	            	er = err;
+	            }
 
+	            if(typeof(datosUsuario)=='number'){
+	            	return true;
+	            }
+	            else{
+					try{	            	
 
-          },false
-        );
+						urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
+						data = {'correo':datosUsuario.correo,'nombre':datosUsuario.nombre};
+						
+						$.ajax({
+							'url':urls,
+							'method':'GET',
+							'dataType':'json',
+							data:data,
+							'success':function(response){
+								document.cookie="upk="+response.userpk; 
+								upk = response.userpk; 
+								getUser(); 
+								
+							}
+						});
+					}
+					catch(err){
+						er = err;
+					}
 
+	            }
 
-	/* MOVE THIS LINES ON PRODUCTION MODE   */
+	          },false
+	        );
+		
 
-		upk = 162; 
-		getUser();
+		if(whereishome=='test.experienciastelcel.com' || whereishome=='experiencias.local'){
+			upk = forGet('u');	
+			getUser(); 		
+		}
 
-	/* RELLY ______ MOVE IT */
-	
-
-	
 	</script>
 
-
-
-
-</body>
+	</body>
 </html>

@@ -1,6 +1,7 @@
 var tiempofinal = 0;
 var fino = 0;
 var segundo_cero = 0;
+var url_rest = 'https://admin.experienciastelcel.com/restful';
 
   function formatnumbers(numero){
     formado = '0' + numero;

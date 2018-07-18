@@ -1,5 +1,5 @@
 
-
+var url_rest = 'https://admin.experienciastelcel.com/restful';
 
 
   myapp = angular.module('mainApp',['ngRoute','ngSanitize']);

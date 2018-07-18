@@ -1,16 +1,13 @@
 <style type="text/css">
-	
-
-	/* css dinamica car en contexto */
 
 	.ladinamica {
 		width: 960px;
 		margin: auto;
-		/*padding-top: 64px;*/
+		
 		display: grid;
 		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
 		grid-template-rows: 246px 202px 48px 1fr;
-		grid-gap: 0px 20px; /* row gap   column gap */
+		grid-gap: 0px 20px; 
 	}
 		.ladinamica h3 {
 			font-size: 2rem;
@@ -33,7 +30,7 @@
 		.infosombra {
 			grid-column: info-start / info-end;
 			grid-row: 2/4;
-			/*background-color: rgb(220,220,220);*/
+			
 			box-shadow:2px 2px 6px rgb(200,200,200);
 			z-index: 1;
 		}
@@ -72,7 +69,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			/*align-content: center; */
+			
 			padding-left: 1.5rem;
 			padding-right: 1.5rem;
 		}
@@ -81,55 +78,14 @@
 
 			display: flex;
 			flex-direction: row;
-			/*justify-content: space-between;*/
+			
 			align-items: center; 
-			/*align-content: center;*/
+			
 			font-size: 0.8rem;
 
 		}
 
 
-
-	/*.contadorregresivo {
-		grid-column: 1 / -1;
-		grid-row: 3/5;
-		background-color: white;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-		.contadorregresivo .numeros {
-			display: flex;
-			flex-direction: row;
-		
-		}
-
-		.contadorregresivo .numeros > div{
-			font-size: 6rem;
-		}
-
-
-		.contadorregresivo .numeros .tagnumero{
-			font-size: 0.6rem;
-			text-align: center;
-			margin-top: 3rem;
-		}
-
-		.contadorregresivo .titulo {
-			font-size: 0.8rem;
-			margin-bottom: 3rem;
-		}*/
-
-
-
-	/*.fondogris {
-		grid-column: 1 / -1;
-		grid-row: 5/7;
-		background-color: rgb(240,240,240);
-	}*/
 	.ladinamica .bloqueizquierdo {
 		grid-column: info-start / info-end;
 		/*grid-column: info-start / info-end;*/
@@ -138,9 +94,6 @@
 		margin-bottom: 3rem;
 		line-height: 1.4rem;
 
-		/*display: grid;*/
-		/*grid-template-columns: repeat(6, 1fr);*/
-		/*grid-column-gap: 20px;*/
 	}
 
 		
@@ -149,28 +102,8 @@
 			margin-bottom: 1.6rem;
 		}
 
-		/*.bloqueizquierdo .galeriafotos {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-gap: 20px 20px;
-		}
-
-		.bloqueizquierdo .galeriafotos .wrapperfoto {
-			width: 100%;
-			height: 175px;
-			cursor: pointer;
-		}
-		
-
-		.bloqueizquierdo .galeriafotos .wrapperfoto img {
-			width: 100%;
-			height: 100%; 
-			object-fit: cover;
-		}*/
 
 		.ganadores .galeriafotos {
-			/*grid-column: 1 / -1;*/
-
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 20px 20px;
@@ -191,7 +124,6 @@
 		
 
 		.btn {
-			/*background-color: #84ffff;*/
 			padding: 5px 15px 5px 15px;
 			box-shadow:2px 2px 6px rgb(180,180,180);
 			cursor: pointer;
@@ -210,7 +142,6 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			/*margin-top: 3rem;*/
 		}
 		.wrappercomodin div {
 			font-size: 3rem;
@@ -303,14 +234,11 @@
 		color: white;
 		position: fixed;
 		left: 50%;
-		/*top: 50%;*/
 		top: 0px;
 		width: 80%;
 		height: auto;
 		margin-left: -40%;
-		/*margin-top: -40vh;*/
 		margin-top: 10px;
-		/*background-color: yellow;*/
 		z-index: 20;
 
 		display: flex;
@@ -428,34 +356,17 @@
 		}
 
 		.headerdinamica .linea {
-	 		/*grid-column: 1 / -1;*/
+	 		
 	 	}
 
 	 	.headerdinamica h1 {
-	 		/*grid-column: 1 / span 5;*/
+	 		
 	 	}
 
-		/*.headerdinamica {
-			width: 960px;
-			margin: auto;
-			padding-top: 84px;	
-			display: grid;
-			grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
-			grid-column-gap: 20px;
-
-	 	}*/
 
 		.categoriadinamica {
 			padding-left: 10px;
 			padding-right: 10px;
-			/*padding-top: 52px;
-			padding-left: 40px;
-			padding-right: 40px;
-			padding-bottom: 52px;
-			width: 960px;
-			margin: auto;*/
-
-			/*display: grid;*/
 			grid-template-columns: 1fr;
 			grid-auto-rows:464px;
 			grid-column-gap: 20px;
@@ -476,16 +387,9 @@
 
 
 		.ladinamica .bloqueizquierdo {
-			grid-column: 2 / -2;
-			/*grid-column: info-start / info-end;*/
+			grid-column: 2 / -2;	
 			grid-row: 5/ span 1;
-			/*margin-top: 3rem;
-			margin-bottom: 3rem;
-			line-height: 1.4rem;*/
 
-			/*display: grid;*/
-			/*grid-template-columns: repeat(6, 1fr);*/
-			/*grid-column-gap: 20px;*/
 		}
 
 		.ladinamica .ganadores {
@@ -507,12 +411,11 @@
 
 
 </style>
-<!-- <div class="grid"> -->
 
 	<section class="ladinamica">
 
 		<div class="portada">
-			<img src="images/blanco.jpg">
+			<img src="images/portadablanca.jpg">
 		</div>
 
 		<div class="infosombra"></div>
@@ -549,24 +452,15 @@
 
 		<div class="ganadores" style="padding-top:4rem;">
 			<h2 style="margin-bottom: 1rem">Ganadores</h2>
-			<!-- <h2 style="margin-bottom: 1rem">Galeria</h2> -->
 
 
 			<div class="galeriafotos">
 			</div>
 				
-			<!-- </div> -->
 			<div class="wrapperbotoncentrado">
 				<div class="btn masfotos no-seleccionable">Más fotos</div>
 			</div>
-			<!-- <div class="totalganadores" style="margin-bottom: 1rem">181</div>
-			<div class="aliasganadores"> -->
-				
-			<!-- </div> -->
 
-			<!-- <div class="wrapperbotoncentrado">
-				<div class="btn">MOSTRAR MAS</div>
-			</div> -->
 		</div>
 
 	</section>
@@ -583,19 +477,12 @@
 
 
 
-
-	
-
-<!-- </div> -->
-
-<!-- dinamica interccion 1 -->
 <div class="fondoventanasflotante"></div>
 
 <div class="wrappercarruselflotante">
 	<div class="fa fa-arrow-left izq manita" aria-hidden="true"></div>
 	<div class="wrappercarruselfoto">
-		<!-- <img src="images/galeriaexperiencias/exp1.png" width="70%" height="auto"> -->
-		<img src="images/galeriaexperiencias/ganadores1.jpg" >
+		<img src="images/ganadoresblanco.jpg" >
 	</div>
 	
 	<div class="fa fa-arrow-right der manita" aria-hidden="true"></div>	
@@ -606,9 +493,8 @@
 
 
 <script type="text/javascript">
-	// var galeriaFotos = ["exp1.png", "exp2.png", "exp3.png", "exp4.png", "exp5.png", "exp6.png", "exp7.jpg", "exp8.jpg"];
+	
 	var galeriaFotos = [];
-	 // = ["ganadores1.jpg", "ganadores2.jpg", "ganadores3.jpg", "ganadores4.jpg", "ganadores5.jpg", "ganadores6.jpg", "ganadores7.jpg", "ganadores8.jpg"];
 	var indexGaleriaFotos = 0;
 	var indexGrupoFotos = 0;
 	var totalGrupoFotosMod4 = 0;
@@ -623,7 +509,6 @@
 		
 		
 		$(".fondoventanasflotante, .wrappercarruselflotante").click( function() {
-			// $(this).hide();
 			$(".fondoventanasflotante").hide();
 			$(".wrappercarruselflotante").hide();
 		})
@@ -635,14 +520,10 @@
 		// amplia foto de la galeria
 		$( "body" ).undelegate(  ".galeriafotos .wrapperfoto", "click").delegate( ".galeriafotos .wrapperfoto", "click", function() {
 			indexGaleriaFoto = $(this).index()+(indexGrupoFotos*mod4);
-			// alert( indexGrupoFotos*4 )
-			// alert(  $(this).index() );
 			$(".fondoventanasflotante").show();
 			$(".wrappercarruselflotante").show();
-			// $(".wrappercarruselflotante img" ).attr( "src", $(this).find("img").attr("src") ); //wrapperfoto img
 			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
 			parent.postMessage('scrollthem,0', '*');
-			// indexGaleriaFoto
 		})
 
 		
@@ -657,8 +538,6 @@
 			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
 			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
 
-
-			// alert( indexGaleriaFoto == (galeriaFotos.length-1) );
 			if( indexGaleriaFoto % mod4 == (mod4-1)  ) {
 				indexGrupoFotos--;
 				if ( indexGrupoFotos < 0) { indexGrupoFotos = (mod4-1) };
@@ -670,8 +549,7 @@
 			$('.galeriafotos').empty();
 			var htmlGallery = "";
 			for(var i=0; i<mod4; i++) {
-				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
-				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };     	
 	        	htmlGallery += '<div class="wrapperfoto">'
 				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
 				htmlGallery += '</div>'	
@@ -689,8 +567,6 @@
 			$(".wrappercarruselflotante img" ).attr( "src", galeriaFotos[indexGaleriaFoto] );
 			$(".wrappercarruselflotante img" ).hide().fadeIn(600);
 
-			// alert( indexGaleriaFoto % mod4 );
-
 			if( indexGaleriaFoto % mod4 == 0  ) {
 				indexGrupoFotos = (indexGrupoFotos+1)%totalGrupoFotosMod4;
 			}
@@ -698,8 +574,7 @@
 			$('.galeriafotos').empty();
 			var htmlGallery = "";
 			for(var i=0; i<mod4; i++) {
-				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
-				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };    	
 	        	htmlGallery += '<div class="wrapperfoto">'
 				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
 				htmlGallery += '</div>'	
@@ -715,8 +590,7 @@
 			$('.galeriafotos').empty();
 			var htmlGallery = "";
 			for(var i=0; i<mod4; i++) {
-				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };
-				// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i+(indexGrupoFotos*mod4)] );	       	
+				if ( i+(indexGrupoFotos*mod4) >= galeriaFotos.length ) { break; };     	
 	        	htmlGallery += '<div class="wrapperfoto">'
 				htmlGallery +=	'<img src="'+ galeriaFotos[i+(indexGrupoFotos*mod4)]+'">'
 				htmlGallery += '</div>'	
@@ -775,18 +649,11 @@
         	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
         	$(".totallikes").text(data.promocion.likes);
         	$(".participaciones").text(data.promocion.shares);
-        	// $(".participaciones").text(data.promocion.participaciones);
         	$(".portada img").attr("src",data.promocion.imagen_ganadores);
-        	// $(".totalganadores").text(data.promocion.ganadores_total);
         	$(".descripcion").html(data.promocion.inicio_juego_txt+data.promocion.descripcion_ganadores);
-        	// $(".premio").html(data.promocion.premio);
-        	// galeriaFotos = data.promocion.galeria;
-            // console.log( data.promocion.galeria );
-        	// console.log( galeriaFotos );
-        	
+   	
         	if ( data.promocion.galeria.length > 0 ) {
         		totalGrupoFotosMod4 =  Math.ceil(data.promocion.galeria.length / mod4);
-        		// alert( totalGrupoFotosMod4 );
         		$('.galeriafotos').empty();
 	        	var htmlGallery = "";
 	        	for (var i=0; i<data.promocion.galeria.length; i++ ) { 		
@@ -795,7 +662,6 @@
 	        			htmlGallery += '<div class="wrapperfoto">'
 						htmlGallery +=	'<img src="'+ galeriaFotos[i]+'">'
 						htmlGallery += '</div>'
-	        			// $(".galeriafotos .wrapperfoto img").eq(i).attr( "src", galeriaFotos[i] );
 	        		}
 	        		
 	        	}
